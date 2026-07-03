@@ -1,0 +1,11 @@
+{
+  "hulls": {
+    "Corvette": { "slots": ["Reactor", "Weapon"], "cost": 100 },
+    "Cruiser": { "slots": ["Reactor", "Weapon", "Weapon", "Shield"], "cost": 500 }
+  },
+  "components": {
+    "Reactor": { "power": 10 },
+    "Weapon": { "damage": 20 },
+    "Shield": { "capacity": 50 }
+  }
+}

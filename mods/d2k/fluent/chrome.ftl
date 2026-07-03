@@ -1,8 +1,23 @@
 ## encyclopedia.yaml, mainmenu.yaml
 label-mentat-title = Mentat
 
+## mainmenu.yaml
+label-main-menu-title = Main Menu
+button-main-menu-content = Manage Content
+button-singleplayer-menu-skirmish = Skirmish
+button-singleplayer-menu-load = Load
+button-extras-menu-replays = Replays
+label-map-editor-title = Map Editor
+button-extras-menu-assetbrowser = Asset Browser
+button-map-editor-new-map = New Map
+button-map-editor-load-map = Load Map
+dropdownbutton-news-bg-button = Battlefield News
+label-update-notice-a = You are running an outdated version of Arklight.
+label-update-notice-b = Download the latest version from www.Arklight.net
+
 ## ingame-menu.yaml
 label-menu-buttons-title = Options
+label-editor-properties-title = PROPERTIES
 
 ## ingame-observer.yaml
 button-observer-widget-options = Options

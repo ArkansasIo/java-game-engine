@@ -1,0 +1,7 @@
+{
+  "theme": "Blue Theme",
+  "panels": {
+    "MainMenu": { "color": "#0000FF", "elements": ["NewGameButton"] },
+    "GalaxyView": { "color": "#000088", "elements": ["FleetPanel", "PlanetPanel"] }
+  }
+}

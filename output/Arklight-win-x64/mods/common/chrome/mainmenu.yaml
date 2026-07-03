@@ -1,0 +1,200 @@
+Container@MAINMENU:
+	Logic: MainMenuLogic
+	Children:
+		LogicKeyListener@GLOBAL_KEYHANDLER:
+			Logic: MusicHotkeyLogic, ScreenshotHotkeyLogic, MuteHotkeyLogic
+		Background@BORDER:
+			Background: mainmenu-border
+			X: 0 - 15
+			Y: 0 - 15
+			Width: WINDOW_WIDTH + 30
+			Height: WINDOW_HEIGHT + 30
+		Image@LOGO:
+			X: WINDOW_WIDTH - 296
+			Y: 30
+			ImageCollection: logos
+			ImageName: logo
+		Container@MENUS:
+			X: (WINDOW_WIDTH - WIDTH) / 2
+			Y: (WINDOW_HEIGHT - HEIGHT) / 2
+			Width: 300
+			Height: 400
+			Children:
+				ColorBlock@WINDOW_BACKDROP:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 020817F0
+				ColorBlock@WINDOW_HEADER:
+					Width: PARENT_WIDTH
+					Height: 44
+					Color: 142C49F0
+				ColorBlock@WINDOW_ACCENT:
+					Y: 44
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				Label@WINDOW_TITLE:
+					X: 0
+					Y: 10
+					Width: PARENT_WIDTH
+					Height: 24
+					Text: label-stellar-command-title
+					Align: Center
+					Font: Bold
+					TextColor: DDEBFF
+					Contrast: true
+				Container@MAIN_MENU:
+					Children:
+						Button@SINGLEPLAYER_BUTTON:
+							X: 20
+							Y: 60
+							Width: 260
+							Height: 40
+							Text: label-singleplayer-title
+							Font: Bold
+						Button@MULTIPLAYER_BUTTON:
+							X: 20
+							Y: 110
+							Width: 260
+							Height: 40
+							Text: label-multiplayer-title
+							Font: Bold
+						Button@SETTINGS_BUTTON:
+							X: 20
+							Y: 160
+							Width: 260
+							Height: 40
+							Text: button-settings-title
+							Font: Bold
+						Button@EXTRAS_BUTTON:
+							X: 20
+							Y: 210
+							Width: 260
+							Height: 40
+							Text: button-extras-title
+							Font: Bold
+						Button@CONTENT_BUTTON:
+							X: 20
+							Y: 260
+							Width: 260
+							Height: 40
+							Text: button-content-title
+							Font: Bold
+						Button@QUIT_BUTTON:
+							X: 20
+							Y: 340
+							Width: 260
+							Height: 40
+							Text: button-quit
+							Font: Bold
+				Container@SINGLEPLAYER_MENU:
+					Children:
+						Button@MISSIONS_BUTTON:
+							X: 20
+							Y: 60
+							Width: 260
+							Height: 40
+							Text: button-missions-title
+							Font: Bold
+						Button@SKIRMISH_BUTTON:
+							X: 20
+							Y: 110
+							Width: 260
+							Height: 40
+							Text: button-skirmish-title
+							Font: Bold
+						Button@LOAD_BUTTON:
+							X: 20
+							Y: 160
+							Width: 260
+							Height: 40
+							Text: button-load-title
+							Font: Bold
+						Button@BACK_BUTTON:
+							X: 20
+							Y: 340
+							Width: 260
+							Height: 40
+							Text: button-back
+							Font: Bold
+				Container@EXTRAS_MENU:
+					Children:
+						Button@REPLAYS_BUTTON:
+							X: 20
+							Y: 60
+							Width: 260
+							Height: 40
+							Text: button-replays-title
+							Font: Bold
+						Button@MUSIC_BUTTON:
+							X: 20
+							Y: 110
+							Width: 260
+							Height: 40
+							Text: button-music-title
+							Font: Bold
+						Button@MAP_EDITOR_BUTTON:
+							X: 20
+							Y: 160
+							Width: 260
+							Height: 40
+							Text: button-map-editor-title
+							Font: Bold
+						Button@CREDITS_BUTTON:
+							X: 20
+							Y: 210
+							Width: 260
+							Height: 40
+							Text: button-credits-title
+							Font: Bold
+						Button@BACK_BUTTON:
+							X: 20
+							Y: 340
+							Width: 260
+							Height: 40
+							Text: button-back
+							Font: Bold
+				Container@MAP_EDITOR_MENU:
+					Children:
+						Button@NEW_MAP_BUTTON:
+							X: 20
+							Y: 60
+							Width: 260
+							Height: 40
+							Text: button-new-map-title
+							Font: Bold
+						Button@LOAD_MAP_BUTTON:
+							X: 20
+							Y: 110
+							Width: 260
+							Height: 40
+							Text: button-load-map-title
+							Font: Bold
+						Button@BACK_BUTTON:
+							X: 20
+							Y: 340
+							Width: 260
+							Height: 40
+							Text: button-back
+							Font: Bold
+		Container@PERFORMANCE_INFO:
+			Logic: PerfDebugLogic
+			Children:
+				Label@PERF_TEXT:
+					X: 30
+					Y: WINDOW_HEIGHT - 70
+					Width: 170
+					Height: 40
+					Contrast: true
+				Background@GRAPH_BG:
+					X: WINDOW_WIDTH - 240
+					Y: WINDOW_HEIGHT - 240
+					Width: 210
+					Height: 210
+					Background: panel-black
+					Children:
+						PerfGraph@GRAPH:
+							X: 5
+							Y: 5
+							Width: 200
+							Height: 200

@@ -60,7 +60,7 @@ Container@INGAME_MENU:
 					Y: 8
 					Width: 245
 					Height: 22
-					Text: STELLAR COMMAND INTERFACE
+					Text: label-strategy-window-title
 					Font: Bold
 					TextColor: DDEBFF
 					Contrast: true
@@ -69,7 +69,7 @@ Container@INGAME_MENU:
 					Y: 10
 					Width: 320
 					Height: 18
-					Text: OGame 0.84 / RTS / 4X / MMORPG shell
+					Text: label-strategy-window-subtitle
 					Font: Tiny
 					TextColor: 8FBDEB
 					Align: Right
@@ -89,7 +89,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: Empire
+							Text: label-strategy-tab-empire
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -99,7 +99,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: Galaxy
+							Text: label-strategy-tab-galaxy
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -109,7 +109,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: System
+							Text: label-strategy-tab-system
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -119,7 +119,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: Planet
+							Text: label-strategy-tab-planet
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -129,7 +129,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: Fleet
+							Text: label-strategy-tab-fleet
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -139,7 +139,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: War
+							Text: label-strategy-tab-war
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -149,7 +149,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 64
 							Height: 15
-							Text: Research
+							Text: label-strategy-tab-research
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -159,7 +159,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 54
 							Height: 15
-							Text: Market
+							Text: label-strategy-tab-market
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -169,7 +169,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 74
 							Height: 15
-							Text: Diplomacy
+							Text: label-strategy-tab-diplomacy
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -179,7 +179,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 64
 							Height: 15
-							Text: Alliance
+							Text: label-strategy-tab-alliance
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -189,7 +189,7 @@ Container@INGAME_MENU:
 							Y: 8
 							Width: 82
 							Height: 15
-							Text: Character
+							Text: label-strategy-tab-character
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
@@ -199,7 +199,7 @@ Container@INGAME_MENU:
 							Y: 30
 							Width: PARENT_WIDTH - 20
 							Height: 15
-							Text: Overview / Resources / Buildings / Shipyard / Defense / Tech Tree / Intel / Quests / Logs / Settings
+							Text: label-strategy-tab-secondary
 							Font: Tiny
 							TextColor: 8FBDEB
 							Align: Center
@@ -223,7 +223,7 @@ Container@INGAME_MENU:
 							Y: 4
 							Width: PARENT_WIDTH - 16
 							Height: 14
-							Text: SUB MENUS
+							Text: label-strategy-rail-title
 							Font: TinyBold
 							TextColor: DDEBFF
 							Contrast: true
@@ -232,7 +232,7 @@ Container@INGAME_MENU:
 							Y: 34
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Empire Overview
+							Text: label-strategy-rail-empire-overview
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -241,7 +241,7 @@ Container@INGAME_MENU:
 							Y: 56
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Colony Management
+							Text: label-strategy-rail-colony-management
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -250,7 +250,7 @@ Container@INGAME_MENU:
 							Y: 78
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Fleet Operations
+							Text: label-strategy-rail-fleet-operations
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -259,7 +259,7 @@ Container@INGAME_MENU:
 							Y: 100
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Military Doctrine
+							Text: label-strategy-rail-military-doctrine
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -268,7 +268,7 @@ Container@INGAME_MENU:
 							Y: 122
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Civilian Systems
+							Text: label-strategy-rail-civilian-systems
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -277,7 +277,7 @@ Container@INGAME_MENU:
 							Y: 144
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Government Council
+							Text: label-strategy-rail-government-council
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -286,7 +286,7 @@ Container@INGAME_MENU:
 							Y: 166
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Diplomacy Desk
+							Text: label-strategy-rail-diplomacy-desk
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -295,7 +295,7 @@ Container@INGAME_MENU:
 							Y: 188
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Character Sheet
+							Text: label-strategy-rail-character-sheet
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -304,7 +304,7 @@ Container@INGAME_MENU:
 							Y: 210
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Inventory / Equipment
+							Text: label-strategy-rail-inventory-equipment
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -313,7 +313,7 @@ Container@INGAME_MENU:
 							Y: 232
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Quests / Campaign
+							Text: label-strategy-rail-quests-campaign
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -322,7 +322,7 @@ Container@INGAME_MENU:
 							Y: 254
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: Logs / Messages
+							Text: label-strategy-rail-logs-messages
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -331,7 +331,7 @@ Container@INGAME_MENU:
 							Y: 276
 							Width: PARENT_WIDTH - 20
 							Height: 16
-							Text: System Settings
+							Text: label-strategy-rail-system-settings
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -354,7 +354,7 @@ Container@INGAME_MENU:
 							Y: 4
 							Width: PARENT_WIDTH - 16
 							Height: 14
-							Text: PAGES AND SUB PAGES
+							Text: label-strategy-page-title
 							Font: TinyBold
 							TextColor: DDEBFF
 							Contrast: true
@@ -363,7 +363,7 @@ Container@INGAME_MENU:
 							Y: 34
 							Width: 155
 							Height: 16
-							Text: "Galaxy: Map / Sectors / Systems"
+							Text: label-strategy-page-galaxy
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -372,7 +372,7 @@ Container@INGAME_MENU:
 							Y: 56
 							Width: 170
 							Height: 16
-							Text: "Planet: Overview / Resources"
+							Text: label-strategy-page-planet
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -381,7 +381,7 @@ Container@INGAME_MENU:
 							Y: 78
 							Width: 170
 							Height: 16
-							Text: "Build: Buildings / Shipyard"
+							Text: label-strategy-page-build
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -390,7 +390,7 @@ Container@INGAME_MENU:
 							Y: 100
 							Width: 170
 							Height: 16
-							Text: "Fleet: Dispatch / Movement"
+							Text: label-strategy-page-fleet
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -399,7 +399,7 @@ Container@INGAME_MENU:
 							Y: 122
 							Width: 170
 							Height: 16
-							Text: "War: Units / Weapons / Armor"
+							Text: label-strategy-page-combat
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -408,7 +408,7 @@ Container@INGAME_MENU:
 							Y: 144
 							Width: 170
 							Height: 16
-							Text: "Research: Lab / Tech Tree"
+							Text: label-strategy-page-research
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -417,7 +417,7 @@ Container@INGAME_MENU:
 							Y: 166
 							Width: 170
 							Height: 16
-							Text: "Civil: Population / Housing"
+							Text: label-strategy-page-civil
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -426,7 +426,7 @@ Container@INGAME_MENU:
 							Y: 188
 							Width: 170
 							Height: 16
-							Text: "Market: Trade / Contracts"
+							Text: label-strategy-page-market
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -435,7 +435,7 @@ Container@INGAME_MENU:
 							Y: 34
 							Width: 160
 							Height: 16
-							Text: "Gov: Laws / Policies"
+							Text: label-strategy-page-gov
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -444,7 +444,7 @@ Container@INGAME_MENU:
 							Y: 56
 							Width: 160
 							Height: 16
-							Text: "Diplomacy: Treaties / War"
+							Text: label-strategy-page-diplo
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -453,7 +453,7 @@ Container@INGAME_MENU:
 							Y: 78
 							Width: 160
 							Height: 16
-							Text: "Alliance: Ranks / Members"
+							Text: label-strategy-page-alliance
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -462,7 +462,7 @@ Container@INGAME_MENU:
 							Y: 100
 							Width: 160
 							Height: 16
-							Text: "Character: Stats / Skills"
+							Text: label-strategy-page-hero
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -471,7 +471,7 @@ Container@INGAME_MENU:
 							Y: 122
 							Width: 160
 							Height: 16
-							Text: "Gear: Weapons / Shields"
+							Text: label-strategy-page-equip
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -480,7 +480,7 @@ Container@INGAME_MENU:
 							Y: 144
 							Width: 160
 							Height: 16
-							Text: "Quest: Acts / Chapters"
+							Text: label-strategy-page-quest
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -489,7 +489,7 @@ Container@INGAME_MENU:
 							Y: 166
 							Width: 160
 							Height: 16
-							Text: "Intel: Espionage / Phalanx"
+							Text: label-strategy-page-intel
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -498,7 +498,7 @@ Container@INGAME_MENU:
 							Y: 188
 							Width: 160
 							Height: 16
-							Text: "System: Save / Load / Audio"
+							Text: label-strategy-page-admin
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -513,7 +513,7 @@ Container@INGAME_MENU:
 							Y: 232
 							Width: PARENT_WIDTH - 24
 							Height: 48
-							Text: "Sub-layouts: resource cards, queue rows, fleet slots, diplomacy dossiers, character equipment, quest chapters, battle reports, and settings forms."
+							Text: label-strategy-subpage-detail
 							Font: Tiny
 							TextColor: 8FBDEB
 							Contrast: true
@@ -536,7 +536,7 @@ Container@INGAME_MENU:
 							Y: 4
 							Width: PARENT_WIDTH - 16
 							Height: 14
-							Text: WINDOW FRAMES
+							Text: label-strategy-status-title
 							Font: TinyBold
 							TextColor: DDEBFF
 							Contrast: true
@@ -545,7 +545,7 @@ Container@INGAME_MENU:
 							Y: 34
 							Width: PARENT_WIDTH - 20
 							Height: 30
-							Text: "Header: title, mode, alerts"
+							Text: label-strategy-status-header
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -554,7 +554,7 @@ Container@INGAME_MENU:
 							Y: 70
 							Width: PARENT_WIDTH - 20
 							Height: 30
-							Text: "Left: category navigation"
+							Text: label-strategy-status-left
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -563,7 +563,7 @@ Container@INGAME_MENU:
 							Y: 106
 							Width: PARENT_WIDTH - 20
 							Height: 30
-							Text: "Center: active page content"
+							Text: label-strategy-status-center
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -572,7 +572,7 @@ Container@INGAME_MENU:
 							Y: 142
 							Width: PARENT_WIDTH - 20
 							Height: 30
-							Text: "Right: inspector and stats"
+							Text: label-strategy-status-right
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -581,7 +581,7 @@ Container@INGAME_MENU:
 							Y: 178
 							Width: PARENT_WIDTH - 20
 							Height: 30
-							Text: "Footer: actions and hints"
+							Text: label-strategy-status-footer
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
@@ -596,7 +596,7 @@ Container@INGAME_MENU:
 							Y: 232
 							Width: PARENT_WIDTH - 20
 							Height: 50
-							Text: Layouts are ready for future logic screens and keep the current Arklight menu actions available.
+							Text: label-strategy-status-note
 							Font: Tiny
 							TextColor: 8FBDEB
 							Contrast: true
@@ -605,7 +605,7 @@ Container@INGAME_MENU:
 					Y: PARENT_HEIGHT - 23
 					Width: PARENT_WIDTH - 32
 					Height: 16
-					Text: Active Arklight actions stay in the command panel; strategy pages are staged for future logic binding.
+					Text: label-strategy-footer-note
 					Font: Tiny
 					TextColor: 8FBDEB
 					Align: Center
@@ -634,7 +634,7 @@ Container@INGAME_MENU:
 					Y: 7
 					Width: 240
 					Height: 18
-					Text: STRATEGIC COMMAND
+					Text: label-strategy-command-title
 					Align: Center
 					Font: Bold
 					TextColor: DDEBFF
@@ -644,7 +644,7 @@ Container@INGAME_MENU:
 					Y: 39
 					Width: PARENT_WIDTH - 20
 					Height: 30
-					Text: Galaxy / System / Planet / Fleet / Diplomacy / Character
+					Text: label-strategy-command-mode-strip
 					Align: Center
 					Font: Tiny
 					TextColor: 8FBDEB

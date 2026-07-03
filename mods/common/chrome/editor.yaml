@@ -238,7 +238,7 @@ Container@EDITOR_WORLD_ROOT:
 				Label@TITLE:
 					X: 10
 					Y: 10
-					Text: PROPERTIES
+					Text: label-editor-properties-title
 					Font: Bold
 					TextColor: DDEBFF
 
