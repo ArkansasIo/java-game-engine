@@ -67,43 +67,42 @@ namespace Arklight.Mods.Common.Widgets.Logic
 		[ObjectCreator.UseCtor]
 		public OGameIngameMenuLogic(Widget widget, World world)
 		{
-			var sections = OGameInterfaceModel.MenuSections;
-			var windows = OGameInterfaceModel.MenuWindows;
+			var systems = OGameMenuSystemsCatalog.Systems;
 			var views = OGameInterfaceModel.Views;
 			var features = OGameCatalog.Features;
 
 			SetLabel(widget, "WINDOW_TITLE", "STELLAR COMMAND INTERFACE");
 			SetLabel(widget, "WINDOW_SUBTITLE", $"{world.Map.Title} / {world.Type} / OGame 0.84 systems");
-			SetLabel(widget, "TAB_SECONDARY", string.Join(" / ", windows.Select(w => w.Name)));
+			SetLabel(widget, "TAB_SECONDARY", string.Join(" / ", systems.Select(s => s.Menu)));
 			SetLabel(widget, "RAIL_TITLE", "MENUS / SUB MENUS");
 			SetLabel(widget, "PAGE_TITLE", "PAGES / SUBPAGES / PLANES");
 			SetLabel(widget, "STATUS_TITLE", "WINDOW FRAMES");
 			SetLabel(widget, "FOOTER_NOTE",
-				"OpenRA pause actions remain active; the strategy shell stages OGame menus, planes, subplanes, windows, pages, features, functions, and game logic.");
+				$"OpenRA pause actions remain active; catalog staged {systems.Count} systems, {OGameMenuSystemsCatalog.LogicFunctionCount} functions, {OGameMenuSystemsCatalog.StatCount} stats, and {OGameMenuSystemsCatalog.FeatureCount} features.");
 			SetLabel(widget, "LABEL_MODE_STRIP", string.Join(" / ", views.Select(v => v.Name.Replace(" View", ""))));
 
-			var sectionLabels = sections
-				.Select(s => $"{s.Name}: {string.Join(" / ", s.Submenus.Take(3))}")
+			var sectionLabels = systems
+				.Select(s => $"{s.Menu}: {string.Join(" / ", s.Submenus.Take(3))}")
 				.ToArray();
 			BindLabels(widget, RailLabelIds, sectionLabels);
 
-			var pageLabels = windows
-				.Select(w => $"{w.Name}: {string.Join(" / ", w.Planes)}")
-				.Concat(windows.Select(w => $"{w.Name} sub: {string.Join(" / ", w.Subplanes.Take(4))}"))
+			var pageLabels = systems
+				.Select(s => $"{s.Name}: {string.Join(" / ", s.Planes.Take(4))}")
+				.Concat(systems.Select(s => $"{s.Menu} stats: {string.Join(" / ", s.Stats.Take(4))}"))
 				.ToArray();
 			BindLabels(widget, PageLabelIds, pageLabels);
 
-			var subpageDetail = string.Join("; ", windows.Take(4).Select(w =>
-				$"{w.Name} functions: {string.Join(", ", w.Functions.Take(3))}"));
+			var subpageDetail = string.Join("; ", systems.Take(4).Select(s =>
+				$"{s.Name} functions: {string.Join(", ", s.LogicFunctions.Take(3))}"));
 			SetLabel(widget, "SUBPAGE_DETAIL", subpageDetail);
 
-			var regionLabels = windows.Take(5)
-				.Select(w => $"{w.Name}: {string.Join(" / ", w.Frames.Take(3))}")
+			var regionLabels = systems.Take(5)
+				.Select(s => $"{s.Name}: {string.Join(" / ", s.Frames.Take(3))}")
 				.ToArray();
 			BindLabels(widget, StatusLabelIds, regionLabels);
 
-			var logicSummary = string.Join("; ", windows.Skip(5).Take(4).Select(w =>
-				$"{w.Name} logic: {string.Join(", ", w.GameLogic.Take(2))}"));
+			var logicSummary = string.Join("; ", systems.Skip(5).Take(4).Select(s =>
+				$"{s.Name}: {string.Join(", ", s.Features.Take(2))}"));
 			logicSummary += $"; source features: {string.Join(", ", features.Take(4).Select(f => f.Name))}";
 			SetLabel(widget, "STATUS_F", logicSummary);
 		}
