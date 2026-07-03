@@ -211,58 +211,37 @@ Container@EDITOR_WORLD_ROOT:
 		ToggleBuildableOverlayKey: EditorToggleBuildableOverlay
 		ToggleMarkerOverlayKey: EditorToggleMarkerOverlay
 	Children:
-		LogicKeyListener@OVERLAY_KEYHANDLER:
-		Container@PERF_ROOT:
-		EditorViewportController@MAP_EDITOR:
+		ColorBlock@EDITOR_VIEWPORT_BACKDROP:
 			Width: WINDOW_WIDTH
 			Height: WINDOW_HEIGHT
-			TooltipContainer: TOOLTIP_CONTAINER
-			TooltipTemplate: SIMPLE_TOOLTIP
-		ViewportController:
+			Color: 020817F0
+		Container@EDITOR_TOOLBAR:
+			X: 0
+			Y: 0
 			Width: WINDOW_WIDTH
-			Height: WINDOW_HEIGHT
-			IgnoreMouseOver: True
-			ZoomInKey: ZoomIn
-			ZoomOutKey: ZoomOut
-			ScrollUpKey: MapScrollUp
-			ScrollDownKey: MapScrollDown
-			ScrollLeftKey: MapScrollLeft
-			ScrollRightKey: MapScrollRight
-			JumpToTopEdgeKey: MapJumpToTopEdge
-			JumpToBottomEdgeKey: MapJumpToBottomEdge
-			JumpToLeftEdgeKey: MapJumpToLeftEdge
-			JumpToRightEdgeKey: MapJumpToRightEdge
-			BookmarkSaveKeyPrefix: MapBookmarkSave
-			BookmarkRestoreKeyPrefix: MapBookmarkRestore
-			BookmarkKeyCount: 4
-		Background@RADAR_BG:
-			X: WINDOW_WIDTH - 325
-			Y: 5
-			Width: 320
-			Height: 320
+			Height: 40
 			Children:
-				Radar@INGAME_RADAR:
+				ColorBlock@BG:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 1C3858F0
+		Container@EDITOR_PROPERTIES:
+			X: WINDOW_WIDTH - 300
+			Y: 40
+			Width: 300
+			Height: WINDOW_HEIGHT - 40
+			Children:
+				ColorBlock@BG:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 061628E8
+				Label@TITLE:
 					X: 10
 					Y: 10
-					Width: PARENT_WIDTH - 19
-					Height: PARENT_HEIGHT - 19
-		Background@TOOLS_BG:
-			X: WINDOW_WIDTH - 320
-			Y: 330
-			Width: 310
-			Height: WINDOW_HEIGHT - 422
-		MenuButton@OPTIONS_BUTTON:
-			Logic: MenuButtonsChromeLogic
-			MenuContainer: INGAME_MENU
-			HideIngameUI: true
-			Pause: true
-			Width: 60
-			Height: 25
-			Text: button-editor-world-root-options.label
-			TooltipText: button-editor-world-root-options.tooltip
-			TooltipContainer: TOOLTIP_CONTAINER
-			Font: Bold
-			Key: escape
+					Text: PROPERTIES
+					Font: Bold
+					TextColor: DDEBFF
+
 		Container@TILE_WIDGETS:
 			X: WINDOW_WIDTH - 320
 			Y: 354
