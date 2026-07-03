@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -10,16 +10,16 @@
 #endregion
 
 using System.Threading.Tasks;
-using OpenRA.FileFormats;
-using OpenRA.Graphics;
-using OpenRA.Primitives;
-using OpenRA.Support;
+using Arklight.FileFormats;
+using Arklight.Graphics;
+using Arklight.Primitives;
+using Arklight.Support;
 
-namespace OpenRA
+namespace Arklight
 {
 	public class PlayerDatabase : IGlobalModData
 	{
-		public readonly string Profile = "https://forum.openra.net/openra/info/";
+		public readonly string Profile = "https://forum.Arklight.net/Arklight/info/";
 		public readonly int IconSize = 24;
 
 		// 512x512 is large enough for 49 unique 72x72 badges
@@ -115,3 +115,4 @@ namespace OpenRA
 		}
 	}
 }
+

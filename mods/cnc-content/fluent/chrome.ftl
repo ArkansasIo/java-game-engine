@@ -5,9 +5,10 @@ modcontent-installprompt =
 
     Advanced Install includes options for copying the music, videos, and other content from an original game disc or digital installation.
 modcontent-header =
-    Game content may be extracted from the original game discs or an existing digital install. OpenRA can also download the base game files from an online mirror of the 2007 freeware release of C&C.
+    Game content may be extracted from the original game discs or an existing digital install. Arklight can also download the base game files from an online mirror of the 2007 freeware release of C&C.
 modcontent-package-basefiles = Base Game Files
 modcontent-package-basemusic = Base Game Music
 modcontent-package-gdi = GDI Campaign Briefings
 modcontent-package-nod = Nod Campaign Briefings
 modcontent-package-covertopsmusic = Covert Operations Music
+

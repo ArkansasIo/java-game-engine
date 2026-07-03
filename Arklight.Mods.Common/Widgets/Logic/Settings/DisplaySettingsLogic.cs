@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,11 +15,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Primitives;
-using OpenRA.Widgets;
+using Arklight.Graphics;
+using Arklight.Primitives;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets.Logic
+namespace Arklight.Mods.Common.Widgets.Logic
 {
 	public class DisplaySettingsLogic : ChromeLogic
 	{
@@ -73,7 +73,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 
 		static readonly FrozenSet<Size> CommonResolutions = new Size[]
 		{
-			new(1024, 720),   // OpenRA minimum
+			new(1024, 720),   // Arklight minimum
 			new(1024, 768),   // XGA
 			new(1280, 720),   // HD 720p
 			new(1366, 768),   // HD (laptop standard)
@@ -573,3 +573,4 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		}
 	}
 }
+

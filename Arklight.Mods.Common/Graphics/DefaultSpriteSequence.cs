@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,10 +15,10 @@ using System.Collections.Immutable;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Primitives;
+using Arklight.Graphics;
+using Arklight.Primitives;
 
-namespace OpenRA.Mods.Common.Graphics
+namespace Arklight.Mods.Common.Graphics
 {
 	public class DefaultSpriteSequenceLoader : ISpriteSequenceLoader
 	{
@@ -156,7 +156,7 @@ namespace OpenRA.Mods.Common.Graphics
 		protected static readonly SpriteSequenceField<float3> Offset = new(nameof(Offset), float3.Zero);
 
 		[Desc("Apply an OpenGL/Photoshop inspired blend mode.")]
-		protected static readonly SpriteSequenceField<BlendMode> BlendMode = new(nameof(BlendMode), OpenRA.BlendMode.Alpha);
+		protected static readonly SpriteSequenceField<BlendMode> BlendMode = new(nameof(BlendMode), Arklight.BlendMode.Alpha);
 
 		[Desc("Create a virtual sprite file by concatenating one or more frames from multiple files, with optional transformations applied. " +
 			"All defined frames will be loaded into memory, even if unused, so use this property with care.")]
@@ -602,3 +602,4 @@ namespace OpenRA.Mods.Common.Graphics
 		}
 	}
 }
+

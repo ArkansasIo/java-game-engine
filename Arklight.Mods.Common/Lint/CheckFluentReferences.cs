@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -19,13 +19,13 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using Linguini.Syntax.Ast;
 using Linguini.Syntax.Parser;
-using OpenRA.Mods.Common.Scripting;
-using OpenRA.Mods.Common.Scripting.Global;
-using OpenRA.Scripting;
-using OpenRA.Traits;
-using OpenRA.Widgets;
+using Arklight.Mods.Common.Scripting;
+using Arklight.Mods.Common.Scripting.Global;
+using Arklight.Scripting;
+using Arklight.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Lint
+namespace Arklight.Mods.Common.Lint
 {
 	sealed class CheckFluentReferences : ILintPass, ILintMapPass
 	{
@@ -533,3 +533,4 @@ namespace OpenRA.Mods.Common.Lint
 		}
 	}
 }
+

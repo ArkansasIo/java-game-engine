@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -14,7 +14,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace OpenRA
+namespace Arklight
 {
 	public enum PlatformType { Unknown, Windows, OSX, Linux }
 
@@ -156,9 +156,9 @@ namespace OpenRA
 			{
 				case PlatformType.Windows:
 				{
-					modernUserSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "OpenRA") + Path.DirectorySeparatorChar;
-					legacyUserSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "OpenRA") + Path.DirectorySeparatorChar;
-					systemSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "OpenRA") + Path.DirectorySeparatorChar;
+					modernUserSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "Arklight") + Path.DirectorySeparatorChar;
+					legacyUserSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "Arklight") + Path.DirectorySeparatorChar;
+					systemSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData), "Arklight") + Path.DirectorySeparatorChar;
 					break;
 				}
 
@@ -166,22 +166,22 @@ namespace OpenRA
 				{
 					modernUserSupportPath = legacyUserSupportPath = Path.Combine(
 						Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
-						"Library", "Application Support", "OpenRA") + Path.DirectorySeparatorChar;
+						"Library", "Application Support", "Arklight") + Path.DirectorySeparatorChar;
 
-					systemSupportPath = "/Library/Application Support/OpenRA/";
+					systemSupportPath = "/Library/Application Support/Arklight/";
 					break;
 				}
 
 				case PlatformType.Linux:
 				{
-					legacyUserSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".openra") + Path.DirectorySeparatorChar;
+					legacyUserSupportPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".Arklight") + Path.DirectorySeparatorChar;
 
 					var xdgConfigHome = Environment.GetEnvironmentVariable("XDG_CONFIG_HOME");
 					if (string.IsNullOrEmpty(xdgConfigHome))
 						xdgConfigHome = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".config") + Path.DirectorySeparatorChar;
 
-					modernUserSupportPath = Path.Combine(xdgConfigHome, "openra") + Path.DirectorySeparatorChar;
-					systemSupportPath = "/var/games/openra/";
+					modernUserSupportPath = Path.Combine(xdgConfigHome, "Arklight") + Path.DirectorySeparatorChar;
+					systemSupportPath = "/var/games/Arklight/";
 
 					break;
 				}
@@ -189,8 +189,8 @@ namespace OpenRA
 				default:
 				{
 					modernUserSupportPath = legacyUserSupportPath =
-						Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".openra") + Path.DirectorySeparatorChar;
-					systemSupportPath = "/var/games/openra/";
+						Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".Arklight") + Path.DirectorySeparatorChar;
+					systemSupportPath = "/var/games/Arklight/";
 					break;
 				}
 			}
@@ -311,3 +311,4 @@ namespace OpenRA
 		}
 	}
 }
+

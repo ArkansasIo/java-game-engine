@@ -5,9 +5,9 @@
 			"name": "Launch (TD)",
 			"type": "coreclr",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/OpenRA.dll",
+			"program": "${workspaceRoot}/bin/Arklight.dll",
 			"windows": {
-				"program": "${workspaceRoot}/bin/OpenRA.exe",
+				"program": "${workspaceRoot}/bin/Arklight.exe",
 			},
 			"args": ["Game.Mod=cnc", "Engine.EngineDir=.."],
 			"preLaunchTask": "build",
@@ -16,9 +16,9 @@
 			"name": "Launch (RA)",
 			"type": "coreclr",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/OpenRA.dll",
+			"program": "${workspaceRoot}/bin/Arklight.dll",
 			"windows": {
-				"program": "${workspaceRoot}/bin/OpenRA.exe",
+				"program": "${workspaceRoot}/bin/Arklight.exe",
 			},
 			"args": ["Game.Mod=ra", "Engine.EngineDir=.."],
 			"preLaunchTask": "build",
@@ -27,9 +27,9 @@
 			"name": "Launch (D2k)",
 			"type": "coreclr",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/OpenRA.dll",
+			"program": "${workspaceRoot}/bin/Arklight.dll",
 			"windows": {
-				"program": "${workspaceRoot}/bin/OpenRA.exe",
+				"program": "${workspaceRoot}/bin/Arklight.exe",
 			},
 			"args": ["Game.Mod=d2k", "Engine.EngineDir=.."],
 			"preLaunchTask": "build",
@@ -38,9 +38,9 @@
 			"name": "Launch (TS)",
 			"type": "coreclr",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/OpenRA.dll",
+			"program": "${workspaceRoot}/bin/Arklight.dll",
 			"windows": {
-				"program": "${workspaceRoot}/bin/OpenRA.exe",
+				"program": "${workspaceRoot}/bin/Arklight.exe",
 			},
 			"args": ["Game.Mod=ts", "Engine.EngineDir=.."],
 			"preLaunchTask": "build",
@@ -49,9 +49,9 @@
 			"name": "Launch Utility",
 			"type": "coreclr",
 			"request": "launch",
-			"program": "${workspaceRoot}/bin/OpenRA.Utility.dll",
+			"program": "${workspaceRoot}/bin/Arklight.Utility.dll",
 			"windows": {
-				"program": "${workspaceRoot}/bin/OpenRA.Utility.exe",
+				"program": "${workspaceRoot}/bin/Arklight.Utility.exe",
 			},
 			"args": ["all", "--docs", "{DEV_VERSION}"],
 			"env": {
@@ -61,3 +61,4 @@
 		},
 	]
 }
+

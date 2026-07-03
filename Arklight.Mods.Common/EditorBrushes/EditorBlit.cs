@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,12 +13,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.MapGenerator;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Support;
+using Arklight.Graphics;
+using Arklight.Mods.Common.MapGenerator;
+using Arklight.Mods.Common.Traits;
+using Arklight.Support;
 
-namespace OpenRA.Mods.Common.EditorBrushes
+namespace Arklight.Mods.Common.EditorBrushes
 {
 	public readonly record struct BlitTile(TerrainTile TerrainTile, ResourceTile ResourceTile, ResourceLayerContents? ResourceLayerContents, byte Height);
 
@@ -361,3 +361,4 @@ namespace OpenRA.Mods.Common.EditorBrushes
 		}
 	}
 }
+

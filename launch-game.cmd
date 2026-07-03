@@ -1,5 +1,5 @@
 @echo off
-title OpenRA
+title Arklight
 for /F "delims==\ " %%x in ("%*") do (
   if "%%~x" EQU "Game.Mod" (goto launch)
 )
@@ -18,24 +18,25 @@ goto choosemod
 
 :launchmod
 cd %~dp0%
-bin\OpenRA.exe Engine.EngineDir=".." Engine.LaunchPath="%~dpf0" Game.Mod=%mod% %*
+bin\Arklight.exe Engine.EngineDir=".." Engine.LaunchPath="%~dpf0" Game.Mod=%mod% %*
 goto end
 :launch
 cd %~dp0%
-bin\OpenRA.exe Engine.EngineDir=".." Engine.LaunchPath="%~dpf0" %*
+bin\Arklight.exe Engine.EngineDir=".." Engine.LaunchPath="%~dpf0" %*
 
 :end
 if %errorlevel% neq 0 goto crashdialog
 exit /b
 
 :crashdialog
-set logs=%AppData%\OpenRA\Logs
-if exist %USERPROFILE%\Documents\OpenRA\Logs (set logs=%USERPROFILE%\Documents\OpenRA\Logs)
+set logs=%AppData%\Arklight\Logs
+if exist %USERPROFILE%\Documents\Arklight\Logs (set logs=%USERPROFILE%\Documents\Arklight\Logs)
 if exist Support\Logs (set logs=%cd%\Support\Logs)
 
 echo ----------------------------------------
-echo OpenRA has encountered a fatal error.
+echo Arklight has encountered a fatal error.
 echo   * Log Files are available in %logs%
-echo   * FAQ is available at https://github.com/OpenRA/OpenRA/wiki/FAQ
+echo   * FAQ is available at https://github.com/Arklight/Arklight/wiki/FAQ
 echo ----------------------------------------
 pause
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,7 +11,7 @@
 
 using System;
 
-namespace OpenRA
+namespace Arklight
 {
 	/// <summary>
 	/// 3d World rotation.
@@ -195,7 +195,7 @@ namespace OpenRA
 		public static WRot SLerp(in WRot a, in WRot b, int mul, int div)
 		{
 			// This implements the standard spherical linear interpolation
-			// between two quaternions, accounting for OpenRA's integer math
+			// between two quaternions, accounting for Arklight's integer math
 			// conventions and WRot always using (nearly) normalized quaternions
 			var dot = a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
 			var flip = dot >= 0 ? 1 : -1;
@@ -220,3 +220,4 @@ namespace OpenRA
 		}
 	}
 }
+

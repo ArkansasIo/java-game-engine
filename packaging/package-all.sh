@@ -1,5 +1,5 @@
 #!/bin/bash
-# OpenRA master packaging script
+# Arklight master packaging script
 
 set -o errexit -o pipefail || exit $?
 
@@ -36,3 +36,4 @@ else
 fi
 
 echo "Package build done."
+

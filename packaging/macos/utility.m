@@ -1,6 +1,6 @@
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation. For more information,
  * see COPYING.
@@ -43,12 +43,12 @@ int launch_dotnet(int argc, char **argv, char *modId, bool isArmArchitecture)
 	if (isArmArchitecture)
 	{
 		hostPath = [exePath stringByAppendingPathComponent: @"arm64/libhostfxr.dylib"];;
-		dllPath = [exePath stringByAppendingPathComponent: @"arm64/OpenRA.Utility.dll"];
+		dllPath = [exePath stringByAppendingPathComponent: @"arm64/Arklight.Utility.dll"];
 	}
 	else
 	{
 		hostPath = [exePath stringByAppendingPathComponent: @"x86_64/libhostfxr.dylib"];;
-		dllPath = [exePath stringByAppendingPathComponent: @"x86_64/OpenRA.Utility.dll"];
+		dllPath = [exePath stringByAppendingPathComponent: @"x86_64/Arklight.Utility.dll"];
 	}
 
 	void *lib = dlopen([hostPath UTF8String], RTLD_LAZY);
@@ -143,3 +143,4 @@ int main(int argc, char **argv)
 	[pool release];
 	return ret;
 }
+

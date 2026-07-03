@@ -1,4 +1,4 @@
-:: example launch script, see https://github.com/OpenRA/OpenRA/wiki/Dedicated-Server for details
+:: example launch script, see https://github.com/Arklight/Arklight/wiki/Dedicated-Server for details
 
 @echo on
 
@@ -27,6 +27,7 @@ set SupportDir=""
 
 :loop
 
-bin\OpenRA.Server.exe Engine.EngineDir=".." Game.Mod=%Mod% Server.Name=%Name% Server.Map=%Map% Server.ListenPort=%ListenPort% Server.AdvertiseOnline=%AdvertiseOnline% Server.AdvertiseOnLocalNetwork=%AdvertiseOnLocalNetwork% Server.EnableSingleplayer=%EnableSingleplayer% Server.Password=%Password% Server.RecordReplays=%RecordReplays% Server.RequireAuthentication=%RequireAuthentication% Server.ProfileIDBlacklist=%ProfileIDBlacklist% Server.ProfileIDWhitelist=%ProfileIDWhitelist% Server.EnableSyncReports=%EnableSyncReports% Server.EnableGeoIP=%EnableGeoIP% Server.EnableLintChecks=%EnableLintChecks% Server.ShareAnonymizedIPs=%ShareAnonymizedIPs% Server.FloodLimitJoinCooldown=%FloodLimitJoinCooldown% Engine.SupportDir=%SupportDir%
+bin\Arklight.Server.exe Engine.EngineDir=".." Game.Mod=%Mod% Server.Name=%Name% Server.Map=%Map% Server.ListenPort=%ListenPort% Server.AdvertiseOnline=%AdvertiseOnline% Server.AdvertiseOnLocalNetwork=%AdvertiseOnLocalNetwork% Server.EnableSingleplayer=%EnableSingleplayer% Server.Password=%Password% Server.RecordReplays=%RecordReplays% Server.RequireAuthentication=%RequireAuthentication% Server.ProfileIDBlacklist=%ProfileIDBlacklist% Server.ProfileIDWhitelist=%ProfileIDWhitelist% Server.EnableSyncReports=%EnableSyncReports% Server.EnableGeoIP=%EnableGeoIP% Server.EnableLintChecks=%EnableLintChecks% Server.ShareAnonymizedIPs=%ShareAnonymizedIPs% Server.FloodLimitJoinCooldown=%FloodLimitJoinCooldown% Engine.SupportDir=%SupportDir%
 
 goto loop
+

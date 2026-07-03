@@ -18,7 +18,7 @@ Cursors:
 Chrome:
 	content|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
+Assemblies: Arklight.Mods.Common.dll, Arklight.Mods.Cnc.dll
 
 ChromeLayout:
 	content|content.yaml
@@ -137,3 +137,4 @@ SpriteFormats: PngSheet
 TerrainFormat: DefaultTerrain
 
 SpriteSequenceFormat: DefaultSpriteSequence
+

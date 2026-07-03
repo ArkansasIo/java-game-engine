@@ -1,8 +1,8 @@
 Metadata:
 	Title: mod-title
 	Version: {DEV_VERSION}
-	Website: https://www.openra.net
-	WebIcon32: https://www.openra.net/images/icons/ra_32x32.png
+	Website: https://www.Arklight.net
+	WebIcon32: https://www.Arklight.net/images/icons/ra_32x32.png
 	WindowTitle: mod-windowtitle
 
 PackageFormats: Mix
@@ -109,7 +109,7 @@ Cursors:
 Chrome:
 	ra|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
+Assemblies: Arklight.Mods.Common.dll, Arklight.Mods.Cnc.dll
 
 ChromeLayout:
 	common|chrome/ingame.yaml
@@ -313,3 +313,4 @@ GameSpeeds:
 
 DiscordService:
 	ApplicationId: 699222659766026240
+

@@ -1,5 +1,5 @@
 #!/bin/sh
-# example launch script, see https://github.com/OpenRA/OpenRA/wiki/Dedicated-Server for details
+# example launch script, see https://github.com/Arklight/Arklight/wiki/Dedicated-Server for details
 
 # Usage:
 #  $ ./launch-dedicated.sh # Launch a dedicated server with default settings
@@ -34,7 +34,7 @@ FloodLimitJoinCooldown="${FloodLimitJoinCooldown:-"5000"}"
 SupportDir="${SupportDir:-""}"
 
 while true; do
-     dotnet "${ENGINEDIR}/bin/OpenRA.Server.dll" Engine.EngineDir=".." Game.Mod="$Mod" \
+     dotnet "${ENGINEDIR}/bin/Arklight.Server.dll" Engine.EngineDir=".." Game.Mod="$Mod" \
      Server.Name="$Name" \
      Server.Map="$Map" \
      Server.ListenPort="$ListenPort" \
@@ -53,3 +53,4 @@ while true; do
      Server.FloodLimitJoinCooldown="$FloodLimitJoinCooldown" \
      Engine.SupportDir="$SupportDir" || :
 done
+

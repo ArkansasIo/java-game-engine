@@ -27,7 +27,7 @@ function All-Command
 		echo "Downloading IP2Location GeoIP database."
 		$target = Join-Path $pwd.ToString() "IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP"
 		[Net.ServicePointManager]::SecurityProtocol = 'Tls12'
-		(New-Object System.Net.WebClient).DownloadFile("https://github.com/OpenRA/GeoIP-Database/releases/download/monthly/IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP", $target)
+		(New-Object System.Net.WebClient).DownloadFile("https://github.com/Arklight/GeoIP-Database/releases/download/monthly/IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP", $target)
 	}
 }
 
@@ -117,8 +117,8 @@ function Test-Command
 function Tests-Command
 {
 	Write-Host "Running unit tests..." -ForegroundColor Cyan
-	dotnet build OpenRA.Test\OpenRA.Test.csproj -c Debug --nologo -p:TargetPlatform=win-x64
-	dotnet test bin\OpenRA.Test.dll --test-adapter-path:.
+	dotnet build Arklight.Test\Arklight.Test.csproj -c Debug --nologo -p:TargetPlatform=win-x64
+	dotnet test bin\Arklight.Test.dll --test-adapter-path:.
 }
 
 function Check-Command
@@ -171,7 +171,7 @@ function CheckForUtility
 		return 0
 	}
 
-	Write-Host "OpenRA.Utility.exe could not be found. Build the project first using the `"all`" command." -ForegroundColor Red
+	Write-Host "Arklight.Utility.exe could not be found. Build the project first using the `"all`" command." -ForegroundColor Red
 	return 1
 }
 
@@ -179,7 +179,7 @@ function CheckForDotnet
 {
 	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null)
 	{
-		Write-Host "The 'dotnet' tool is required to compile OpenRA. Please install the .NET Core SDK or Visual Studio and try again. https://dotnet.microsoft.com/download" -ForegroundColor Red
+		Write-Host "The 'dotnet' tool is required to compile Arklight. Please install the .NET Core SDK or Visual Studio and try again. https://dotnet.microsoft.com/download" -ForegroundColor Red
 		return 1
 	}
 
@@ -244,7 +244,7 @@ else
 }
 
 $env:ENGINE_DIR = ".."
-$utilityPath = "bin\OpenRA.Utility.exe"
+$utilityPath = "bin\Arklight.Utility.exe"
 
 $configuration = "Release"
 if ($args.Contains("CONFIGURATION=Debug"))
@@ -275,3 +275,4 @@ if ($args.Length -eq 0)
 {
 	WaitForInput
 }
+

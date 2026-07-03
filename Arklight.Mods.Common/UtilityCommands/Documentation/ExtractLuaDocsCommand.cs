@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,10 +11,10 @@
 
 using System;
 using System.Linq;
-using OpenRA;
-using OpenRA.Scripting;
+using Arklight;
+using Arklight.Scripting;
 
-namespace OpenRA.Mods.Common.UtilityCommands.Documentation
+namespace Arklight.Mods.Common.UtilityCommands.Documentation
 {
 	sealed class ExtractLuaDocsCommand : IUtilityCommand
 	{
@@ -35,9 +35,9 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 			if (args.Length > 1)
 				version = args[1];
 
-			Console.WriteLine("This is an automatically generated listing of the Lua map scripting API for version {0} of OpenRA.", version);
+			Console.WriteLine("This is an automatically generated listing of the Lua map scripting API for version {0} of Arklight.", version);
 			Console.WriteLine();
-			Console.WriteLine("OpenRA allows custom maps and missions to be scripted using Lua 5.1.");
+			Console.WriteLine("Arklight allows custom maps and missions to be scripted using Lua 5.1.");
 			Console.WriteLine("These scripts run in a sandbox that prevents access to unsafe functions (e.g. OS or file access), " +
 				"and limits the memory and CPU usage of the scripts.");
 			Console.WriteLine();
@@ -57,7 +57,7 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 			Console.WriteLine("* Individual players expose a collection of properties and commands that query information or modify their state.");
 			Console.WriteLine("The properties and commands available on each actor depends on the traits that the actor specifies in its rule definitions.");
 			Console.WriteLine();
-			Console.WriteLine("For a basic guide about map scripts see the [`Map Scripting` wiki page](https://github.com/OpenRA/OpenRA/wiki/Map-scripting).");
+			Console.WriteLine("For a basic guide about map scripts see the [`Map Scripting` wiki page](https://github.com/Arklight/Arklight/wiki/Map-scripting).");
 			Console.WriteLine();
 
 			var tables = utility.ModData.ObjectCreator.GetTypesImplementing<ScriptGlobal>()
@@ -208,3 +208,4 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 		}
 	}
 }
+

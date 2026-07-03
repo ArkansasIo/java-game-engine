@@ -31,7 +31,7 @@ create_symlinks()
 
 	echo "FAILED"
 
-	echo "OpenRA expects to find a file matching \"${SEARCH}\" in one of the following locations:"
+	echo "Arklight expects to find a file matching \"${SEARCH}\" in one of the following locations:"
 	echo "${SEARCHDIRS}"
 	exit 1
 }
@@ -53,3 +53,4 @@ else
 	create_symlinks OpenAL "${SEARCHDIRS}" soft_oal.so "libopenal.so.1 libopenal.so"
 	create_symlinks FreeType "${SEARCHDIRS}" freetype6.so "libfreetype.so.6 libfreetype.so"
 fi
+

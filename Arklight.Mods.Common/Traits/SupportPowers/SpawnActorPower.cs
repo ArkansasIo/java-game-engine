@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,13 +11,13 @@
 
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.Activities;
-using OpenRA.Mods.Common.Effects;
-using OpenRA.Mods.Common.Orders;
-using OpenRA.Traits;
+using Arklight.Graphics;
+using Arklight.Mods.Common.Activities;
+using Arklight.Mods.Common.Effects;
+using Arklight.Mods.Common.Orders;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[Desc("Spawns an actor that stays for a limited amount of time.")]
 	public class SpawnActorPowerInfo : SupportPowerInfo
@@ -162,3 +162,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,7 +13,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace OpenRA.Mods.Common.UtilityCommands
+namespace Arklight.Mods.Common.UtilityCommands
 {
 	sealed class CreateManPage : IUtilityCommand
 	{
@@ -50,14 +50,14 @@ namespace OpenRA.Mods.Common.UtilityCommands
 		[Desc("Create a man page in troff format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
-			Console.WriteLine(".TH OPENRA 6");
+			Console.WriteLine(".TH Arklight 6");
 			Console.WriteLine(".SH NAME");
-			Console.WriteLine("openra \\- An Open Source modernization of the early 2D Command & Conquer games.");
+			Console.WriteLine("Arklight \\- An Open Source modernization of the early 2D Command & Conquer games.");
 			Console.WriteLine(".SH SYNOPSIS");
-			Console.WriteLine(".B openra");
+			Console.WriteLine(".B Arklight");
 			Console.WriteLine("[\\fB\\Game.Mod=\\fR\\fIra\\fR]");
 			Console.WriteLine(".SH DESCRIPTION");
-			Console.WriteLine(".B openra");
+			Console.WriteLine(".B Arklight");
 			Console.WriteLine("starts the game.");
 			Console.WriteLine(".SH OPTIONS");
 
@@ -75,12 +75,13 @@ namespace OpenRA.Mods.Common.UtilityCommands
 			WriteFields("Launch", new LaunchArguments(new Arguments()));
 
 			Console.WriteLine(".SH FILES");
-			Console.WriteLine("Settings are stored in the ~/.openra user folder.");
+			Console.WriteLine("Settings are stored in the ~/.Arklight user folder.");
 			Console.WriteLine(".SH BUGS");
-			Console.WriteLine("Known issues are tracked at https://bugs.openra.net");
+			Console.WriteLine("Known issues are tracked at https://bugs.Arklight.net");
 			Console.WriteLine(".SH COPYRIGHT");
-			Console.WriteLine("Copyright (c) The OpenRA Developers and Contributors");
-			Console.WriteLine("This manual is part of OpenRA, which is free software. It is GNU GPL v3 licensed. See COPYING for details.");
+			Console.WriteLine("Copyright (c) The Arklight Developers and Contributors");
+			Console.WriteLine("This manual is part of Arklight, which is free software. It is GNU GPL v3 licensed. See COPYING for details.");
 		}
 	}
 }
+

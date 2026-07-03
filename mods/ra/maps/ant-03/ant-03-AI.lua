@@ -1,6 +1,6 @@
 --[[
-   Copyright (c) The OpenRA Developers and Contributors
-   This file is part of OpenRA, which is free software. It is made
+   Copyright (c) The Arklight Developers and Contributors
+   This file is part of Arklight, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
    the License, or (at your option) any later version. For more
@@ -101,3 +101,4 @@ ActivateAntHives = function()
 	Trigger.AfterDelay(DateTime.Minutes(6) + DateTime.Seconds(30), ActivateHive6)
 	Trigger.AfterDelay(DateTime.Minutes(7) + DateTime.Seconds(45), ActivateHive7)
 end
+

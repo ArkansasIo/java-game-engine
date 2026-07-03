@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -10,12 +10,12 @@
 #endregion
 
 using System.Collections.Generic;
-using OpenRA.FileSystem;
-using OpenRA.Mods.Common.Lint;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Widgets;
+using Arklight.FileSystem;
+using Arklight.Mods.Common.Lint;
+using Arklight.Mods.Common.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets.Logic.Ingame
+namespace Arklight.Mods.Common.Widgets.Logic.Ingame
 {
 	[ChromeLogicArgsHotkeys("EditorQuickSaveKey")]
 	public class EditorQuickSaveHotkeyLogic : SingleHotkeyBaseLogic
@@ -59,3 +59,4 @@ namespace OpenRA.Mods.Common.Widgets.Logic.Ingame
 		}
 	}
 }
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,13 +13,13 @@ using System;
 using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Mods.Common.Activities;
-using OpenRA.Primitives;
-using OpenRA.Support;
-using OpenRA.Traits;
-using static OpenRA.Mods.Common.Traits.DockActorTargeter;
+using Arklight.Mods.Common.Activities;
+using Arklight.Primitives;
+using Arklight.Support;
+using Arklight.Traits;
+using static Arklight.Mods.Common.Traits.DockActorTargeter;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[Desc("Manages DockClients on the actor.")]
 	public class DockClientManagerInfo : ConditionalTraitInfo, IDockClientManagerInfo
@@ -436,3 +436,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

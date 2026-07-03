@@ -1,6 +1,6 @@
 # OGame 0.84 Reference Documentation
 
-This folder documents the external PHP project [`ogamespec/ogame-opensource`](https://github.com/ogamespec/ogame-opensource), described by that project as a revived OGame v0.84 implementation. It is added as a reference package inside this repository; it does not port the PHP browser-game logic into OpenRA's C# RTS engine.
+This folder documents the external PHP project [`ogamespec/ogame-opensource`](https://github.com/ogamespec/ogame-opensource), described by that project as a revived OGame v0.84 implementation. It is added as a reference package inside this repository; it does not port the PHP browser-game logic into Arklight's C# RTS engine.
 
 Generated from local clone path: `.external/ogame-opensource`.
 
@@ -11,7 +11,7 @@ Generated from local clone path: `.external/ogame-opensource`.
 - [Stellar RTS/4X/MMORPG Blueprint](stellar-rts-4x-design.md): fictional 12-act, 600-chapter campaign framework with 35 chapter detail elements, 90 system classes, and hybrid strategy/MMORPG UI pillars.
 - [In-Game UI Redesign Pass](ingame-ui-redesign.md): Red Alert HUD and shared in-game menu chrome updated toward Stellaris/OGame/RTS-4X/MMORPG styling.
 - [Stellaris/OGame Menu Taxonomy](stellaris-menu-taxonomy.md): top categories, submenus, pages, subpages, and reusable window-frame regions for the strategy UI shell.
-- [Implementation Scaffold](implementation-scaffold.md): C# files added under `OpenRA.Mods.Common/OGame084` for feature catalogs, economy, queues, fleet logic, battle logic, campaign generation, and UI state modeling.
+- [Implementation Scaffold](implementation-scaffold.md): C# files added under `Arklight.Mods.Common/OGame084` for feature catalogs, economy, queues, fleet logic, battle logic, campaign generation, and UI state modeling.
 - [All Classes UML](all-classes.md): generated Mermaid class diagram and class source table for every PHP class under `game/`.
 - [Source Index](source-index.md): all source files under `game/` with extracted PHP classes/functions where possible.
 
@@ -30,4 +30,5 @@ Generated from local clone path: `.external/ogame-opensource`.
 
 ## Scope Note
 
-The source is a PHP/MySQL browser game with procedural modules and page controllers. OpenRA is a C# real-time strategy engine with trait-driven actors. Treat these docs as design input for a future port, not as executable OpenRA gameplay.
+The source is a PHP/MySQL browser game with procedural modules and page controllers. Arklight is a C# real-time strategy engine with trait-driven actors. Treat these docs as design input for a future port, not as executable Arklight gameplay.
+

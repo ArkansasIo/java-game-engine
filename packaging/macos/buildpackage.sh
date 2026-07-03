@@ -1,5 +1,5 @@
 #!/bin/bash
-# OpenRA packaging script for macOS
+# Arklight packaging script for macOS
 #
 # The application bundles will be signed if the following environment variables are defined:
 #   MACOS_DEVELOPER_IDENTITY: The alphanumeric identifier listed in the certificate name ("Developer ID Application: <your name> (<identity>)")
@@ -99,7 +99,7 @@ build_app() {
 	# Set launcher metadata
 	modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 	modify_plist "{MOD_NAME}" "${MOD_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	modify_plist "{JOIN_SERVER_URL_SCHEME}" "Arklight-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 	modify_plist "{DISCORD_URL_SCHEME}" "discord-${DISCORD_APPID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 
 	# Sign binaries with developer certificate
@@ -119,7 +119,7 @@ mkdir -p "${TEMPLATE_DIR}/Contents/MacOS/arm64"
 echo "APPL????" > "${TEMPLATE_DIR}/Contents/PkgInfo"
 cp Info.plist.in "${TEMPLATE_DIR}/Contents/Info.plist"
 modify_plist "{DEV_VERSION}" "${TAG}" "${TEMPLATE_DIR}/Contents/Info.plist"
-modify_plist "{FAQ_URL}" "https://wiki.openra.net/FAQ" "${TEMPLATE_DIR}/Contents/Info.plist"
+modify_plist "{FAQ_URL}" "https://wiki.Arklight.net/FAQ" "${TEMPLATE_DIR}/Contents/Info.plist"
 modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.15" "${TEMPLATE_DIR}/Contents/Info.plist"
 
 # Compile universal (x86_64 + arm64) arch-specific apphosts
@@ -138,30 +138,30 @@ clang utility.m -o "${TEMPLATE_DIR}/Contents/MacOS/Utility-arm64" -framework App
 lipo -create -output "${TEMPLATE_DIR}/Contents/MacOS/Utility" "${TEMPLATE_DIR}/Contents/MacOS/Utility-x86_64" "${TEMPLATE_DIR}/Contents/MacOS/Utility-arm64"
 rm "${TEMPLATE_DIR}/Contents/MacOS/Utility-x86_64" "${TEMPLATE_DIR}/Contents/MacOS/Utility-arm64"
 
-build_app "${TEMPLATE_DIR}" "${BUILTDIR}/OpenRA - Red Alert.app" "ra" "Red Alert" "699222659766026240"
-build_app "${TEMPLATE_DIR}" "${BUILTDIR}/OpenRA - Tiberian Dawn.app" "cnc" "Tiberian Dawn" "699223250181292033"
-build_app "${TEMPLATE_DIR}" "${BUILTDIR}/OpenRA - Dune 2000.app" "d2k" "Dune 2000" "712711732770111550"
+build_app "${TEMPLATE_DIR}" "${BUILTDIR}/Arklight - Red Alert.app" "ra" "Red Alert" "699222659766026240"
+build_app "${TEMPLATE_DIR}" "${BUILTDIR}/Arklight - Tiberian Dawn.app" "cnc" "Tiberian Dawn" "699223250181292033"
+build_app "${TEMPLATE_DIR}" "${BUILTDIR}/Arklight - Dune 2000.app" "d2k" "Dune 2000" "712711732770111550"
 
 rm -rf "${TEMPLATE_DIR}"
 
 echo "Packaging disk image"
-if hdiutil info | grep -q "/Volumes/OpenRA"; then
-  echo "Some process is stealing our resources! /Volumes/OpenRA is already mounted!"
+if hdiutil info | grep -q "/Volumes/Arklight"; then
+  echo "Some process is stealing our resources! /Volumes/Arklight is already mounted!"
 fi
 
-hdiutil create "build.dmg" -format UDRW -volname "OpenRA" -fs HFS+ -srcfolder build
+hdiutil create "build.dmg" -format UDRW -volname "Arklight" -fs HFS+ -srcfolder build
 DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "build.dmg" | egrep '^/dev/' | sed 1q | awk '{print $1}')
 sleep 2
 
 # Background image is created from source svg in artsrc repository
-mkdir "/Volumes/OpenRA/.background/"
-tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/macos-background-2x.png" -out "/Volumes/OpenRA/.background/background.tiff"
+mkdir "/Volumes/Arklight/.background/"
+tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/macos-background-2x.png" -out "/Volumes/Arklight/.background/background.tiff"
 
-cp "${BUILTDIR}/OpenRA - Red Alert.app/Contents/Resources/ra.icns" "/Volumes/OpenRA/.VolumeIcon.icns"
+cp "${BUILTDIR}/Arklight - Red Alert.app/Contents/Resources/ra.icns" "/Volumes/Arklight/.VolumeIcon.icns"
 
 echo '
    tell application "Finder"
-     tell disk "'OpenRA'"
+     tell disk "'Arklight'"
            open
            set current view of container window to icon view
            set toolbar visible of container window to false
@@ -172,9 +172,9 @@ echo '
            set icon size of theViewOptions to 72
            set background picture of theViewOptions to file ".background:background.tiff"
            make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
-           set position of item "'OpenRA - Tiberian Dawn.app'" of container window to {160, 106}
-           set position of item "'OpenRA - Red Alert.app'" of container window to {320, 106}
-           set position of item "'OpenRA - Dune 2000.app'" of container window to {480, 106}
+           set position of item "'Arklight - Tiberian Dawn.app'" of container window to {160, 106}
+           set position of item "'Arklight - Red Alert.app'" of container window to {320, 106}
+           set position of item "'Arklight - Dune 2000.app'" of container window to {480, 106}
            set position of item "Applications" of container window to {320, 298}
            set position of item ".background" of container window to {160, 298}
            set position of item ".fseventsd" of container window to {160, 298}
@@ -187,15 +187,15 @@ echo '
 ' | osascript
 
 # HACK: Copy the volume icon again - something in the previous step seems to delete it...?
-cp "${BUILTDIR}/OpenRA - Red Alert.app/Contents/Resources/ra.icns" "/Volumes/OpenRA/.VolumeIcon.icns"
-SetFile -c icnC "/Volumes/OpenRA/.VolumeIcon.icns"
-SetFile -a C "/Volumes/OpenRA"
+cp "${BUILTDIR}/Arklight - Red Alert.app/Contents/Resources/ra.icns" "/Volumes/Arklight/.VolumeIcon.icns"
+SetFile -c icnC "/Volumes/Arklight/.VolumeIcon.icns"
+SetFile -a C "/Volumes/Arklight"
 
 # Replace duplicate .NET runtime files with hard links to improve compression
 for MOD in "Red Alert" "Tiberian Dawn"; do
 	for p in "x86_64" "arm64"; do
-		for f in "/Volumes/OpenRA/OpenRA - ${MOD}.app/Contents/MacOS/${p}"/*; do
-			g="/Volumes/OpenRA/OpenRA - Dune 2000.app/Contents/MacOS/${p}/"$(basename "${f}")
+		for f in "/Volumes/Arklight/Arklight - ${MOD}.app/Contents/MacOS/${p}"/*; do
+			g="/Volumes/Arklight/Arklight - Dune 2000.app/Contents/MacOS/${p}/"$(basename "${f}")
 			hashf=$(shasum "${f}" | awk '{ print $1 }') || :
 			hashg=$(shasum "${g}" | awk '{ print $1 }') || :
 			if [ -n "${hashf}" ] && [ "${hashf}" = "${hashg}" ]; then
@@ -208,8 +208,8 @@ for MOD in "Red Alert" "Tiberian Dawn"; do
 done
 
 for MOD in "Red Alert" "Tiberian Dawn" "Dune 2000"; do
-	for f in "/Volumes/OpenRA/OpenRA - ${MOD}.app/Contents/MacOS/x86_64"/*; do
-		g="/Volumes/OpenRA/OpenRA - ${MOD}.app/Contents/MacOS/arm64/"$(basename "${f}")
+	for f in "/Volumes/Arklight/Arklight - ${MOD}.app/Contents/MacOS/x86_64"/*; do
+		g="/Volumes/Arklight/Arklight - ${MOD}.app/Contents/MacOS/arm64/"$(basename "${f}")
 		if [ -e "${g}" ]; then
 			hashf=$(shasum "${f}" | awk '{ print $1 }') || :
 			hashg=$(shasum "${g}" | awk '{ print $1 }') || :
@@ -222,7 +222,7 @@ for MOD in "Red Alert" "Tiberian Dawn" "Dune 2000"; do
 	done
 done
 
-chmod -Rf go-w /Volumes/OpenRA
+chmod -Rf go-w /Volumes/Arklight
 sync
 sync
 
@@ -250,9 +250,9 @@ if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ] 
 	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "build.dmg" | egrep '^/dev/' | sed 1q | awk '{print $1}')
 	sleep 2
 
-	xcrun stapler staple "/Volumes/OpenRA/OpenRA - Red Alert.app"
-	xcrun stapler staple "/Volumes/OpenRA/OpenRA - Tiberian Dawn.app"
-	xcrun stapler staple "/Volumes/OpenRA/OpenRA - Dune 2000.app"
+	xcrun stapler staple "/Volumes/Arklight/Arklight - Red Alert.app"
+	xcrun stapler staple "/Volumes/Arklight/Arklight - Tiberian Dawn.app"
+	xcrun stapler staple "/Volumes/Arklight/Arklight - Dune 2000.app"
 
 	sync
 	sync
@@ -260,5 +260,6 @@ if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ] 
 	hdiutil detach "${DMG_DEVICE}"
 fi
 
-hdiutil convert "build.dmg" -format ULFO -ov -o "${OUTPUTDIR}/OpenRA-${TAG}.dmg"
+hdiutil convert "build.dmg" -format ULFO -ov -o "${OUTPUTDIR}/Arklight-${TAG}.dmg"
 rm "build.dmg"
+

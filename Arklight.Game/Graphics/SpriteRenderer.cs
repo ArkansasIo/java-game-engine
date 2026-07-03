@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,9 +12,9 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using OpenRA.Primitives;
+using Arklight.Primitives;
 
-namespace OpenRA.Graphics
+namespace Arklight.Graphics
 {
 	public class SpriteRenderer : Renderer.IBatchRenderer
 	{
@@ -227,7 +227,7 @@ namespace OpenRA.Graphics
 			var height = 2f / (downscale * sheetSize.Height);
 
 			// Depth is more complicated:
-			// * The OpenGL z axis is inverted (negative is closer) relative to OpenRA (positive is closer).
+			// * The OpenGL z axis is inverted (negative is closer) relative to Arklight (positive is closer).
 			// * We want to avoid clipping pixels that are behind the nominal z == y plane at the
 			//   top of the map, or above the nominal z == y plane at the bottom of the map.
 			//   We therefore expand the depth range by an extra margin that is calculated based on
@@ -259,3 +259,4 @@ namespace OpenRA.Graphics
 		}
 	}
 }
+

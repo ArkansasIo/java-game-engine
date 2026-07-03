@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -10,12 +10,12 @@
 #endregion
 
 using System;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.EditorBrushes;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Widgets;
+using Arklight.Graphics;
+using Arklight.Mods.Common.EditorBrushes;
+using Arklight.Mods.Common.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets.Logic
+namespace Arklight.Mods.Common.Widgets.Logic
 {
 	[IncludeStaticFluentReferences(typeof(CopyPasteEditorAction))]
 	public class MapEditorSelectionLogic : ChromeLogic
@@ -150,3 +150,4 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		static string DimensionsAsString(CPos cell) => $"{cell.X}x{cell.Y}";
 	}
 }
+

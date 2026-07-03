@@ -30,7 +30,7 @@ button-connection-switchmod-panel-abort = Abort
 button-connection-switchmod-panel-switch = Switch
 
 ## credits.yaml
-label-openra = OpenRA
+label-Arklight = Arklight
 
 ## credits.yaml, mainmenu.yaml
 label-credits-title = Credits
@@ -127,7 +127,7 @@ label-load-game-browser-panel-title = Load Game
 label-load-game-browser-panel-choose-save = Choose Save
 label-load-game-browser-panel-incompatible-title = Incompatible Savegame
 label-load-game-browser-panel-incompatible-a = This savegame is not compatible
-label-load-game-browser-panel-incompatible-b = with this version of OpenRA
+label-load-game-browser-panel-incompatible-b = with this version of Arklight
 label-load-game-browser-panel-human-player = Player
 button-load-game-browser-panel-load = Load
 tooltip-savegame-date-created = Date Created
@@ -371,15 +371,15 @@ button-force-start-dialog-start = Start
 
 ## lobby-mappreview.yaml
 label-map-incompatible-status-a = This map is not compatible
-label-map-incompatible-status-b = with this version of OpenRA
+label-map-incompatible-status-b = with this version of Arklight
 label-map-validating-status = Validating...
 label-map-generating-status = Generating...
 button-map-download-available-install = Install Map
 button-map-preview-update = Update Map
 button-map-update-download-available-install = Install Map
-label-map-preview-searching = Searching OpenRA Resource Center...
+label-map-preview-searching = Searching Arklight Resource Center...
 label-map-unavailable-a = This map was not found on the
-label-map-unavailable-b = OpenRA Resource Center
+label-map-unavailable-b = Arklight Resource Center
 label-map-preview-error = An error occurred during installation
 label-map-update-available-a = A new version of the map
 label-map-update-available-b = was found on your computer
@@ -422,7 +422,7 @@ button-lobby-players-spectate = Spectate
 
 ## lobby-servers.yaml
 image-lobby-servers-bin-password-protected-tooltip = Requires Password
-image-lobby-servers-bin-requires-authentication-tooltip = Requires OpenRA forum account
+image-lobby-servers-bin-requires-authentication-tooltip = Requires Arklight forum account
 dropdownbutton-lobby-servers-bin-filters = Filter Games
 
 ## lobby.yaml
@@ -447,7 +447,7 @@ label-mainmenu-introduction-prompt-title = Establishing Battlefield Control
 label-bg-desc-a = Welcome back Commander! Initialize combat parameters using the options below.
 label-bg-desc-b = Additional options can be configured later from the Settings menu.
 label-mainmenu-system-info-prompt-title = Establishing Battlefield Control
-label-bg-prompt-text-a = We would like to collect some details that will help us optimize OpenRA.
+label-bg-prompt-text-a = We would like to collect some details that will help us optimize Arklight.
 label-bg-prompt-text-b = With your permission, the following anonymous system data will be sent:
 checkbox-bg-sysinfo = Send System Information
 
@@ -508,8 +508,8 @@ button-extras-menu-assetbrowser = Asset Browser
 button-map-editor-new-map = New Map
 button-map-editor-load-map = Load Map
 dropdownbutton-news-bg-button = Battlefield News
-label-update-notice-a = You are running an outdated version of OpenRA.
-label-update-notice-b = Download the latest version from www.openra.net
+label-update-notice-a = You are running an outdated version of Arklight.
+label-update-notice-b = Download the latest version from www.Arklight.net
 
 ## mainmenu.yaml, missionbrowser.yaml
 label-missions-title = Missions
@@ -555,7 +555,7 @@ label-missionbrowser-normal-difficulty = Normal
 
 ## multiplayer-browser.yaml
 image-bg-password-protected-tooltip = Requires Password
-image-bg-requires-authentication-tooltip = Requires OpenRA forum account
+image-bg-requires-authentication-tooltip = Requires Arklight forum account
 button-selected-server-join = Join
 dropdownbutton-bg-filters = Filter Games
 button-bg-directconnect = Direct IP
@@ -566,9 +566,9 @@ label-container-server = Server
 label-container-players = Players
 label-container-location = Location
 label-container-status = Status
-label-bg-outdated-version = You are running an outdated version of OpenRA. Download the latest version from www.openra.net
-label-bg-unknown-version = You are running an unrecognized version of OpenRA. Download the latest version from www.openra.net
-label-bg-playtest-available = A preview of the next OpenRA release is available for testing. Download the playtest from www.openra.net
+label-bg-outdated-version = You are running an outdated version of Arklight. Download the latest version from www.Arklight.net
+label-bg-unknown-version = You are running an unrecognized version of Arklight. Download the latest version from www.Arklight.net
+label-bg-playtest-available = A preview of the next Arklight release is available for testing. Download the playtest from www.Arklight.net
 
 ## multiplayer-browserpanels.yaml
 checkbox-multiplayer-filter-panel-waiting-for-players = Waiting
@@ -612,17 +612,17 @@ button-profile-header-logout = Logout
 label-generate-keys-desc-a = Connect to a forum account to identify
 label-generate-keys-desc-b = yourself to other players, join private
 label-generate-keys-desc-c = servers, and display badges.
-button-generate-keys-key = Connect to an OpenRA forum account
+button-generate-keys-key = Connect to an Arklight forum account
 label-generating-keys-desc-a = Generating authentication key pair.
 label-generating-keys-desc-b = This will take several seconds...
 label-register-fingerprint-desc-a = An authentication key has been copied to your
 label-register-fingerprint-desc-b = clipboard. Add this to your User Control Panel
-label-register-fingerprint-desc-c = on the OpenRA forum then press Continue.
+label-register-fingerprint-desc-c = on the Arklight forum then press Continue.
 label-checking-fingerprint-desc-a = Querying account details from
-label-checking-fingerprint-desc-b = the OpenRA forum...
+label-checking-fingerprint-desc-b = the Arklight forum...
 label-fingerprint-not-found-desc-a = Your authentication key is not connected
-label-fingerprint-not-found-desc-b = to an OpenRA forum account.
-label-connection-error-desc-a = Failed to connect to the OpenRA forum.
+label-fingerprint-not-found-desc-b = to an Arklight forum account.
+label-connection-error-desc-a = Failed to connect to the Arklight forum.
 label-connection-error-desc-b = Please check your internet connection.
 
 ## replaybrowser.yaml
@@ -768,4 +768,5 @@ label-anonymous-player-tooltip-name = Anonymous Player
 label-bot-player-tooltip-name = Bot
 label-bot-managed-by-tooltip = Bot managed by { $name }
 label-game-admin = Game Admin
+
 

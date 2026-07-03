@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,10 +13,10 @@ using System;
 using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Network;
-using OpenRA.Primitives;
+using Arklight.Network;
+using Arklight.Primitives;
 
-namespace OpenRA
+namespace Arklight
 {
 	public class GameInformation
 	{
@@ -48,7 +48,7 @@ namespace OpenRA
 		[FieldLoader.Ignore]
 		public MapGenerationArgs MapGenerationArgs;
 
-		readonly Dictionary<OpenRA.Player, Player> playersByRuntime;
+		readonly Dictionary<Arklight.Player, Player> playersByRuntime;
 
 		public GameInformation()
 		{
@@ -121,7 +121,7 @@ namespace OpenRA
 		}
 
 		/// <summary>Adds the player information at start-up.</summary>
-		public void AddPlayer(OpenRA.Player runtimePlayer, Session lobbyInfo)
+		public void AddPlayer(Arklight.Player runtimePlayer, Session lobbyInfo)
 		{
 			ArgumentNullException.ThrowIfNull(runtimePlayer);
 
@@ -147,7 +147,7 @@ namespace OpenRA
 				FactionId = runtimePlayer.Faction.InternalName,
 				DisplayFactionName = runtimePlayer.DisplayFaction.Name,
 				DisplayFactionId = runtimePlayer.DisplayFaction.InternalName,
-				Color = OpenRA.Player.GetColor(runtimePlayer),
+				Color = Arklight.Player.GetColor(runtimePlayer),
 				Team = client.Team,
 				Handicap = client.Handicap,
 				SpawnPoint = runtimePlayer.SpawnPoint,
@@ -161,7 +161,7 @@ namespace OpenRA
 		}
 
 		/// <summary>Gets the player information for the specified runtime player instance.</summary>
-		public Player GetPlayer(OpenRA.Player runtimePlayer)
+		public Player GetPlayer(Arklight.Player runtimePlayer)
 		{
 			playersByRuntime.TryGetValue(runtimePlayer, out var player);
 
@@ -215,7 +215,7 @@ namespace OpenRA
 			/// <summary>True if the spawn point was chosen at random; otherwise, false.</summary>
 			public bool IsRandomSpawnPoint;
 
-			/// <summary>Player authentication fingerprint for the OpenRA forum.</summary>
+			/// <summary>Player authentication fingerprint for the Arklight forum.</summary>
 			public string Fingerprint;
 
 			#endregion
@@ -235,3 +235,4 @@ namespace OpenRA
 		}
 	}
 }
+

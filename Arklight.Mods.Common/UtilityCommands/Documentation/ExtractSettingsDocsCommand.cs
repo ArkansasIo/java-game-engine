@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,7 +13,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 
-namespace OpenRA.Mods.Common.UtilityCommands.Documentation
+namespace Arklight.Mods.Common.UtilityCommands.Documentation
 {
 	sealed class ExtractSettingsDocsCommand : IUtilityCommand
 	{
@@ -75,23 +75,23 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 			Console.WriteLine(
 				"This documentation displays annotated settings with default values and description. " +
 				"Please do not edit it directly, but add new `[Desc(\"String\")]` tags to the source code. This file has been " +
-				$"automatically generated for version {version} of OpenRA.");
+				$"automatically generated for version {version} of Arklight.");
 			Console.WriteLine();
 			Console.WriteLine("All settings can be changed by starting the game via a command-line parameter like `Game.Mod=ra`.");
 			Console.WriteLine();
 			Console.WriteLine("## Location");
-			Console.WriteLine("* Windows: `%APPDATA%\\OpenRA\\settings.yaml`");
-			Console.WriteLine("* Mac OS X: `~/Library/Application Support/OpenRA/settings.yaml`");
-			Console.WriteLine("* Linux `~/.config/openra/settings.yaml`");
+			Console.WriteLine("* Windows: `%APPDATA%\\Arklight\\settings.yaml`");
+			Console.WriteLine("* Mac OS X: `~/Library/Application Support/Arklight/settings.yaml`");
+			Console.WriteLine("* Linux `~/.config/Arklight/settings.yaml`");
 			Console.WriteLine();
 			Console.WriteLine(
 				"Older releases (before playtest-20190825) used different locations, " +
 				"which newer versions may continue to use in some circumstances:");
-			Console.WriteLine("* Windows: `%USERPROFILE%\\Documents\\OpenRA\\settings.yaml`");
-			Console.WriteLine("* Linux `~/.openra/settings.yaml`");
+			Console.WriteLine("* Windows: `%USERPROFILE%\\Documents\\Arklight\\settings.yaml`");
+			Console.WriteLine("* Linux `~/.Arklight/settings.yaml`");
 			Console.WriteLine();
 			Console.WriteLine(
-				"If you create the folder `Support` relative to the OpenRA main directory, everything " +
+				"If you create the folder `Support` relative to the Arklight main directory, everything " +
 				"including settings gets stored there to aid portable installations.");
 			Console.WriteLine();
 
@@ -110,3 +110,4 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 		}
 	}
 }
+

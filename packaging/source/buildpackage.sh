@@ -1,5 +1,5 @@
 #!/bin/bash
-# OpenRA packaging script for versioned source tarball
+# Arklight packaging script for versioned source tarball
 
 set -o errexit -o pipefail || exit $?
 
@@ -22,10 +22,11 @@ make version VERSION="${TAG}"
 # The output from `git ls-tree` is too long to fit in a single command (overflows MAX_ARG_STRLEN)
 # so `xargs` will automatically split the input across multiple `tar` commands.
 # Use the amend flag (r) to prevent each call erasing the output from earlier calls.
-rm "${OUTPUTDIR}/OpenRA-${TAG}-source.tar" || :
-git ls-tree HEAD --name-only -r -z | xargs -0 tar vrf "${OUTPUTDIR}/OpenRA-${TAG}-source.tar"
+rm "${OUTPUTDIR}/Arklight-${TAG}-source.tar" || :
+git ls-tree HEAD --name-only -r -z | xargs -0 tar vrf "${OUTPUTDIR}/Arklight-${TAG}-source.tar"
 ./fetch-geoip.sh
-tar -rvf "${OUTPUTDIR}/OpenRA-${TAG}-source.tar" IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP
-bzip2 "${OUTPUTDIR}/OpenRA-${TAG}-source.tar"
+tar -rvf "${OUTPUTDIR}/Arklight-${TAG}-source.tar" IP2LOCATION-LITE-DB1.IPV6.BIN.ZIP
+bzip2 "${OUTPUTDIR}/Arklight-${TAG}-source.tar"
 
 popd > /dev/null
+

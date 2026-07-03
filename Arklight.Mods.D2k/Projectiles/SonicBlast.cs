@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,15 +12,15 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using OpenRA.GameRules;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.D2k.Graphics;
-using OpenRA.Mods.D2k.Traits;
-using OpenRA.Traits;
+using Arklight.GameRules;
+using Arklight.Graphics;
+using Arklight.Mods.Common;
+using Arklight.Mods.Common.Traits;
+using Arklight.Mods.D2k.Graphics;
+using Arklight.Mods.D2k.Traits;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.D2k.Projectiles
+namespace Arklight.Mods.D2k.Projectiles
 {
 	[Desc("Blast projectile that travels in a straight line.")]
 	public class SonicBlastInfo : IProjectileInfo
@@ -155,3 +155,4 @@ namespace OpenRA.Mods.D2k.Projectiles
 		}
 	}
 }
+

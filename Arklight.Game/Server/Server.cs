@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -22,13 +22,13 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using OpenRA.FileFormats;
-using OpenRA.Network;
-using OpenRA.Primitives;
-using OpenRA.Support;
-using OpenRA.Traits;
+using Arklight.FileFormats;
+using Arklight.Network;
+using Arklight.Primitives;
+using Arklight.Support;
+using Arklight.Traits;
 
-namespace OpenRA.Server
+namespace Arklight.Server
 {
 	public enum ServerState
 	{
@@ -429,7 +429,7 @@ namespace OpenRA.Server
 
 			// Validate player identity by asking them to sign a random blob of data
 			// which we can then verify against the player public key database
-			var token = Convert.ToBase64String(OpenRA.Exts.MakeArray(256, _ => (byte)Random.Next()));
+			var token = Convert.ToBase64String(Arklight.Exts.MakeArray(256, _ => (byte)Random.Next()));
 
 			var newConn = new Connection(this, socket, token);
 			try
@@ -489,7 +489,7 @@ namespace OpenRA.Server
 				var ipAddress = ((IPEndPoint)newConn.EndPoint).Address;
 				var client = new Session.Client
 				{
-					Name = OpenRA.Settings.SanitizedPlayerName(handshake.Client.Name),
+					Name = Arklight.Settings.SanitizedPlayerName(handshake.Client.Name),
 					IPAddress = ipAddress.ToString(),
 					AnonymizedIPAddress = IsMultiplayer && Settings.ShareAnonymizedIPs ? Session.AnonymizeIP(ipAddress) : null,
 					Location = GeoIP.LookupCountry(ipAddress),
@@ -1029,7 +1029,7 @@ namespace OpenRA.Server
 						if (GameSave != null)
 						{
 							var data = MiniYaml.FromString(o.TargetString, o.OrderString).First();
-							GameSave.AddTraitData(OpenRA.Exts.ParseInt32Invariant(data.Key), data.Value);
+							GameSave.AddTraitData(Arklight.Exts.ParseInt32Invariant(data.Key), data.Value);
 						}
 
 						break;
@@ -1592,3 +1592,4 @@ namespace OpenRA.Server
 		}
 	}
 }
+

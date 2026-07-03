@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,12 +11,12 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.GameRules;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Support;
-using OpenRA.Traits;
+using Arklight.GameRules;
+using Arklight.Mods.Common.Traits;
+using Arklight.Support;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Cnc.Traits
+namespace Arklight.Mods.Cnc.Traits
 {
 	[Desc("Will open and be passable for actors that appear friendly when there are no enemies in range.")]
 	public class EnergyWallInfo : BuildingInfo, ITemporaryBlockerInfo, IObservesVariablesInfo, IRulesetLoaded
@@ -109,3 +109,4 @@ namespace OpenRA.Mods.Cnc.Traits
 		}
 	}
 }
+

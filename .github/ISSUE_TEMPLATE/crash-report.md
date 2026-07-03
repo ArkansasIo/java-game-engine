@@ -1,6 +1,6 @@
 ---
 name: Crash report
-about: Report a game crash. Check the FAQ first https://github.com/OpenRA/OpenRA/wiki/FAQ#common-issues
+about: Report a game crash. Check the FAQ first https://github.com/Arklight/Arklight/wiki/FAQ#common-issues
 title: My game crashed
 labels: Crash
 assignees: ''
@@ -13,13 +13,13 @@ assignees: ''
 <!-- Information about the operating system, engine version, game mod and package source are mandatory for investigating and fixing crashes. -->
 
 - Operating System:  OPERATING SYSTEM
-- OpenRA Version: ENGINE VERSION
-- OpenRA Mod: GAME MOD
+- Arklight Version: ENGINE VERSION
+- Arklight Mod: GAME MOD
 - Source: Official download package OR self-compiled OR third-party package
 
 
 ## Exception log
-<!-- Please replace the placeholder below with the content of the exception.log file. The three backticks before and after the placeholder are used for formatting, so don't remove them. If you don't find the log folder consult https://github.com/OpenRA/OpenRA/wiki/FAQ#my-game-just-crashed. -->
+<!-- Please replace the placeholder below with the content of the exception.log file. The three backticks before and after the placeholder are used for formatting, so don't remove them. If you don't find the log folder consult https://github.com/Arklight/Arklight/wiki/FAQ#my-game-just-crashed. -->
 
 ```
 PASTE LOG HERE
@@ -32,3 +32,4 @@ PASTE LOG HERE
 
 ## Additional information
 <!-- Please tell us below everything that you think is important for us to know about the crash. Specifically, what you were doing in the moment before the crash or ideally steps to reproduce it are very valuable information. -->
+

@@ -1,7 +1,7 @@
-﻿using NUnit.Framework;
-using OpenRA.Primitives;
+using NUnit.Framework;
+using Arklight.Primitives;
 
-namespace OpenRA.Test
+namespace Arklight.Test
 {
 	[TestFixture]
 	sealed class Sha1Tests
@@ -33,3 +33,4 @@ namespace OpenRA.Test
 		}
 	}
 }
+

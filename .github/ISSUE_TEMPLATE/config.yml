@@ -1,14 +1,15 @@
 blank_issues_enabled: false
 contact_links:
   - name: Frequently Asked Questions
-    url: https://github.com/OpenRA/OpenRA/wiki/FAQ#frequently-asked-questions
+    url: https://github.com/Arklight/Arklight/wiki/FAQ#frequently-asked-questions
     about: Explanations for common problems and questions.
-  - name: OpenRA Forum
-    url: https://forum.openra.net/
+  - name: Arklight Forum
+    url: https://forum.Arklight.net/
     about: Please ask questions about modding here.
-  - name: OpenRA Discord server
-    url: https://discord.openra.net/
+  - name: Arklight Discord server
+    url: https://discord.Arklight.net/
     about: Join the community Discord server for community discussion and support.
-  - name: OpenRA IRC Channel
-    url: https://web.libera.chat/#openra
+  - name: Arklight IRC Channel
+    url: https://web.libera.chat/#Arklight
     about: Join our development IRC channel on Libera for discussion of development topics.
+

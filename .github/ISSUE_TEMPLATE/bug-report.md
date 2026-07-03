@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report unexpected behavior or any issues you experienced in OpenRA.
+about: Report unexpected behavior or any issues you experienced in Arklight.
 title: ''
 labels: Bug
 assignees: ''
@@ -31,3 +31,4 @@ EXPECTED BEHAVIOR
 
 ## Screenshots / Screen recordings / Replays
 <!-- If applicable, attach screenshots, screen recordings or replays to help explain your problem. -->
+

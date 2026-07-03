@@ -16,7 +16,7 @@
 		},
 		{
 			"label": "Run Utility",
-			"command": "dotnet ${workspaceRoot}/bin/OpenRA.Utility.dll ${input:modId} ${input:command}",
+			"command": "dotnet ${workspaceRoot}/bin/Arklight.Utility.dll ${input:modId} ${input:command}",
 			"type": "shell",
 		}
 	],
@@ -34,3 +34,4 @@
 		},
 	]
 }
+

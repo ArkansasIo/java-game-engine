@@ -1,14 +1,15 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<IsPublishable Condition="'$(CopyD2kDll)' == 'False'">false</IsPublishable>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj">
+		<ProjectReference Include="..\Arklight.Game\Arklight.Game.csproj">
 			<Private>False</Private>
 		</ProjectReference>
-		<ProjectReference Include="..\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
+		<ProjectReference Include="..\Arklight.Mods.Common\Arklight.Mods.Common.csproj">
 			<Private>False</Private>
 		</ProjectReference>
 	</ItemGroup>
 </Project>
+

@@ -1,7 +1,7 @@
-ï»¿#region Copyright & License Information
+#region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,9 +13,9 @@ using System;
 using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Traits;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	public enum BotMcvExpansionMode { CheckResource, CheckBase, CheckCurrentLocation }
 
@@ -281,7 +281,7 @@ namespace OpenRA.Mods.Common.Traits
 			 *     note that: pathDistanceSquareFactor = resourceMapIndicesColumnCount * resourceMapIndicesColumnCount + resourceMapIndicesRowCount * resourceMapIndicesRowCount,
 			 *
 			 *     Consider a map, we divide it at the length of indiceSideLength = r, and then its resourceMapIndicesColumnCount = a, resourceMapIndicesRowCount = b,
-			 *     so the map.width â‰ˆ a*r, map.height â‰ˆ b*r,
+			 *     so the map.width ˜ a*r, map.height ˜ b*r,
 			 *     the maximum euclid distance-square between two points on the map is (a*r)(a*r) + (b*r)(b*r),
 			 *     so the maximum "weight of candidate's distance to current MCV" is from 0 to -((a*r)(a*r) + (b*r)(b*r)) / (a*a + b*b) = -r*r = -indiceSideLengthSquare.
 			 *
@@ -313,7 +313,7 @@ namespace OpenRA.Mods.Common.Traits
 			{
 				/*
 				 * CheckBase mode only considers the distance to current MCV, ally construction yard within range and enemy buildings within range.
-				 * Attaction has a base value of indiceSideLengthSquare >> 1 (1/2 of the maximum distance weight, 1/ sqrt(2) â‰ˆ 1/1.4 of maximum euclid distance in map)
+				 * Attaction has a base value of indiceSideLengthSquare >> 1 (1/2 of the maximum distance weight, 1/ sqrt(2) ˜ 1/1.4 of maximum euclid distance in map)
 				 */
 				case BotMcvExpansionMode.CheckBase:
 					var cb_conyardlocs = world.ActorsHavingTrait<Building>()
@@ -376,7 +376,7 @@ namespace OpenRA.Mods.Common.Traits
 				 * CheckResource mode considers the distance to current MCV, ally construction yard & refinery within range,
 				 * Attaction has a base value of:
 				 * 1. if not Mobile: indiceSideLengthSquare >> 2 (1/4 of the maximum distance weight, = 0.5 of the maximum euclid distance in map)
-				 * 2. if Mobile: indiceSideLengthSquare >> 1 (1/2 of the maximum distance weight, â‰ˆ 0.71 of the maximum euclid distance in map)
+				 * 2. if Mobile: indiceSideLengthSquare >> 1 (1/2 of the maximum distance weight, ˜ 0.71 of the maximum euclid distance in map)
 				 */
 				case BotMcvExpansionMode.CheckResource:
 
@@ -729,7 +729,7 @@ namespace OpenRA.Mods.Common.Traits
 				/* First, sort the cells that keep tryMaintainRange to target (meanwhile direction is from center to target) the first to be considered
 				 * by using following code. The idea is to use a linear combination of two distances-square for sorting weight.
 				 *
-				 * See comments in https://github.com/OpenRA/OpenRA/pull/22028#issuecomment-3242518793 for explaination.
+				 * See comments in https://github.com/Arklight/Arklight/pull/22028#issuecomment-3242518793 for explaination.
 				 */
 				if (source != target)
 				{
@@ -823,3 +823,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

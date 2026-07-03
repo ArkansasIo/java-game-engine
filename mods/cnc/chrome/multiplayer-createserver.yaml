@@ -30,7 +30,7 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 					Width: 215
 					MaxLength: 50
 					Height: 25
-					Text: My OpenRA Server
+					Text: My Arklight Server
 				Label@PASSWORD_LABEL:
 					Y: 49
 					Width: 105
@@ -230,3 +230,4 @@ Container@MULTIPLAYER_CREATESERVER_PANEL:
 			Height: 35
 			Text: button-multiplayer-createserver-panel-create
 		TooltipContainer@TOOLTIP_CONTAINER:
+

@@ -1,12 +1,13 @@
 [Desktop Entry]
 Type=Application
 Version=1.0
-Name=OpenRA - {MODNAME}
+Name=Arklight - {MODNAME}
 GenericName=Real Time Strategy Game
 GenericName[de]=Echtzeit-Strategiespiel
-Icon=openra-{MODID}
-Exec=openra-{MODID} %U
+Icon=Arklight-{MODID}
+Exec=Arklight-{MODID} %U
 Terminal=false
 Categories=Game;StrategyGame;
-StartupWMClass=openra-{MODID}-{TAG}
-MimeType=x-scheme-handler/openra-{MODID}-{TAG};x-scheme-handler/discord-{DISCORDAPPID};
+StartupWMClass=Arklight-{MODID}-{TAG}
+MimeType=x-scheme-handler/Arklight-{MODID}-{TAG};x-scheme-handler/discord-{DISCORDAPPID};
+

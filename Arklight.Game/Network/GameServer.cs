@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,9 +15,9 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Text.RegularExpressions;
-using OpenRA.Primitives;
+using Arklight.Primitives;
 
-namespace OpenRA.Network
+namespace Arklight.Network
 {
 	public class GameClient
 	{
@@ -106,7 +106,7 @@ namespace OpenRA.Network
 		/// <summary>Password protected.</summary>
 		public readonly bool Protected = false;
 
-		/// <summary>Players must be authenticated with the OpenRA forum.</summary>
+		/// <summary>Players must be authenticated with the Arklight forum.</summary>
 		public readonly bool Authentication = false;
 
 		/// <summary>UTC datetime string when the game changed to the Playing state.</summary>
@@ -263,3 +263,4 @@ namespace OpenRA.Network
 		}
 	}
 }
+

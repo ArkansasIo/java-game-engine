@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,12 +12,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.Graphics;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
+using Arklight.Graphics;
+using Arklight.Mods.Common.Graphics;
+using Arklight.Mods.Common.Traits;
+using Arklight.Primitives;
 
-namespace OpenRA.Mods.Common.HitShapes
+namespace Arklight.Mods.Common.HitShapes
 {
 	public class RectangleShape : IHitShape
 	{
@@ -145,3 +145,4 @@ namespace OpenRA.Mods.Common.HitShapes
 		}
 	}
 }
+

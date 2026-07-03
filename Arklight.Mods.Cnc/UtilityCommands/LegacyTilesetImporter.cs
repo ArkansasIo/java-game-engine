@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,9 +15,9 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
-using OpenRA.Mods.Common.FileFormats;
+using Arklight.Mods.Common.FileFormats;
 
-namespace OpenRA.Mods.Cnc.UtilityCommands
+namespace Arklight.Mods.Cnc.UtilityCommands
 {
 	sealed class ImportLegacyTilesetCommand : IUtilityCommand
 	{
@@ -28,7 +28,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 			return args.Length >= 3;
 		}
 
-		[Desc("FILENAME", "TEMPLATEEXTENSION", "[TILESETNAME]", "Convert a legacy tileset to the OpenRA format.")]
+		[Desc("FILENAME", "TEMPLATEEXTENSION", "[TILESETNAME]", "Convert a legacy tileset to the Arklight format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
@@ -190,3 +190,4 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		}
 	}
 }
+

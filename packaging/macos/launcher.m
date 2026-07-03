@@ -1,6 +1,6 @@
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation. For more information,
  * see COPYING.
@@ -14,11 +14,11 @@
 
 #define DOTNET_MIN_MACOS_VERSION 10.15
 
-@interface OpenRALauncher : NSObject <NSApplicationDelegate>
+@interface ArklightLauncher : NSObject <NSApplicationDelegate>
 - (void)launchGameWithArgs: (NSArray *)gameArgs;
 @end
 
-@implementation OpenRALauncher
+@implementation ArklightLauncher
 
 BOOL launched = NO;
 NSTask *gameTask;
@@ -33,7 +33,7 @@ NSTask *gameTask;
 			return title;
 	}
 
-	return @"OpenRA";
+	return @"Arklight";
 }
 
 - (void)exitWithCrashPrompt
@@ -56,7 +56,7 @@ NSTask *gameTask;
 
 	if (answer == NSAlertFirstButtonReturn)
 	{
-		NSString *logDir = [@"~/Library/Application Support/OpenRA/Logs/" stringByExpandingTildeInPath];
+		NSString *logDir = [@"~/Library/Application Support/Arklight/Logs/" stringByExpandingTildeInPath];
 		[[NSWorkspace sharedWorkspace] openFile: logDir withApplication:@"Finder"];
 	}
 	else if (answer == NSAlertSecondButtonReturn)
@@ -167,13 +167,13 @@ NSTask *gameTask;
 	{
 		launchPath = [exePath stringByAppendingPathComponent: @"apphost-arm64"];
 		hostPath = [exePath stringByAppendingPathComponent: @"arm64/libhostfxr.dylib"];;
-		dllPath = [exePath stringByAppendingPathComponent: @"arm64/OpenRA.dll"];
+		dllPath = [exePath stringByAppendingPathComponent: @"arm64/Arklight.dll"];
 	}
 	else
 	{
 		launchPath = [exePath stringByAppendingPathComponent: @"apphost-x86_64"];
 		hostPath = [exePath stringByAppendingPathComponent: @"x86_64/libhostfxr.dylib"];;
-		dllPath = [exePath stringByAppendingPathComponent: @"x86_64/OpenRA.dll"];
+		dllPath = [exePath stringByAppendingPathComponent: @"x86_64/Arklight.dll"];
 	}
 
 	NSString *appPath = [exePath stringByAppendingPathComponent: @"Launcher"];
@@ -190,7 +190,7 @@ NSTask *gameTask;
 
 	[launchArgs addObjectsFromArray: gameArgs];
 
-	NSLog(@"Running OpenRA with arguments:");
+	NSLog(@"Running Arklight with arguments:");
 	for (size_t i = 0; i < [launchArgs count]; i++)
 		NSLog(@"%@", [launchArgs objectAtIndex: i]);
 
@@ -279,7 +279,7 @@ int main(int argc, char **argv)
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	NSApplication *application = [NSApplication sharedApplication];
-	OpenRALauncher *launcher = [[OpenRALauncher alloc] init];
+	ArklightLauncher *launcher = [[ArklightLauncher alloc] init];
 	[NSApp setActivationPolicy: NSApplicationActivationPolicyProhibited];
 
 	[application setDelegate:launcher];
@@ -290,3 +290,4 @@ int main(int argc, char **argv)
 
 	return EXIT_SUCCESS;
 }
+

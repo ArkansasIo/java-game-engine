@@ -1,5 +1,5 @@
 {
-  "name": "OpenRA"
+  "name": "Arklight"
 , "files": [ { "git": 1 } ]
 , "build": {
   "directory": "."

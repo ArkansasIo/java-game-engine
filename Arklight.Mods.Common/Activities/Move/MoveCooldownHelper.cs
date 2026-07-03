@@ -1,7 +1,7 @@
-﻿using OpenRA.Activities;
-using OpenRA.Mods.Common.Traits;
+using Arklight.Activities;
+using Arklight.Mods.Common.Traits;
 
-namespace OpenRA.Mods.Common.Activities
+namespace Arklight.Mods.Common.Activities
 {
 	/// <summary>
 	/// Activities that queue move activities via <see cref="IMove"/> can use this helper to decide
@@ -98,3 +98,4 @@ namespace OpenRA.Mods.Common.Activities
 		}
 	}
 }
+

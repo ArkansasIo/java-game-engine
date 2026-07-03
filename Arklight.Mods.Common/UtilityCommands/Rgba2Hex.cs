@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,7 +11,7 @@
 
 using System;
 
-namespace OpenRA.Mods.Common.UtilityCommands
+namespace Arklight.Mods.Common.UtilityCommands
 {
 	sealed class Rgba2Hex : IUtilityCommand
 	{
@@ -53,10 +53,10 @@ namespace OpenRA.Mods.Common.UtilityCommands
 		{
 			Console.WriteLine("");
 			Console.WriteLine("Usage:");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --rgba2hex r1,g1,b1");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --rgba2hex r1,g1,b1,a1");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --rgba2hex r1,g1,b1 r2,g2,b2,a2");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --rgba2hex r1,g1,b1,a1 r2,g2,b2 ...");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --rgba2hex r1,g1,b1");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --rgba2hex r1,g1,b1,a1");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --rgba2hex r1,g1,b1 r2,g2,b2,a2");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --rgba2hex r1,g1,b1,a1 r2,g2,b2 ...");
 			Console.WriteLine("");
 			Console.WriteLine("\tNo spaces between the color components (red,green,blue[,alpha]).");
 			Console.WriteLine("\tSpaces between colors for a list; each argument is a color.");
@@ -141,11 +141,11 @@ namespace OpenRA.Mods.Common.UtilityCommands
 		{
 			Console.WriteLine("");
 			Console.WriteLine("Usage:");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --argb2hex a1,r1,g1,b1");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --argb2hex r1,g1,b1");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --argb2hex a1,r1,g1,b1 a2,r2,g2,b2");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --argb2hex a1,r1,g1,b1, a2,r2,g2,b2");
-			Console.WriteLine("\tOpenRA.Utility.exe [MOD] --argb2hex a1,r1,g1,b1 a2,r2,g2,b2 ...");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --argb2hex a1,r1,g1,b1");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --argb2hex r1,g1,b1");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --argb2hex a1,r1,g1,b1 a2,r2,g2,b2");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --argb2hex a1,r1,g1,b1, a2,r2,g2,b2");
+			Console.WriteLine("\tArklight.Utility.exe [MOD] --argb2hex a1,r1,g1,b1 a2,r2,g2,b2 ...");
 			Console.WriteLine("");
 			Console.WriteLine("\tNo spaces between color components ([alpha,]red,green,blue).");
 			Console.WriteLine("\tSpaces between colors for a list; each argument is a color.");
@@ -159,7 +159,7 @@ namespace OpenRA.Mods.Common.UtilityCommands
 			Console.WriteLine("\t[MOD] is any valid mod such as \"all\"");
 			Console.WriteLine("");
 			Console.WriteLine("Converting legacy color lists:");
-			Console.WriteLine("\tType into command line: OpenRA.Utility.exe all --argb2hex ");
+			Console.WriteLine("\tType into command line: Arklight.Utility.exe all --argb2hex ");
 			Console.WriteLine("\tFollow with a space.");
 			Console.WriteLine("\tCopy legacy color list and paste into command line");
 			Console.WriteLine("\t1.) Copying from command line terminal:");
@@ -206,3 +206,4 @@ namespace OpenRA.Mods.Common.UtilityCommands
 		}
 	}
 }
+

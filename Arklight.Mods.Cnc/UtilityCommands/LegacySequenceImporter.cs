@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,10 +12,10 @@
 using System;
 using System.IO;
 using System.Linq;
-using OpenRA.Mods.Common.FileFormats;
-using OpenRA.Primitives;
+using Arklight.Mods.Common.FileFormats;
+using Arklight.Primitives;
 
-namespace OpenRA.Mods.Cnc.UtilityCommands
+namespace Arklight.Mods.Cnc.UtilityCommands
 {
 	sealed class ImportLegacySequenceCommand : IUtilityCommand
 	{
@@ -29,7 +29,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		IniFile file;
 		Size tileSize;
 
-		[Desc("FILENAME", "Convert ART.INI to the OpenRA sequence definition format.")]
+		[Desc("FILENAME", "Convert ART.INI to the Arklight sequence definition format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
@@ -273,3 +273,4 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		}
 	}
 }
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,10 +15,10 @@ using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices;
-using OpenRA.Primitives;
+using Arklight.Primitives;
 using SDL2;
 
-namespace OpenRA.Platforms.Default
+namespace Arklight.Platforms.Default
 {
 	sealed class Sdl2PlatformWindow : ThreadAffine, IPlatformWindow
 	{
@@ -179,18 +179,18 @@ namespace OpenRA.Platforms.Default
 				// This is not necessary on macOS, which defines window sizes in effective units ("points").
 				if (Platform.CurrentPlatform == PlatformType.Windows)
 				{
-					// Launch the game with OPENRA_DISPLAY_SCALE to force a specific scaling factor
+					// Launch the game with Arklight_DISPLAY_SCALE to force a specific scaling factor
 					// Otherwise fall back to Windows's DPI configuration
-					var scaleVariable = Environment.GetEnvironmentVariable("OPENRA_DISPLAY_SCALE");
+					var scaleVariable = Environment.GetEnvironmentVariable("Arklight_DISPLAY_SCALE");
 					if (scaleVariable == null || !float.TryParse(scaleVariable, NumberStyles.Float, NumberFormatInfo.InvariantInfo, out windowScale) || windowScale <= 0)
 						if (SDL.SDL_GetDisplayDPI(videoDisplay, out var ddpi, out _, out _) == 0)
 							windowScale = ddpi / 96;
 				}
 				else if (Platform.CurrentPlatform == PlatformType.Linux)
 				{
-					// Launch the game with OPENRA_DISPLAY_SCALE to force a specific scaling factor
+					// Launch the game with Arklight_DISPLAY_SCALE to force a specific scaling factor
 					// Otherwise fall back to GDK_SCALE or parsing the x11 DPI configuration
-					var scaleVariable = Environment.GetEnvironmentVariable("OPENRA_DISPLAY_SCALE") ?? Environment.GetEnvironmentVariable("GDK_SCALE");
+					var scaleVariable = Environment.GetEnvironmentVariable("Arklight_DISPLAY_SCALE") ?? Environment.GetEnvironmentVariable("GDK_SCALE");
 					if (scaleVariable == null || !float.TryParse(scaleVariable, NumberStyles.Float, NumberFormatInfo.InvariantInfo, out windowScale) || windowScale <= 0)
 					{
 						// Attempt to automatically detect DPI
@@ -230,7 +230,7 @@ namespace OpenRA.Platforms.Default
 				if (Platform.CurrentPlatform == PlatformType.OSX && windowMode == WindowMode.Fullscreen)
 					SDL.SDL_SetHint(SDL.SDL_HINT_VIDEO_HIGHDPI_DISABLED, "1");
 
-				window = SDL.SDL_CreateWindow("OpenRA", SDL.SDL_WINDOWPOS_CENTERED_DISPLAY(videoDisplay), SDL.SDL_WINDOWPOS_CENTERED_DISPLAY(videoDisplay),
+				window = SDL.SDL_CreateWindow("Arklight", SDL.SDL_WINDOWPOS_CENTERED_DISPLAY(videoDisplay), SDL.SDL_WINDOWPOS_CENTERED_DISPLAY(videoDisplay),
 					windowSize.Width, windowSize.Height, WindowFlags);
 
 				if (Platform.CurrentPlatform == PlatformType.Linux)
@@ -238,7 +238,7 @@ namespace OpenRA.Platforms.Default
 					// The KDE task switcher limits itself to the 128px icon unless we
 					// set an X11 _KDE_NET_WM_DESKTOP_FILE property on the window
 					var currentDesktop = Environment.GetEnvironmentVariable("XDG_CURRENT_DESKTOP");
-					var desktopFilename = Environment.GetEnvironmentVariable("OPENRA_DESKTOP_FILENAME");
+					var desktopFilename = Environment.GetEnvironmentVariable("Arklight_DESKTOP_FILENAME");
 					if (desktopFilename != null && currentDesktop == "KDE")
 					{
 						try
@@ -617,3 +617,4 @@ namespace OpenRA.Platforms.Default
 		}
 	}
 }
+

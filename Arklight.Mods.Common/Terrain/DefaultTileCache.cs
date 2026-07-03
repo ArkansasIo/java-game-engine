@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -14,11 +14,11 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Primitives;
-using OpenRA.Support;
+using Arklight.Graphics;
+using Arklight.Primitives;
+using Arklight.Support;
 
-namespace OpenRA.Mods.Common.Terrain
+namespace Arklight.Mods.Common.Terrain
 {
 	public record TheaterTemplate(Sprite[] Sprites, int Stride, int Variants);
 
@@ -103,14 +103,14 @@ namespace OpenRA.Mods.Common.Terrain
 						var type = SheetBuilder.FrameTypeToSheetType(f.Type);
 
 						var s = sheetBuilders[type].Allocate(f.Size, zRamp, offset);
-						OpenRA.Graphics.Util.FastCopyIntoChannel(s, f.Data, f.Type);
+						Arklight.Graphics.Util.FastCopyIntoChannel(s, f.Data, f.Type);
 
 						if (terrainInfo.EnableDepth)
 						{
 							var depthFrame = depthFrames != null ? depthFrames[j] : allFrames[j + frameCount];
 							var depthType = SheetBuilder.FrameTypeToSheetType(depthFrame.Type);
 							var ss = sheetBuilders[depthType].Allocate(depthFrame.Size, zRamp, offset);
-							OpenRA.Graphics.Util.FastCopyIntoChannel(ss, depthFrame.Data, depthFrame.Type);
+							Arklight.Graphics.Util.FastCopyIntoChannel(ss, depthFrame.Data, depthFrame.Type);
 							s = new SpriteWithSecondaryData(s, ss.Sheet, ss.Bounds, ss.Channel);
 						}
 
@@ -178,3 +178,4 @@ namespace OpenRA.Mods.Common.Terrain
 		}
 	}
 }
+

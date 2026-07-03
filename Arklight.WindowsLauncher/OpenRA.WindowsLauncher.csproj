@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>winexe</OutputType>
 		<ApplicationIcon>$(LauncherIcon)</ApplicationIcon>
@@ -21,9 +21,10 @@
 		</AssemblyAttribute>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="OpenRA-SDL2-CS" Version="1.0.42" />
+		<PackageReference Include="Arklight-SDL2-CS" Version="1.0.42" />
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj" />
+		<ProjectReference Include="..\Arklight.Game\Arklight.Game.csproj" />
 	</ItemGroup>
 </Project>
+

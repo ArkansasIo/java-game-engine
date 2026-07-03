@@ -1,6 +1,6 @@
 # Stellaris/OGame Menu Taxonomy
 
-This document defines the in-game menu hierarchy staged by `mods/common/chrome/ingame-menu.yaml` and mirrored in `OpenRA.Mods.Common/OGame084/OGameInterfaceModel.cs`.
+This document defines the in-game menu hierarchy staged by `mods/common/chrome/ingame-menu.yaml` and mirrored in `Arklight.Mods.Common/OGame084/OGameInterfaceModel.cs`.
 
 ## Window Frame
 
@@ -11,7 +11,7 @@ This document defines the in-game menu hierarchy staged by `mods/common/chrome/i
 | Left Rail | Section-specific submenus and filters. |
 | Center Page | Active page and subpage content. |
 | Right Inspector | Selected object details, stats, warnings, and context actions. |
-| Footer | Hotkey hints, state text, queue warnings, and active OpenRA actions. |
+| Footer | Hotkey hints, state text, queue warnings, and active Arklight actions. |
 
 ## Categories
 
@@ -36,4 +36,5 @@ This document defines the in-game menu hierarchy staged by `mods/common/chrome/i
 - Left rail entries should switch center-page content once logic is added.
 - Center pages should support reusable sub-layouts: resource cards, queue rows, fleet slots, diplomacy dossiers, character equipment, quest chapters, battle reports, and settings forms.
 - Right inspector panes should show the selected planet, fleet, building, unit, technology, character item, faction, or quest.
-- Existing OpenRA pause-menu buttons remain active until each staged page receives dedicated chrome logic.
+- Existing Arklight pause-menu buttons remain active until each staged page receives dedicated chrome logic.
+

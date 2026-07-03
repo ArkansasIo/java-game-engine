@@ -13,8 +13,8 @@
     <ExternalConsole>false</ExternalConsole>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <Nullable>disable</Nullable>
-    <Product>OpenRA</Product>
-    <Copyright>Copyright (c) The OpenRA Developers and Contributors</Copyright>
+    <Product>Arklight</Product>
+    <Copyright>Copyright (c) The Arklight Developers and Contributors</Copyright>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -57,3 +57,4 @@
     <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.13.0" PrivateAssets="All" />
   </ItemGroup>
 </Project>
+

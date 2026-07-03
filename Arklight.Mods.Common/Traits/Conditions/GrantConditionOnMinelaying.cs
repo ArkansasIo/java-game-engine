@@ -1,6 +1,6 @@
-﻿using OpenRA.Traits;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	public class GrantConditionOnMinelayingInfo : ConditionalTraitInfo, Requires<MinelayerInfo>
 	{
@@ -42,3 +42,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -14,14 +14,14 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using OpenRA.FileSystem;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
-using OpenRA.Video;
-using OpenRA.Widgets;
+using Arklight.FileSystem;
+using Arklight.Graphics;
+using Arklight.Mods.Common.Traits;
+using Arklight.Primitives;
+using Arklight.Video;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets.Logic
+namespace Arklight.Mods.Common.Widgets.Logic
 {
 	public class AssetBrowserLogic : ChromeLogic
 	{
@@ -518,7 +518,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				currentFilename = filename;
 				var prefix = "";
 
-				if (modData.DefaultFileSystem is OpenRA.FileSystem.FileSystem fs)
+				if (modData.DefaultFileSystem is Arklight.FileSystem.FileSystem fs)
 				{
 					prefix = fs.GetPrefix(package);
 					if (prefix != null)
@@ -680,7 +680,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				return allPackages;
 
 			// Packages that are explicitly mounted in the filesystem use their explicit mount name
-			var fs = (OpenRA.FileSystem.FileSystem)modData.DefaultFileSystem;
+			var fs = (Arklight.FileSystem.FileSystem)modData.DefaultFileSystem;
 			var name = fs.GetPrefix(source);
 
 			// Fall back to the path relative to the mod, engine, or support dir
@@ -768,3 +768,4 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		}
 	}
 }
+

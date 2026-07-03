@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -10,12 +10,12 @@
 #endregion
 
 using System.Collections.Generic;
-using OpenRA.FileSystem;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.SpriteLoaders;
-using OpenRA.Traits;
+using Arklight.FileSystem;
+using Arklight.Graphics;
+using Arklight.Mods.Common.SpriteLoaders;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	public class PaletteFromEmbeddedSpritePaletteInfo : TraitInfo, IProvidesCursorPaletteInfo
@@ -71,3 +71,4 @@ namespace OpenRA.Mods.Common.Traits
 		public IEnumerable<string> PaletteNames { get { yield return info.Name; } }
 	}
 }
+

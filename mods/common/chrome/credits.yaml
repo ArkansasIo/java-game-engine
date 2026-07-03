@@ -27,7 +27,7 @@ Background@CREDITS_PANEL:
 					X: 140
 					Width: 140
 					Height: 31
-					Text: label-openra
+					Text: label-Arklight
 					Font: Bold
 		ScrollPanel@CREDITS_DISPLAY:
 			X: 20
@@ -50,3 +50,4 @@ Background@CREDITS_PANEL:
 			Text: button-back
 			Font: Bold
 			Key: escape
+

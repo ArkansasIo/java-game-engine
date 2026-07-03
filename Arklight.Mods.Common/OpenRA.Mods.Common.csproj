@@ -1,10 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<ItemGroup>
-		<ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj">
+		<ProjectReference Include="..\Arklight.Game\Arklight.Game.csproj">
 			<Private>False</Private>
 		</ProjectReference>
 		<PackageReference Include="NuGet.CommandLine" Version="6.12.5" />
-		<PackageReference Include="OpenRA-FuzzyLogicLibrary" Version="1.0.1" />
+		<PackageReference Include="Arklight-FuzzyLogicLibrary" Version="1.0.1" />
 		<PackageReference Include="DiscordRichPresence" Version="1.2.1.24" />
 		<PackageReference Include="MP3Sharp" Version="1.0.5" />
 		<PackageReference Include="NVorbis" Version="0.10.5" />
@@ -13,3 +13,4 @@
 		<PackageReference Include="Pfim" Version="0.11.3" />
 	</ItemGroup>
 </Project>
+

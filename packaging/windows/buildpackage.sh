@@ -1,5 +1,5 @@
 #!/bin/bash
-# OpenRA packaging script for Windows
+# Arklight packaging script for Windows
 
 set -o errexit -o pipefail || exit $?
 
@@ -25,7 +25,7 @@ SRCDIR="$(pwd)/../.."
 BUILTDIR="$(pwd)/build"
 ARTWORK_DIR="$(pwd)/../artwork/"
 
-FAQ_URL="https://wiki.openra.net/FAQ"
+FAQ_URL="https://wiki.Arklight.net/FAQ"
 
 SUFFIX=" (dev)"
 if [[ ${TAG} == release* ]]; then
@@ -57,10 +57,10 @@ function makelauncher()
 	# Use rcedit to patch the generated EXE with missing assembly/PortableExecutable information because .NET 8 ignores that when building on Linux.
 	# Using a backwards version tag because rcedit is unable to set versions starting with a letter.
 	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-product-version "${BACKWARDS_TAG}"
-	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "ProductName" "OpenRA"
-	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "CompanyName" "The OpenRA team"
-	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "FileDescription" "${LAUNCHER_NAME} mod for OpenRA"
-	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "LegalCopyright" "Copyright (c) The OpenRA Developers and Contributors"
+	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "ProductName" "Arklight"
+	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "CompanyName" "The Arklight team"
+	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "FileDescription" "${LAUNCHER_NAME} mod for Arklight"
+	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-version-string "LegalCopyright" "Copyright (c) The Arklight Developers and Contributors"
 	wine64 rcedit-x64.exe "${BUILTDIR}/${LAUNCHER_NAME}.exe" --set-icon "${BUILTDIR}/${MOD_ID}.ico"
 }
 
@@ -81,12 +81,12 @@ function build_platform()
 	makelauncher "Dune2000" "Dune 2000" "d2k" "${PLATFORM}"
 
 	echo "Building Windows setup.exe (${PLATFORM})"
-	makensis -V2 -DSRCDIR="${BUILTDIR}" -DTAG="${TAG}" -DSUFFIX="${SUFFIX}" -DOUTFILE="${OUTPUTDIR}/OpenRA-${TAG}-${PLATFORM}.exe" OpenRA.nsi
+	makensis -V2 -DSRCDIR="${BUILTDIR}" -DTAG="${TAG}" -DSUFFIX="${SUFFIX}" -DOUTFILE="${OUTPUTDIR}/Arklight-${TAG}-${PLATFORM}.exe" Arklight.nsi
 
 	echo "Packaging zip archive ($PLATFORM)"
 	pushd "${BUILTDIR}" > /dev/null
-	zip "OpenRA-${TAG}-${PLATFORM}-winportable.zip" -r -9 ./* --quiet
-	mv "OpenRA-${TAG}-${PLATFORM}-winportable.zip" "${OUTPUTDIR}"
+	zip "Arklight-${TAG}-${PLATFORM}-winportable.zip" -r -9 ./* --quiet
+	mv "Arklight-${TAG}-${PLATFORM}-winportable.zip" "${OUTPUTDIR}"
 	popd > /dev/null
 
 	rm -rf "${BUILTDIR}"
@@ -94,3 +94,4 @@ function build_platform()
 
 build_platform "x64"
 rm rcedit-x64.exe
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -9,11 +9,11 @@
  */
 #endregion
 
-namespace OpenRA.Server
+namespace Arklight.Server
 {
 	public static class ProtocolVersion
 	{
-		// OpenRA's network protocol defines a packet structure:
+		// Arklight's network protocol defines a packet structure:
 		// - Int32 specifying the length of the packet, ignoring this length field
 		//   The connection will be terminated if a packet with length > 128kB is received by the server
 		// - Int32 specifying the client ID sending the orders (or 0 if the orders are created by the server)
@@ -35,7 +35,7 @@ namespace OpenRA.Server
 		// - 0xFF: World order
 		//   - Length-prefixed string specifying the order name
 		//   - OrderFields enum encoded as a byte: specifies the data included in the rest of the order
-		//   - Order-specific data - see OpenRA.Game/Server/Order.cs for details
+		//   - Order-specific data - see Arklight.Game/Server/Order.cs for details
 		// - 0x10: Order acknowledgement (sent from the server to a client in response to a packet with world orders)
 		//   - Int32 containing the frame number that the client should apply the orders it sent
 		//   - byte containing the number of sent order packets to apply
@@ -80,3 +80,4 @@ namespace OpenRA.Server
 		public const int Orders = 21;
 	}
 }
+

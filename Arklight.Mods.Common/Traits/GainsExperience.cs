@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,11 +12,11 @@
 using System;
 using System.Collections.Frozen;
 using System.Collections.Generic;
-using OpenRA.Mods.Common.Effects;
-using OpenRA.Primitives;
-using OpenRA.Traits;
+using Arklight.Mods.Common.Effects;
+using Arklight.Primitives;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[IncludeStaticFluentReferences(typeof(GainsExperience))]
 	[Desc("This actor's experience increases when it has killed a GivesExperience actor.")]
@@ -170,3 +170,4 @@ namespace OpenRA.Mods.Common.Traits
 			: base(info, value) { }
 	}
 }
+

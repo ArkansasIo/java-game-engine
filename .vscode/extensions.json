@@ -1,9 +1,10 @@
 {
 	"recommendations": [
 		"ms-dotnettools.csharp",
-		"openra.oraide-vscode",
-		"openra.vscode-openra-lua",
+		"Arklight.oraide-vscode",
+		"Arklight.vscode-Arklight-lua",
 		"EditorConfig.EditorConfig",
 		"macabeus.vscode-fluent",
 	]
 }
+

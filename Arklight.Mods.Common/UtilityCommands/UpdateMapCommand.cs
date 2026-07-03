@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,10 +13,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using OpenRA.FileSystem;
-using OpenRA.Mods.Common.UpdateRules;
+using Arklight.FileSystem;
+using Arklight.Mods.Common.UpdateRules;
 
-namespace OpenRA.Mods.Common.UtilityCommands
+namespace Arklight.Mods.Common.UtilityCommands
 {
 	sealed class UpdateMapCommand : IUtilityCommand
 	{
@@ -160,3 +160,4 @@ namespace OpenRA.Mods.Common.UtilityCommands
 		}
 	}
 }
+

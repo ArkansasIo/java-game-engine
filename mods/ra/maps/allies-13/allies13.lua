@@ -1,6 +1,6 @@
 --[[
-   Copyright (c) The OpenRA Developers and Contributors
-   This file is part of OpenRA, which is free software. It is made
+   Copyright (c) The Arklight Developers and Contributors
+   This file is part of Arklight, which is free software. It is made
    available to you under the terms of the GNU General Public License
    as published by the Free Software Foundation, either version 3 of
    the License, or (at your option) any later version. For more
@@ -165,7 +165,7 @@ CameraTriggers = function()
 			mrjCamTriggered = true
 
 			local mrjCam = Actor.Create("camera", true, { Owner = Greece, Location = MRJCamera.Location })
-			--The original had the Mobile Radar Jammers attempt to escape. Excluding that for now as MRJs in OpenRA can take much more damage than the original.
+			--The original had the Mobile Radar Jammers attempt to escape. Excluding that for now as MRJs in Arklight can take much more damage than the original.
 			Trigger.AfterDelay(DateTime.Minutes(1), function()
 				mrjCam.Destroy()
 			end)
@@ -303,3 +303,4 @@ WorldLoaded = function()
 
 	DateTime.TimeLimit = (DateTime.Minutes(32) - TimerLength[Difficulty])
 end
+

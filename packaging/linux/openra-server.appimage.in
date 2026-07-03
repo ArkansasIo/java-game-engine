@@ -3,6 +3,7 @@ set -o errexit || exit $?
 
 LAUNCHER=$(readlink -f "${0}")
 HERE=$(dirname "${LAUNCHER}")
-cd "${HERE}/../lib/openra"
+cd "${HERE}/../lib/Arklight"
 
-./OpenRA.Server Game.Mod="{MODID}" "$@"
+./Arklight.Server Game.Mod="{MODID}" "$@"
+

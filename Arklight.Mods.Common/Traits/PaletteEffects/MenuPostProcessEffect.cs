@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -9,11 +9,11 @@
  */
 #endregion
 
-using OpenRA.Graphics;
-using OpenRA.Traits;
-using OpenRA.Widgets;
+using Arklight.Graphics;
+using Arklight.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	[Desc("Fades the world from/to black at the start/end of the game, and can (optionally) desaturate the world")]
@@ -99,3 +99,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

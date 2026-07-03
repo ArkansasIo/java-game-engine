@@ -1,13 +1,13 @@
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation. For more information,
  * see COPYING.
  */
 
 //
-// A custom apphost is required (instead of just invoking <arch-dir>/OpenRA directly)
+// A custom apphost is required (instead of just invoking <arch-dir>/Arklight directly)
 // because macOS will only properly associate dock icons and tooltips to windows that are
 // created by a process in the Contents/MacOS directory (not subdirectories).
 //
@@ -82,3 +82,4 @@ int main(int argc, char **argv)
 
 	return hostfxr_close(host_context_handle);
 }
+

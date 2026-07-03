@@ -1,8 +1,8 @@
 Metadata:
 	Title: mod-title
 	Version: {DEV_VERSION}
-	Website: https://www.openra.net
-	WebIcon32: https://www.openra.net/images/icons/d2k_32x32.png
+	Website: https://www.Arklight.net
+	WebIcon32: https://www.Arklight.net/images/icons/d2k_32x32.png
 	WindowTitle: mod-windowtitle
 
 PackageFormats: D2kSoundResources
@@ -75,7 +75,7 @@ Cursors:
 Chrome:
 	d2k|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll, OpenRA.Mods.D2k.dll
+Assemblies: Arklight.Mods.Common.dll, Arklight.Mods.Cnc.dll, Arklight.Mods.D2k.dll
 
 ChromeLayout:
 	common|chrome/ingame.yaml
@@ -279,3 +279,4 @@ GameSpeeds:
 
 DiscordService:
 	ApplicationId: 712711732770111550
+

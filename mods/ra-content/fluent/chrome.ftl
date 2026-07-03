@@ -5,7 +5,7 @@ modcontent-installprompt =
 
     Advanced Install includes options for copying the music, videos, and other content from an original game disc or digital installation.
 modcontent-header =
-    Game content may be extracted from the original game discs or an existing digital install. OpenRA can also download the base game files from an online mirror of the 2008 freeware release of RA.
+    Game content may be extracted from the original game discs or an existing digital install. Arklight can also download the base game files from an online mirror of the 2008 freeware release of RA.
 modcontent-package-basefiles = Base Game Files
 modcontent-package-aftermathfiles = Aftermath Expansion Files
 modcontent-package-deserttileset = C&C Desert Tileset
@@ -14,3 +14,4 @@ modcontent-package-allied = Allied Campaign Briefings
 modcontent-package-soviet = Soviet Campaign Briefings
 modcontent-package-counterstrikemusic = Counterstrike Music
 modcontent-package-aftermathmusic = Aftermath Music
+

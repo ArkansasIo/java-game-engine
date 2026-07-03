@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -10,20 +10,20 @@
 #endregion
 
 using System.Threading.Tasks;
-using OpenRA.Support;
+using Arklight.Support;
 
-namespace OpenRA.Mods.Common
+namespace Arklight.Mods.Common
 {
 	public enum ModVersionStatus { NotChecked, Latest, Outdated, Unknown, PlaytestAvailable }
 
 	public class WebServices : IGlobalModData
 	{
-		public readonly string ServerList = "https://master.openra.net/games";
-		public readonly string ServerAdvertise = "https://master.openra.net/ping";
-		public readonly string MapRepository = "https://resource.openra.net/map/";
-		public readonly string GameNews = "https://master.openra.net/gamenews";
+		public readonly string ServerList = "https://master.Arklight.net/games";
+		public readonly string ServerAdvertise = "https://master.Arklight.net/ping";
+		public readonly string MapRepository = "https://resource.Arklight.net/map/";
+		public readonly string GameNews = "https://master.Arklight.net/gamenews";
 		public readonly string GameNewsFileName = "news.yaml";
-		public readonly string VersionCheck = "https://master.openra.net/versioncheck";
+		public readonly string VersionCheck = "https://master.Arklight.net/versioncheck";
 
 		public ModVersionStatus ModVersionStatus { get; private set; }
 		const int VersionCheckProtocol = 1;
@@ -62,3 +62,4 @@ namespace OpenRA.Mods.Common
 		}
 	}
 }
+

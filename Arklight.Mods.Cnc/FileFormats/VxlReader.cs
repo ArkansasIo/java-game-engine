@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace OpenRA.Mods.Cnc.FileFormats
+namespace Arklight.Mods.Cnc.FileFormats
 {
 	public enum NormalType : byte { TiberianSun = 2, RedAlert2 = 4 }
 	public readonly record struct VxlElement(byte Color, byte Normal);
@@ -156,3 +156,4 @@ namespace OpenRA.Mods.Cnc.FileFormats
 		}
 	}
 }
+

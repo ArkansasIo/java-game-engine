@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,11 +15,11 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.IO;
 using System.Linq;
-using OpenRA.FileFormats;
-using OpenRA.Graphics;
-using OpenRA.Primitives;
+using Arklight.FileFormats;
+using Arklight.Graphics;
+using Arklight.Primitives;
 
-namespace OpenRA
+namespace Arklight
 {
 	[Flags]
 	enum ModRegistration { User = 1, System = 2 }
@@ -210,7 +210,7 @@ namespace OpenRA
 						modKey = ExternalMod.MakeKey(m);
 
 						// Continue to the next entry if this one is valid
-						// HACK: Explicitly invalidate paths to OpenRA.dll to clean up bogus metadata files
+						// HACK: Explicitly invalidate paths to Arklight.dll to clean up bogus metadata files
 						// that were created after the initial migration from .NET Framework to Core/5.
 						if (File.Exists(m.LaunchPath) && Path.GetFileNameWithoutExtension(path) == modKey && Path.GetExtension(m.LaunchPath) != ".dll")
 							continue;
@@ -294,3 +294,4 @@ namespace OpenRA
 		IEnumerator IEnumerable.GetEnumerator() { return mods.GetEnumerator(); }
 	}
 }
+

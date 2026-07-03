@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -14,14 +14,14 @@ using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using OpenRA.Mods.Common.MapGenerator;
-using OpenRA.Mods.Common.Terrain;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Support;
-using OpenRA.Traits;
-using static OpenRA.Mods.Common.Traits.ResourceLayerInfo;
+using Arklight.Mods.Common.MapGenerator;
+using Arklight.Mods.Common.Terrain;
+using Arklight.Mods.Common.Traits;
+using Arklight.Support;
+using Arklight.Traits;
+using static Arklight.Mods.Common.Traits.ResourceLayerInfo;
 
-namespace OpenRA.Mods.D2k.Traits
+namespace Arklight.Mods.D2k.Traits
 {
 	[TraitLocation(SystemActors.EditorWorld)]
 	public sealed class D2kMapGeneratorInfo : TraitInfo, IEditorMapGeneratorInfo
@@ -662,3 +662,4 @@ namespace OpenRA.Mods.D2k.Traits
 		}
 	}
 }
+

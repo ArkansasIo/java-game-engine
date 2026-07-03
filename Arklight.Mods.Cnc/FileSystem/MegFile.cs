@@ -1,7 +1,7 @@
-﻿#region Copyright & License Information
+#region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,10 +12,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using OpenRA.FileSystem;
-using OpenRA.Primitives;
+using Arklight.FileSystem;
+using Arklight.Primitives;
 
-namespace OpenRA.Mods.Cnc.FileSystem
+namespace Arklight.Mods.Cnc.FileSystem
 {
 	/// <summary>
 	/// This class supports loading unencrypted V3 .meg files using
@@ -28,7 +28,7 @@ namespace OpenRA.Mods.Cnc.FileSystem
 		// Float value 0.99, but it is simpler to read and compare as an integer
 		const uint MegVersion = 0x3F7D70A4;
 
-		public bool TryParsePackage(Stream s, string filename, OpenRA.FileSystem.FileSystem context, out IReadOnlyPackage package)
+		public bool TryParsePackage(Stream s, string filename, Arklight.FileSystem.FileSystem context, out IReadOnlyPackage package)
 		{
 			var position = s.Position;
 
@@ -124,7 +124,7 @@ namespace OpenRA.Mods.Cnc.FileSystem
 				return SegmentStream.CreateWithoutOwningStream(s, index.Offset, index.Length);
 			}
 
-			public IReadOnlyPackage OpenPackage(string filename, OpenRA.FileSystem.FileSystem context)
+			public IReadOnlyPackage OpenPackage(string filename, Arklight.FileSystem.FileSystem context)
 			{
 				var childStream = GetStream(filename);
 				if (childStream == null)
@@ -139,3 +139,4 @@ namespace OpenRA.Mods.Cnc.FileSystem
 		}
 	}
 }
+

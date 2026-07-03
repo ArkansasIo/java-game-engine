@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -15,11 +15,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using OpenRA.Mods.Common.Scripting;
-using OpenRA.Scripting;
-using OpenRA.Traits;
+using Arklight.Mods.Common.Scripting;
+using Arklight.Scripting;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.UtilityCommands.Documentation
+namespace Arklight.Mods.Common.UtilityCommands.Documentation
 {
 	// See https://emmylua.github.io/annotation.html for reference
 	sealed class ExtractEmmyLuaAPI : IUtilityCommand
@@ -35,9 +35,9 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			var version = utility.ModData.Manifest.Metadata.Version;
-			Console.WriteLine($"-- This is an automatically generated Lua API definition generated for {version} of OpenRA.");
-			Console.WriteLine("-- https://wiki.openra.net/Utility was used with the --emmy-lua-api parameter.");
-			Console.WriteLine("-- See https://docs.openra.net/en/release/lua/ for human readable documentation.");
+			Console.WriteLine($"-- This is an automatically generated Lua API definition generated for {version} of Arklight.");
+			Console.WriteLine("-- https://wiki.Arklight.net/Utility was used with the --emmy-lua-api parameter.");
+			Console.WriteLine("-- See https://docs.Arklight.net/en/release/lua/ for human readable documentation.");
 
 			Console.WriteLine();
 			WriteDiagnosticsDisabling();
@@ -381,7 +381,7 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 
 		static string GetDocumentationUrl(string trait)
 		{
-			return $"[{trait}](https://docs.openra.net/en/release/traits/#{trait.ToLowerInvariant()})";
+			return $"[{trait}](https://docs.Arklight.net/en/release/traits/#{trait.ToLowerInvariant()})";
 		}
 	}
 
@@ -476,3 +476,4 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 		}
 	}
 }
+

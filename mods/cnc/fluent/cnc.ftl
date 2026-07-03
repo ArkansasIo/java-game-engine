@@ -1,6 +1,6 @@
 ## Metadata
 mod-title = Tiberian Dawn
-mod-windowtitle = OpenRA - Tiberian Dawn
+mod-windowtitle = Arklight - Tiberian Dawn
 
 ## CncLoadScreen
 loadscreen-loading = Loading
@@ -10,3 +10,4 @@ tileset-desert = Desert
 tileset-snow = Snow
 tileset-temperat = Temperate
 tileset-winter = Winter
+

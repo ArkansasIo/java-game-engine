@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -14,15 +14,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BeaconLib;
-using OpenRA.Graphics;
-using OpenRA.Network;
-using OpenRA.Primitives;
-using OpenRA.Server;
-using OpenRA.Support;
-using OpenRA.Traits;
-using OpenRA.Widgets;
+using Arklight.Graphics;
+using Arklight.Network;
+using Arklight.Primitives;
+using Arklight.Server;
+using Arklight.Support;
+using Arklight.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Widgets.Logic
+namespace Arklight.Mods.Common.Widgets.Logic
 {
 	public class ServerListLogic : ChromeLogic
 	{
@@ -408,7 +408,7 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 			lanGameLocations = [];
 			try
 			{
-				lanGameProbe = new Probe("OpenRALANGame");
+				lanGameProbe = new Probe("ArklightLANGame");
 				lanGameProbe.BeaconsUpdated += locations => lanGameLocations = locations;
 				lanGameProbe.Start();
 			}
@@ -890,3 +890,4 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 		}
 	}
 }
+

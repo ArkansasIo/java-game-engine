@@ -1,7 +1,7 @@
-﻿#region Copyright & License Information
+#region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,9 +12,9 @@
 using System;
 using System.Collections.Frozen;
 using System.Linq;
-using OpenRA.Traits;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[TraitLocation(SystemActors.Player)]
 	public class ResourceMapBotModuleInfo : ConditionalTraitInfo, NotBefore<IResourceLayerInfo>
@@ -93,7 +93,7 @@ namespace OpenRA.Mods.Common.Traits
 
 			// FindTilesInAnnulus returns cells in a rough circle shape, and resourceMapIndices are divided in square,
 			// so we need a larger range to cover cells in the indice approximately, but avoid takes too much other indices' cells.
-			indiceResourceScanRadius = info.ResourceMapStrideRadius * 12 / 10; // ≈ * (sqrt(2) + 1) / 2
+			indiceResourceScanRadius = info.ResourceMapStrideRadius * 12 / 10; // � * (sqrt(2) + 1) / 2
 		}
 
 		void IBotTick.BotTick(IBot bot)
@@ -306,3 +306,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

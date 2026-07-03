@@ -3,7 +3,7 @@ set -o errexit || exit $?
 
 LAUNCHER=$(readlink -f "${0}")
 HERE="$(dirname "${LAUNCHER}")"
-cd "${HERE}/../lib/openra"
+cd "${HERE}/../lib/Arklight"
 
 # APPIMAGE is an environment variable set by the runtime
 # defining the absolute path to the .AppImage file
@@ -12,21 +12,21 @@ if [ -n "${APPIMAGE}" ]; then
 
 	APPIMAGEID=$(printf "file://%s" "${APPIMAGE}" | md5sum | cut -d' ' -f1)
 	test -n "${APPIMAGEID}"
-	LAUNCHER_NAME="appimagekit_${APPIMAGEID}-openra-{MODID}.desktop"
+	LAUNCHER_NAME="appimagekit_${APPIMAGEID}-Arklight-{MODID}.desktop"
 	LAUNCHER_PATH="${HOME}/.local/share/applications/${LAUNCHER_NAME}"
-	export SDL_VIDEO_X11_WMCLASS="openra-{MODID}-{TAG}"
+	export SDL_VIDEO_X11_WMCLASS="Arklight-{MODID}-{TAG}"
 
 	if [ -f "${LAUNCHER_PATH}" ]; then
 		# The KDE task switcher limits itself to the 128px icon unless we
 		# set an X11 _KDE_NET_WM_DESKTOP_FILE property on the window
-		export OPENRA_DESKTOP_FILENAME="${LAUNCHER_NAME}"
+		export Arklight_DESKTOP_FILENAME="${LAUNCHER_NAME}"
 
 		# appimaged doesn't update the mime or icon caches when registering AppImages.
 		# Run update-desktop-database and gtk-update-icon-cache ourselves if we detect
 		# that the desktop file has been installed but the handler is not cached
 		if command -v update-desktop-database > /dev/null; then
 			MIMECACHE_PATH="${HOME}/.local/share/applications/mimeinfo.cache"
-			SCHEME="x-scheme-handler/openra-{MODID}-{TAG}"
+			SCHEME="x-scheme-handler/Arklight-{MODID}-{TAG}"
 			if ! grep -qs "${SCHEME}=" "${MIMECACHE_PATH}"; then
 				update-desktop-database "${HOME}/.local/share/applications"
 				if command -v gtk-update-icon-cache > /dev/null; then
@@ -38,27 +38,27 @@ if [ -n "${APPIMAGE}" ]; then
 fi
 
 # Search for server connection
-PROTOCOL_PREFIX="openra-{MODID}-{TAG}://"
+PROTOCOL_PREFIX="Arklight-{MODID}-{TAG}://"
 JOIN_SERVER=""
 if [ "${1#${PROTOCOL_PREFIX}}" != "${1}" ]; then
 	JOIN_SERVER="Launch.Connect=${1#${PROTOCOL_PREFIX}}"
 fi
 
 # Run the game
-export SDL_VIDEO_X11_WMCLASS="openra-{MODID}-{TAG}"
-./OpenRA Game.Mod={MODID} Engine.LaunchPath="${LAUNCHER}" "${JOIN_SERVER}" "$@" && rc=0 || rc=$?
+export SDL_VIDEO_X11_WMCLASS="Arklight-{MODID}-{TAG}"
+./Arklight Game.Mod={MODID} Engine.LaunchPath="${LAUNCHER}" "${JOIN_SERVER}" "$@" && rc=0 || rc=$?
 
 # Show a crash dialog if something went wrong
 if [ "${rc}" != 0 ] && [ "${rc}" != 1 ]; then
-	LOGS="${XDG_CONFIG_HOME:-${HOME}/.config}/openra/Logs"
-	if [ ! -d "${LOGS}" ] && [ -d "${HOME}/.openra/Logs" ]; then
-		LOGS="${HOME}/.openra/Logs"
+	LOGS="${XDG_CONFIG_HOME:-${HOME}/.config}/Arklight/Logs"
+	if [ ! -d "${LOGS}" ] && [ -d "${HOME}/.Arklight/Logs" ]; then
+		LOGS="${HOME}/.Arklight/Logs"
 	fi
 
 	if [ -d Support/Logs ]; then
 		LOGS="${PWD}/Support/Logs"
 	fi
-	ERROR_MESSAGE=$(printf "%s has encountered a fatal error.\nPlease refer to the crash logs and FAQ for more information.\n\nLog files are located in %s\nThe FAQ is available at https://wiki.openra.net/FAQ" "{MODNAME}" "${LOGS}")
+	ERROR_MESSAGE=$(printf "%s has encountered a fatal error.\nPlease refer to the crash logs and FAQ for more information.\n\nLog files are located in %s\nThe FAQ is available at https://wiki.Arklight.net/FAQ" "{MODNAME}" "${LOGS}")
 	if command -v zenity > /dev/null; then
 		zenity --no-wrap --error --title "{MODNAME}" --no-markup --text "${ERROR_MESSAGE}" 2> /dev/null || :
 	elif command -v kdialog > /dev/null; then
@@ -70,3 +70,4 @@ if [ "${rc}" != 0 ] && [ "${rc}" != 1 ]; then
 	fi
 	exit 1
 fi
+

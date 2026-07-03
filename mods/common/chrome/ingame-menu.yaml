@@ -596,7 +596,7 @@ Container@INGAME_MENU:
 							Y: 232
 							Width: PARENT_WIDTH - 20
 							Height: 50
-							Text: Layouts are ready for future logic screens and keep the current OpenRA menu actions available.
+							Text: Layouts are ready for future logic screens and keep the current Arklight menu actions available.
 							Font: Tiny
 							TextColor: 8FBDEB
 							Contrast: true
@@ -605,7 +605,7 @@ Container@INGAME_MENU:
 					Y: PARENT_HEIGHT - 23
 					Width: PARENT_WIDTH - 32
 					Height: 16
-					Text: Active OpenRA actions stay in the command panel; strategy pages are staged for future logic binding.
+					Text: Active Arklight actions stay in the command panel; strategy pages are staged for future logic binding.
 					Font: Tiny
 					TextColor: 8FBDEB
 					Align: Center
@@ -655,3 +655,4 @@ Container@INGAME_MENU:
 					Width: 140
 					Height: 30
 					Font: Bold
+

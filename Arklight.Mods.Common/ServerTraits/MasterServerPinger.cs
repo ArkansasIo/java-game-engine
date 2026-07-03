@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -16,12 +16,12 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using BeaconLib;
-using OpenRA.Network;
-using OpenRA.Server;
-using OpenRA.Support;
-using S = OpenRA.Server.Server;
+using Arklight.Network;
+using Arklight.Server;
+using Arklight.Support;
+using S = Arklight.Server.Server;
 
-namespace OpenRA.Mods.Common.Server
+namespace Arklight.Mods.Common.Server
 {
 	public class MasterServerPinger : ServerTrait, ITick, INotifyServerStart, INotifyServerShutdown, INotifySyncLobbyInfo, IStartGame, IEndGame
 	{
@@ -205,7 +205,7 @@ namespace OpenRA.Mods.Common.Server
 			try
 			{
 				lanGameBeacon?.Stop();
-				lanGameBeacon = new Beacon("OpenRALANGame", LanAdvertisePort);
+				lanGameBeacon = new Beacon("ArklightLANGame", LanAdvertisePort);
 			}
 			catch (Exception ex)
 			{
@@ -215,3 +215,4 @@ namespace OpenRA.Mods.Common.Server
 		}
 	}
 }
+

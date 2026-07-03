@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,9 +11,9 @@
 
 using System;
 using System.IO;
-using OpenRA.FileSystem;
+using Arklight.FileSystem;
 
-namespace OpenRA.Mods.D2k.UtilityCommands
+namespace Arklight.Mods.D2k.UtilityCommands
 {
 	sealed class ImportD2kMapCommand : IUtilityCommand
 	{
@@ -24,7 +24,7 @@ namespace OpenRA.Mods.D2k.UtilityCommands
 			return args.Length >= 3;
 		}
 
-		[Desc("FILENAME", "TILESET", "Convert a legacy Dune 2000 MAP file to the OpenRA format.")]
+		[Desc("FILENAME", "TILESET", "Convert a legacy Dune 2000 MAP file to the Arklight format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
@@ -42,3 +42,4 @@ namespace OpenRA.Mods.D2k.UtilityCommands
 		}
 	}
 }
+

@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -19,14 +19,14 @@ using System.Linq;
 using System.Net;
 using System.Runtime;
 using System.Threading;
-using OpenRA.Graphics;
-using OpenRA.Network;
-using OpenRA.Primitives;
-using OpenRA.Server;
-using OpenRA.Support;
-using OpenRA.Widgets;
+using Arklight.Graphics;
+using Arklight.Network;
+using Arklight.Primitives;
+using Arklight.Server;
+using Arklight.Support;
+using Arklight.Widgets;
 
-namespace OpenRA
+namespace Arklight
 {
 	[IncludeStaticFluentReferences(typeof(Server.Server), typeof(Player), typeof(UnitOrders), typeof(OrderManager))]
 	public static class Game
@@ -460,7 +460,7 @@ namespace OpenRA
 
 		public static IPlatform CreatePlatform(string platformName)
 		{
-			var rendererPath = Path.Combine(Platform.BinDir, "OpenRA.Platforms." + platformName + ".dll");
+			var rendererPath = Path.Combine(Platform.BinDir, "Arklight.Platforms." + platformName + ".dll");
 
 			var loader = new AssemblyLoader(rendererPath);
 			var platformType = loader.LoadDefaultAssembly().GetTypes().SingleOrDefault(t => typeof(IPlatform).IsAssignableFrom(t));
@@ -1043,3 +1043,4 @@ namespace OpenRA
 		public static ExternalMod ServerExternalMod;
 	}
 }
+

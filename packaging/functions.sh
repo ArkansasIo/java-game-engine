@@ -1,5 +1,5 @@
 #!/bin/sh
-# Helper functions for packaging and installing OpenRA
+# Helper functions for packaging and installing Arklight
 
 ####
 # This file must stay /bin/sh and POSIX compliant for macOS and BSD portability.
@@ -8,12 +8,12 @@
 
 # Compile and publish the core engine and specified mod assemblies to the target directory
 # Arguments:
-#   SRC_PATH: Path to the root OpenRA directory
+#   SRC_PATH: Path to the root Arklight directory
 #   DEST_PATH: Path to the root of the install destination (will be created if necessary)
 #   TARGETPLATFORM: Platform type (win-x64, osx-x64, osx-arm64, linux-x64, linux-arm64)
-#   COPY_GENERIC_LAUNCHER: If set to True the OpenRA.exe will also be copied (True, False)
-#   COPY_CNC_DLL: If set to True the OpenRA.Mods.Cnc.dll will also be copied (True, False)
-#   COPY_D2K_DLL: If set to True the OpenRA.Mods.D2k.dll will also be copied (True, False)
+#   COPY_GENERIC_LAUNCHER: If set to True the Arklight.exe will also be copied (True, False)
+#   COPY_CNC_DLL: If set to True the Arklight.Mods.Cnc.dll will also be copied (True, False)
+#   COPY_D2K_DLL: If set to True the Arklight.Mods.D2k.dll will also be copied (True, False)
 # Used by:
 #   Makefile (install target for local installs and downstream packaging)
 #   Windows packaging
@@ -41,7 +41,7 @@ install_assemblies() (
 
 # Copy the core engine and specified mod data to the target directory
 # Arguments:
-#   SRC_PATH: Path to the root OpenRA directory
+#   SRC_PATH: Path to the root Arklight directory
 #   DEST_PATH: Path to the root of the install destination (will be created if necessary)
 #   MOD [MOD...]: One or more mod ids to copy (cnc, d2k, ra)
 # Used by:
@@ -87,14 +87,14 @@ install_data() (
 
 # Compile and publish a windows launcher with the specified mod details to the target directory
 # Arguments:
-#   SRC_PATH: Path to the root OpenRA directory
+#   SRC_PATH: Path to the root Arklight directory
 #   DEST_PATH: Path to the root of the install destination (will be created if necessary)
 #   TARGETPLATFORM: Platform type (win-x64)
 #   MOD_ID: Mod id to launch (e.g. "ra")
 #   LAUNCHER_NAME: Filename (without the .exe extension) for the launcher
 #   MOD_NAME: Human-readable mod name to show in the crash dialog (e.g. "Red Alert")
 #   ICON_PATH: Path to a windows .ico file
-#   FAQ_URL: URL to load when the "View FAQ" button is pressed in the crash dialog (e.g. https://wiki.openra.net/FAQ)
+#   FAQ_URL: URL to load when the "View FAQ" button is pressed in the crash dialog (e.g. https://wiki.Arklight.net/FAQ)
 # Used by:
 #   Windows packaging
 #   Mod SDK Windows packaging
@@ -110,14 +110,14 @@ install_windows_launcher() (
 	FAQ_URL="${7}"
 	VERSION="${8}"
 
-	rm -rf "${SRC_PATH}/OpenRA.WindowsLauncher/obj" || :
+	rm -rf "${SRC_PATH}/Arklight.WindowsLauncher/obj" || :
 
 	# See https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-publish for details.
 	# Unfortunately there doesn't seem to be a way to set FileDescription and it uses the value of -p:LauncherName.
 	# -p:Product sets the "Product name" field.
 	# -p:InformationalVersion seems to set the "Product version" field.
 	# -p:DisplayName doesn't seem to have a visible effect?
-	dotnet publish "${SRC_PATH}/OpenRA.WindowsLauncher/OpenRA.WindowsLauncher.csproj" -c Release -r "${TARGETPLATFORM}" -p:LauncherName="${LAUNCHER_NAME}",TargetPlatform="${TARGETPLATFORM}",ModID="${MOD_ID}",PublishDir="${DEST_PATH}",FaqUrl="${FAQ_URL}",InformationalVersion="${VERSION}" --self-contained true
+	dotnet publish "${SRC_PATH}/Arklight.WindowsLauncher/Arklight.WindowsLauncher.csproj" -c Release -r "${TARGETPLATFORM}" -p:LauncherName="${LAUNCHER_NAME}",TargetPlatform="${TARGETPLATFORM}",ModID="${MOD_ID}",PublishDir="${DEST_PATH}",FaqUrl="${FAQ_URL}",InformationalVersion="${VERSION}" --self-contained true
 
 	# NET 8 is unable to customize the application host for windows when compiling from Linux,
 	# so we must patch the properties we need in the PE header.
@@ -127,7 +127,7 @@ install_windows_launcher() (
 
 # Write a version string to the engine VERSION file
 # Arguments:
-#   VERSION: OpenRA version string
+#   VERSION: Arklight version string
 #   DEST_PATH: Path to the root of the install destination
 # Used by:
 #   Makefile (install target for local installs and downstream packaging)
@@ -147,7 +147,7 @@ set_engine_version() (
 
 # Write a version string to a list of specified mod.yamls
 # Arguments:
-#   VERSION: OpenRA version string
+#   VERSION: Arklight version string
 #   MOD_YAML_PATH [MOD_YAML_PATH...]: One or more mod.yaml files to update
 # Used by:
 #   Makefile (install target for local installs and downstream packaging)
@@ -173,12 +173,12 @@ set_mod_version() (
 
 # Copy launch wrappers, application icons, desktop, and MIME files to the target directory
 # Arguments:
-#   SRC_PATH: Path to the root OpenRA directory
-#   BUILD_PATH: Path to packaging filesystem root (e.g. /tmp/openra-build/ or "" for a local install)
-#   OPENRA_PATH: Path to the OpenRA installation (e.g. /usr/local/lib/openra)
+#   SRC_PATH: Path to the root Arklight directory
+#   BUILD_PATH: Path to packaging filesystem root (e.g. /tmp/Arklight-build/ or "" for a local install)
+#   Arklight_PATH: Path to the Arklight installation (e.g. /usr/local/lib/Arklight)
 #   BIN_PATH: Path to install wrapper scripts (e.g. /usr/local/bin)
 #   SHARE_PATH: Parent path to the icons and applications directory (e.g. /usr/local/share)
-#   VERSION: OpenRA version string
+#   VERSION: Arklight version string
 #   MOD [MOD...]: One or more mod ids to copy (cnc, d2k, ra)
 # Used by:
 #   Makefile (install-linux-shortcuts target for local installs and downstream packaging)
@@ -187,7 +187,7 @@ install_linux_shortcuts() (
 
 	SRC_PATH="${1}"
 	BUILD_PATH="${2}"
-	OPENRA_PATH="${3}"
+	Arklight_PATH="${3}"
 	BIN_PATH="${4}"
 	SHARE_PATH="${5}"
 	VERSION="${6}"
@@ -210,34 +210,34 @@ install_linux_shortcuts() (
 
 			# wrapper scripts
 			install -d "${BUILD_PATH}/${BIN_PATH}"
-			sed -e 's/{DEBUG}/--debug/' -e "s|{GAME_INSTALL_DIR}|${OPENRA_PATH}|" -e "s|{BIN_DIR}|${BIN_PATH}|" -e "s/{MODID}/${MOD_ID}/g" -e "s/{TAG}/${VERSION}/g" -e "s/{MODNAME}/${MOD_NAME}/g" "${SRC_PATH}/packaging/linux/openra.in" > "${SRC_PATH}/packaging/linux/openra-${MOD_ID}"
-			sed -e 's/{DEBUG}/--debug/' -e "s|{GAME_INSTALL_DIR}|${OPENRA_PATH}|" -e "s/{MODID}/${MOD_ID}/g" "${SRC_PATH}/packaging/linux/openra-server.in" > "${SRC_PATH}/packaging/linux/openra-${MOD_ID}-server"
-			install -m755 "${SRC_PATH}/packaging/linux/openra-${MOD_ID}" "${BUILD_PATH}/${BIN_PATH}"
-			install -m755 "${SRC_PATH}/packaging/linux/openra-${MOD_ID}-server" "${BUILD_PATH}/${BIN_PATH}"
-			rm "${SRC_PATH}/packaging/linux/openra-${MOD_ID}" "${SRC_PATH}/packaging/linux/openra-${MOD_ID}-server"
+			sed -e 's/{DEBUG}/--debug/' -e "s|{GAME_INSTALL_DIR}|${Arklight_PATH}|" -e "s|{BIN_DIR}|${BIN_PATH}|" -e "s/{MODID}/${MOD_ID}/g" -e "s/{TAG}/${VERSION}/g" -e "s/{MODNAME}/${MOD_NAME}/g" "${SRC_PATH}/packaging/linux/Arklight.in" > "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}"
+			sed -e 's/{DEBUG}/--debug/' -e "s|{GAME_INSTALL_DIR}|${Arklight_PATH}|" -e "s/{MODID}/${MOD_ID}/g" "${SRC_PATH}/packaging/linux/Arklight-server.in" > "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}-server"
+			install -m755 "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}" "${BUILD_PATH}/${BIN_PATH}"
+			install -m755 "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}-server" "${BUILD_PATH}/${BIN_PATH}"
+			rm "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}" "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}-server"
 
 			# desktop files
 			install -d "${BUILD_PATH}${SHARE_PATH}/applications"
-			sed -e "s/{MODID}/${MOD_ID}/g" -e "s/{MODNAME}/${MOD_NAME}/g" -e "s/{TAG}/${VERSION}/g" "${SRC_PATH}/packaging/linux/openra.desktop.in" > "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.desktop"
-			install -m644 "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.desktop" "${BUILD_PATH}${SHARE_PATH}/applications"
-			rm "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.desktop"
+			sed -e "s/{MODID}/${MOD_ID}/g" -e "s/{MODNAME}/${MOD_NAME}/g" -e "s/{TAG}/${VERSION}/g" "${SRC_PATH}/packaging/linux/Arklight.desktop.in" > "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.desktop"
+			install -m644 "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.desktop" "${BUILD_PATH}${SHARE_PATH}/applications"
+			rm "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.desktop"
 
 			# icons
 			for SIZE in 16x16 32x32 48x48 64x64 128x128; do
 				install -d "${BUILD_PATH}${SHARE_PATH}/icons/hicolor/${SIZE}/apps"
-				install -m644 "${SRC_PATH}/packaging/artwork/${MOD_ID}_${SIZE}.png" "${BUILD_PATH}${SHARE_PATH}/icons/hicolor/${SIZE}/apps/openra-${MOD_ID}.png"
+				install -m644 "${SRC_PATH}/packaging/artwork/${MOD_ID}_${SIZE}.png" "${BUILD_PATH}${SHARE_PATH}/icons/hicolor/${SIZE}/apps/Arklight-${MOD_ID}.png"
 			done
 
 			if [ "${MOD_ID}" = "ra" ] || [ "${MOD_ID}" = "cnc" ]; then
 				install -d "${BUILD_PATH}${SHARE_PATH}/icons/hicolor/scalable/apps"
-				install -m644 "${SRC_PATH}/packaging/artwork/${MOD_ID}_scalable.svg" "${BUILD_PATH}${SHARE_PATH}/icons/hicolor/scalable/apps/openra-${MOD_ID}.svg"
+				install -m644 "${SRC_PATH}/packaging/artwork/${MOD_ID}_scalable.svg" "${BUILD_PATH}${SHARE_PATH}/icons/hicolor/scalable/apps/Arklight-${MOD_ID}.svg"
 			fi
 
 			# MIME info
 			install -d "${BUILD_PATH}${SHARE_PATH}/mime/packages"
-			sed -e "s/{MODID}/${MOD_ID}/g" -e "s/{TAG}/${VERSION}/g" "${SRC_PATH}/packaging/linux/openra-mimeinfo.xml.in" > "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.xml"
-			install -m644 "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.xml" "${BUILD_PATH}${SHARE_PATH}/mime/packages/openra-${MOD_ID}.xml"
-			rm "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.xml"
+			sed -e "s/{MODID}/${MOD_ID}/g" -e "s/{TAG}/${VERSION}/g" "${SRC_PATH}/packaging/linux/Arklight-mimeinfo.xml.in" > "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.xml"
+			install -m644 "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.xml" "${BUILD_PATH}${SHARE_PATH}/mime/packages/Arklight-${MOD_ID}.xml"
+			rm "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.xml"
 		fi
 
 		shift
@@ -246,8 +246,8 @@ install_linux_shortcuts() (
 
 # Copy AppStream metadata to the target directory
 # Arguments:
-#   SRC_PATH: Path to the root OpenRA directory
-#   BUILD_PATH: Path to packaging filesystem root (e.g. /tmp/openra-build/ or "" for a local install)
+#   SRC_PATH: Path to the root Arklight directory
+#   BUILD_PATH: Path to packaging filesystem root (e.g. /tmp/Arklight-build/ or "" for a local install)
 #   SHARE_PATH: Parent path to the appdata directory (e.g. /usr/local/share)
 #   MOD [MOD...]: One or more mod ids to copy (cnc, d2k, ra)
 # Used by:
@@ -283,10 +283,11 @@ install_linux_appdata() (
 
 		install -d "${BUILD_PATH}${SHARE_PATH}/metainfo"
 
-		sed -e "s/{MODID}/${MOD_ID}/g" -e "s/{MOD_NAME}/${MOD_NAME}/g" -e "s/{SCREENSHOT_RA}/${SCREENSHOT_RA}/g" -e "s/{SCREENSHOT_CNC}/${SCREENSHOT_CNC}/g" -e "s/{SCREENSHOT_D2K}/${SCREENSHOT_D2K}/g" "${SRC_PATH}/packaging/linux/openra.metainfo.xml.in" > "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.metainfo.xml"
-		install -m644 "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.metainfo.xml" "${BUILD_PATH}${SHARE_PATH}/metainfo"
-		rm "${SRC_PATH}/packaging/linux/openra-${MOD_ID}.metainfo.xml"
+		sed -e "s/{MODID}/${MOD_ID}/g" -e "s/{MOD_NAME}/${MOD_NAME}/g" -e "s/{SCREENSHOT_RA}/${SCREENSHOT_RA}/g" -e "s/{SCREENSHOT_CNC}/${SCREENSHOT_CNC}/g" -e "s/{SCREENSHOT_D2K}/${SCREENSHOT_D2K}/g" "${SRC_PATH}/packaging/linux/Arklight.metainfo.xml.in" > "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.metainfo.xml"
+		install -m644 "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.metainfo.xml" "${BUILD_PATH}${SHARE_PATH}/metainfo"
+		rm "${SRC_PATH}/packaging/linux/Arklight-${MOD_ID}.metainfo.xml"
 
 		shift
 	done
 )
+

@@ -65,7 +65,7 @@ button-production-types-aircraft-tooltip = Aircraft
 
 ## mainmenu-prerelease-notification.yaml
 label-mainmenu-prerelease-notification-prompt-title = Tiberian Sun developer preview
-label-mainmenu-prerelease-notification-prompt-text-a = This pre-alpha build of OpenRA's Tiberian Sun mod is made available
+label-mainmenu-prerelease-notification-prompt-text-a = This pre-alpha build of Arklight's Tiberian Sun mod is made available
 label-mainmenu-prerelease-notification-prompt-text-b = for the community to follow development and as example for modders.
 label-mainmenu-prerelease-notification-prompt-text-c = Many features are missing or incomplete, performance has not been
 label-mainmenu-prerelease-notification-prompt-text-d = optimized, and balance will not be addressed until a future beta.
@@ -73,3 +73,4 @@ button-mainmenu-prerelease-notification-continue = I Understand
 
 ## settings-hotkeys.yaml
 hotkey-group-depth-preview-debug = Depth Preview Debug
+

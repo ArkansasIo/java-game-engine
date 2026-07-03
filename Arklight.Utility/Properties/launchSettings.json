@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "OpenRA.Utility": {
+    "Arklight.Utility": {
       "commandName": "Project",
       "commandLineArgs": "all --docs {DEV_VERSION}",
       "environmentVariables": {
@@ -9,3 +9,4 @@
     }
   }
 }
+

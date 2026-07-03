@@ -1,6 +1,6 @@
 ---
 name: Feature / Enhancement request
-about: Describe what you think is missing or could be improved in OpenRA.
+about: Describe what you think is missing or could be improved in Arklight.
 title: ''
 labels: Idea/Wishlist
 assignees: ''
@@ -33,3 +33,4 @@ EXPECTED SIDE EFFECTS
 <!-- Please outline any alternative solutions you have considered. -->
 
 ALTERNATIVES
+

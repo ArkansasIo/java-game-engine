@@ -1,24 +1,24 @@
-; Copyright (c) The OpenRA Developers and Contributors
-; This file is part of OpenRA.
+; Copyright (c) The Arklight Developers and Contributors
+; This file is part of Arklight.
 ;
-;  OpenRA is free software: you can redistribute it and/or modify
+;  Arklight is free software: you can redistribute it and/or modify
 ;  it under the terms of the GNU General Public License as published by
 ;  the Free Software Foundation, either version 3 of the License, or
 ;  (at your option) any later version.
 ;
-;  OpenRA is distributed in the hope that it will be useful,
+;  Arklight is distributed in the hope that it will be useful,
 ;  but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;  GNU General Public License for more details.
 ;
 ;  You should have received a copy of the GNU General Public License
-;  along with OpenRA.  If not, see <https://www.gnu.org/licenses/>.
+;  along with Arklight.  If not, see <https://www.gnu.org/licenses/>.
 
 !include "MUI2.nsh"
 !include "FileFunc.nsh"
 !include "WordFunc.nsh"
 
-Name "OpenRA"
+Name "Arklight"
 OutFile "${OUTFILE}"
 
 ManifestDPIAware true
@@ -29,13 +29,13 @@ Function .onInit
 	!ifndef USE_PROGRAMFILES32
 		SetRegView 64
 	!endif
-	ReadRegStr $INSTDIR HKLM "Software\OpenRA${SUFFIX}" "InstallDir"
+	ReadRegStr $INSTDIR HKLM "Software\Arklight${SUFFIX}" "InstallDir"
 	StrCmp $INSTDIR "" unset done
 	unset:
 	!ifndef USE_PROGRAMFILES32
-		StrCpy $INSTDIR "$PROGRAMFILES64\OpenRA${SUFFIX}"
+		StrCpy $INSTDIR "$PROGRAMFILES64\Arklight${SUFFIX}"
 	!else
-		StrCpy $INSTDIR "$PROGRAMFILES32\OpenRA${SUFFIX}"
+		StrCpy $INSTDIR "$PROGRAMFILES32\Arklight${SUFFIX}"
 	!endif
 	done:
 FunctionEnd
@@ -48,9 +48,9 @@ RequestExecutionLevel admin
 !insertmacro MUI_PAGE_DIRECTORY
 
 !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKLM"
-!define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\OpenRA${SUFFIX}"
+!define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\Arklight${SUFFIX}"
 !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
-!define MUI_STARTMENUPAGE_DEFAULTFOLDER "OpenRA"
+!define MUI_STARTMENUPAGE_DEFAULTFOLDER "Arklight"
 
 Var StartMenuFolder
 !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
@@ -74,33 +74,33 @@ Var StartMenuFolder
 Section "-Reg" Reg
 
 	; Installation directory
-	WriteRegStr HKLM "Software\OpenRA${SUFFIX}" "InstallDir" $INSTDIR
+	WriteRegStr HKLM "Software\Arklight${SUFFIX}" "InstallDir" $INSTDIR
 
 	; Join server URL Scheme
-	WriteRegStr HKLM "Software\Classes\openra-ra-${TAG}" "" "URL:Join OpenRA server"
-	WriteRegStr HKLM "Software\Classes\openra-ra-${TAG}" "URL Protocol" ""
-	WriteRegStr HKLM "Software\Classes\openra-ra-${TAG}\DefaultIcon" "" "$INSTDIR\ra.ico,0"
-	WriteRegStr HKLM "Software\Classes\openra-ra-${TAG}\Shell\Open\Command" "" "$INSTDIR\RedAlert.exe Launch.URI=%1"
+	WriteRegStr HKLM "Software\Classes\Arklight-ra-${TAG}" "" "URL:Join Arklight server"
+	WriteRegStr HKLM "Software\Classes\Arklight-ra-${TAG}" "URL Protocol" ""
+	WriteRegStr HKLM "Software\Classes\Arklight-ra-${TAG}\DefaultIcon" "" "$INSTDIR\ra.ico,0"
+	WriteRegStr HKLM "Software\Classes\Arklight-ra-${TAG}\Shell\Open\Command" "" "$INSTDIR\RedAlert.exe Launch.URI=%1"
 
 	WriteRegStr HKLM "Software\Classes\discord-${RA_DISCORDID}" "" "URL:Run game ${RA_DISCORDID} protocol"
 	WriteRegStr HKLM "Software\Classes\discord-${RA_DISCORDID}" "URL Protocol" ""
 	WriteRegStr HKLM "Software\Classes\discord-${RA_DISCORDID}\DefaultIcon" "" "$INSTDIR\ra.ico,0"
 	WriteRegStr HKLM "Software\Classes\discord-${RA_DISCORDID}\Shell\Open\Command" "" "$INSTDIR\RedAlert.exe"
 
-	WriteRegStr HKLM "Software\Classes\openra-cnc-${TAG}" "" "URL:Join OpenRA server"
-	WriteRegStr HKLM "Software\Classes\openra-cnc-${TAG}" "URL Protocol" ""
-	WriteRegStr HKLM "Software\Classes\openra-cnc-${TAG}\DefaultIcon" "" "$INSTDIR\cnc.ico,0"
-	WriteRegStr HKLM "Software\Classes\openra-cnc-${TAG}\Shell\Open\Command" "" "$INSTDIR\TiberianDawn.exe Launch.URI=%1"
+	WriteRegStr HKLM "Software\Classes\Arklight-cnc-${TAG}" "" "URL:Join Arklight server"
+	WriteRegStr HKLM "Software\Classes\Arklight-cnc-${TAG}" "URL Protocol" ""
+	WriteRegStr HKLM "Software\Classes\Arklight-cnc-${TAG}\DefaultIcon" "" "$INSTDIR\cnc.ico,0"
+	WriteRegStr HKLM "Software\Classes\Arklight-cnc-${TAG}\Shell\Open\Command" "" "$INSTDIR\TiberianDawn.exe Launch.URI=%1"
 
 	WriteRegStr HKLM "Software\Classes\discord-${CNC_DISCORDID}" "" "URL:Run game ${CNC_DISCORDID} protocol"
 	WriteRegStr HKLM "Software\Classes\discord-${CNC_DISCORDID}" "URL Protocol" ""
 	WriteRegStr HKLM "Software\Classes\discord-${CNC_DISCORDID}\DefaultIcon" "" "$INSTDIR\cnc.ico,0"
 	WriteRegStr HKLM "Software\Classes\discord-${CNC_DISCORDID}\Shell\Open\Command" "" "$INSTDIR\TiberianDawn.exe"
 
-	WriteRegStr HKLM "Software\Classes\openra-d2k-${TAG}" "" "URL:Join OpenRA server"
-	WriteRegStr HKLM "Software\Classes\openra-d2k-${TAG}" "URL Protocol" ""
-	WriteRegStr HKLM "Software\Classes\openra-d2k-${TAG}\DefaultIcon" "" "$INSTDIR\d2k.ico,0"
-	WriteRegStr HKLM "Software\Classes\openra-d2k-${TAG}\Shell\Open\Command" "" "$INSTDIR\Dune2000.exe Launch.URI=%1"
+	WriteRegStr HKLM "Software\Classes\Arklight-d2k-${TAG}" "" "URL:Join Arklight server"
+	WriteRegStr HKLM "Software\Classes\Arklight-d2k-${TAG}" "URL Protocol" ""
+	WriteRegStr HKLM "Software\Classes\Arklight-d2k-${TAG}\DefaultIcon" "" "$INSTDIR\d2k.ico,0"
+	WriteRegStr HKLM "Software\Classes\Arklight-d2k-${TAG}\Shell\Open\Command" "" "$INSTDIR\Dune2000.exe Launch.URI=%1"
 
 	WriteRegStr HKLM "Software\Classes\discord-${D2K_DISCORDID}" "" "URL:Run game ${D2K_DISCORDID} protocol"
 	WriteRegStr HKLM "Software\Classes\discord-${D2K_DISCORDID}" "URL Protocol" ""
@@ -109,10 +109,10 @@ Section "-Reg" Reg
 
 	; Remove obsolete file associations
 	DeleteRegKey HKLM "Software\Classes\.orarep"
-	DeleteRegKey HKLM "Software\Classes\OpenRA_replay"
+	DeleteRegKey HKLM "Software\Classes\Arklight_replay"
 	DeleteRegKey HKLM "Software\Classes\.oramod"
-	DeleteRegKey HKLM "Software\Classes\OpenRA_mod"
-	DeleteRegKey HKLM "Software\Classes\openra"
+	DeleteRegKey HKLM "Software\Classes\Arklight_mod"
+	DeleteRegKey HKLM "Software\Classes\Arklight"
 
 SectionEnd
 
@@ -160,28 +160,28 @@ Section "Game" GAME
 	; Estimated install size for the control panel properties
 	${GetSize} "$INSTDIR" "/S=0K" $0 $1 $2
 	IntFmt $0 "0x%08X" $0
-	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "EstimatedSize" "$0"
+	WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "EstimatedSize" "$0"
 
 	SetShellVarContext all
-	CreateDirectory "$APPDATA\OpenRA\ModMetadata"
+	CreateDirectory "$APPDATA\Arklight\ModMetadata"
 	SetOutPath "$INSTDIR"
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" ra --register-mod "$INSTDIR\RedAlert.exe" system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" ra --clear-invalid-mod-registrations system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" cnc --register-mod "$INSTDIR\TiberianDawn.exe" system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" cnc --clear-invalid-mod-registrations system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" d2k --register-mod "$INSTDIR\Dune2000.exe" system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" d2k --clear-invalid-mod-registrations system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" ra --register-mod "$INSTDIR\RedAlert.exe" system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" ra --clear-invalid-mod-registrations system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" cnc --register-mod "$INSTDIR\TiberianDawn.exe" system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" cnc --clear-invalid-mod-registrations system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" d2k --register-mod "$INSTDIR\Dune2000.exe" system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" d2k --clear-invalid-mod-registrations system'
 	SetShellVarContext current
 
 SectionEnd
 
 Section "Desktop Shortcut" DESKTOPSHORTCUT
 	SetOutPath "$INSTDIR"
-	CreateShortCut "$DESKTOP\OpenRA - Red Alert${SUFFIX}.lnk" $INSTDIR\RedAlert.exe "" \
+	CreateShortCut "$DESKTOP\Arklight - Red Alert${SUFFIX}.lnk" $INSTDIR\RedAlert.exe "" \
 		"$INSTDIR\RedAlert.exe" "" "" "" ""
-	CreateShortCut "$DESKTOP\OpenRA - Tiberian Dawn${SUFFIX}.lnk" $INSTDIR\TiberianDawn.exe "" \
+	CreateShortCut "$DESKTOP\Arklight - Tiberian Dawn${SUFFIX}.lnk" $INSTDIR\TiberianDawn.exe "" \
 		"$INSTDIR\TiberianDawn.exe" "" "" "" ""
-	CreateShortCut "$DESKTOP\OpenRA - Dune 2000${SUFFIX}.lnk" $INSTDIR\Dune2000.exe "" \
+	CreateShortCut "$DESKTOP\Arklight - Dune 2000${SUFFIX}.lnk" $INSTDIR\Dune2000.exe "" \
 		"$INSTDIR\Dune2000.exe" "" "" "" ""
 SectionEnd
 
@@ -190,23 +190,23 @@ SectionEnd
 ;***************************
 Section "-Uninstaller"
 	WriteUninstaller $INSTDIR\uninstaller.exe
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "DisplayName" "OpenRA${SUFFIX}"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "UninstallString" "$INSTDIR\uninstaller.exe"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "QuietUninstallString" "$\"$INSTDIR\uninstaller.exe$\" /S"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "InstallLocation" "$INSTDIR"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "DisplayIcon" "$INSTDIR\ra.ico"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "Publisher" "OpenRA developers"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "URLInfoAbout" "https://openra.net"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "DisplayVersion" "${TAG}"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "NoModify" "1"
-	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}" "NoRepair" "1"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "DisplayName" "Arklight${SUFFIX}"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "UninstallString" "$INSTDIR\uninstaller.exe"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "QuietUninstallString" "$\"$INSTDIR\uninstaller.exe$\" /S"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "InstallLocation" "$INSTDIR"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "DisplayIcon" "$INSTDIR\ra.ico"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "Publisher" "Arklight developers"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "URLInfoAbout" "https://Arklight.net"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "DisplayVersion" "${TAG}"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "NoModify" "1"
+	WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}" "NoRepair" "1"
 SectionEnd
 
 !macro Clean UN
 Function ${UN}Clean
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" ra --unregister-mod system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" cnc --unregister-mod system'
-	nsExec::ExecToLog '"$INSTDIR\OpenRA.Utility.exe" d2k --unregister-mod system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" ra --unregister-mod system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" cnc --unregister-mod system'
+	nsExec::ExecToLog '"$INSTDIR\Arklight.Utility.exe" d2k --unregister-mod system'
 
 	RMDir /r $INSTDIR\mods
 	RMDir /r $INSTDIR\maps
@@ -229,10 +229,10 @@ Function ${UN}Clean
 		SetRegView 64
 	!endif
 
-	DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenRA${SUFFIX}"
-	DeleteRegKey HKLM "Software\Classes\openra-ra-${TAG}"
-	DeleteRegKey HKLM "Software\Classes\openra-cnc-${TAG}"
-	DeleteRegKey HKLM "Software\Classes\openra-d2k-${TAG}"
+	DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\Arklight${SUFFIX}"
+	DeleteRegKey HKLM "Software\Classes\Arklight-ra-${TAG}"
+	DeleteRegKey HKLM "Software\Classes\Arklight-cnc-${TAG}"
+	DeleteRegKey HKLM "Software\Classes\Arklight-d2k-${TAG}"
 
 	DeleteRegKey HKLM "Software\Classes\discord-${RA_DISCORDID}"
 	DeleteRegKey HKLM "Software\Classes\discord-${CNC_DISCORDID}"
@@ -243,17 +243,17 @@ Function ${UN}Clean
 
 	!insertmacro MUI_STARTMENU_GETFOLDER Application $StartMenuFolder
 
-	; Clean up start menu: Delete all our icons, and the OpenRA folder
+	; Clean up start menu: Delete all our icons, and the Arklight folder
 	; *only* if we were the only installed version
 	Delete "$SMPROGRAMS\$StartMenuFolder\Red Alert${SUFFIX}.lnk"
 	Delete "$SMPROGRAMS\$StartMenuFolder\Tiberian Dawn${SUFFIX}.lnk"
 	Delete "$SMPROGRAMS\$StartMenuFolder\Dune 2000${SUFFIX}.lnk"
 	RMDir "$SMPROGRAMS\$StartMenuFolder"
 
-	Delete "$DESKTOP\OpenRA - Red Alert${SUFFIX}.lnk"
-	Delete "$DESKTOP\OpenRA - Tiberian Dawn${SUFFIX}.lnk"
-	Delete "$DESKTOP\OpenRA - Dune 2000${SUFFIX}.lnk"
-	DeleteRegKey HKLM "Software\OpenRA${SUFFIX}"
+	Delete "$DESKTOP\Arklight - Red Alert${SUFFIX}.lnk"
+	Delete "$DESKTOP\Arklight - Tiberian Dawn${SUFFIX}.lnk"
+	Delete "$DESKTOP\Arklight - Dune 2000${SUFFIX}.lnk"
+	DeleteRegKey HKLM "Software\Arklight${SUFFIX}"
 FunctionEnd
 !macroend
 
@@ -267,7 +267,7 @@ SectionEnd
 ;***************************
 ;Section Descriptions
 ;***************************
-LangString DESC_GAME ${LANG_ENGLISH} "OpenRA engine, official mods and dependencies"
+LangString DESC_GAME ${LANG_ENGLISH} "Arklight engine, official mods and dependencies"
 LangString DESC_DESKTOPSHORTCUT ${LANG_ENGLISH} "Place shortcut on the Desktop."
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -282,3 +282,4 @@ LangString DESC_DESKTOPSHORTCUT ${LANG_ENGLISH} "Place shortcut on the Desktop."
 Function .onInstFailed
 	Call Clean
 FunctionEnd
+

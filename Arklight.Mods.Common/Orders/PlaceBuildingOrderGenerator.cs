@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,14 +12,14 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Orders;
-using OpenRA.Primitives;
-using OpenRA.Traits;
-using OpenRA.Widgets;
+using Arklight.Graphics;
+using Arklight.Mods.Common.Traits;
+using Arklight.Orders;
+using Arklight.Primitives;
+using Arklight.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Orders
+namespace Arklight.Mods.Common.Orders
 {
 	[Flags]
 	public enum PlaceBuildingCellType { None = 0, Valid = 1, Invalid = 2, LineBuild = 4 }
@@ -335,3 +335,4 @@ namespace OpenRA.Mods.Common.Orders
 		}
 	}
 }
+

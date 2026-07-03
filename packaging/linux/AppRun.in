@@ -8,11 +8,12 @@ HERE=$(dirname "${LAUNCHER}")
 if [ -n "$1" ] && [ "$1" = "--server" ]; then
 	# Drop the --server argument
 	shift
-	"${HERE}/usr/bin/openra-{MODID}-server" "$@"
+	"${HERE}/usr/bin/Arklight-{MODID}-server" "$@"
 elif [ -n "$1" ] && [ "$1" = "--utility" ]; then
 	# Drop the --utility argument
 	shift
-	"${HERE}/usr/bin/openra-{MODID}-utility" "$@"
+	"${HERE}/usr/bin/Arklight-{MODID}-utility" "$@"
 else
-	"${HERE}/usr/bin/openra-{MODID}" "$@"
+	"${HERE}/usr/bin/Arklight-{MODID}" "$@"
 fi
+

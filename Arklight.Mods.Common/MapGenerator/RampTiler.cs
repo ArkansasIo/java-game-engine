@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -14,10 +14,10 @@ using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Data;
 using System.Linq;
-using OpenRA.Primitives;
-using OpenRA.Support;
+using Arklight.Primitives;
+using Arklight.Support;
 
-namespace OpenRA.Mods.Common.MapGenerator
+namespace Arklight.Mods.Common.MapGenerator
 {
 	/// <summary>Combines ramp tiles to fit a target height map.</summary>
 	public sealed class RampTiler
@@ -772,3 +772,4 @@ namespace OpenRA.Mods.Common.MapGenerator
 		}
 	}
 }
+

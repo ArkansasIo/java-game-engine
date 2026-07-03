@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -12,9 +12,9 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using OpenRA.Scripting;
+using Arklight.Scripting;
 
-namespace OpenRA.Mods.Common.UtilityCommands.Documentation
+namespace Arklight.Mods.Common.UtilityCommands.Documentation
 {
 	// See https://studio.zerobrane.com/doc-api-auto-complete for reference
 	sealed class ExtractZeroBraneStudioLuaAPI : IUtilityCommand
@@ -30,17 +30,17 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			Console.WriteLine("local interpreter = {");
-			Console.WriteLine("  name = \"OpenRA\",");
-			Console.WriteLine("  description = \"OpenRA map scripting Lua API\",");
-			Console.WriteLine("  api = {\"baselib\", \"openra\"},");
+			Console.WriteLine("  name = \"Arklight\",");
+			Console.WriteLine("  description = \"Arklight map scripting Lua API\",");
+			Console.WriteLine("  api = {\"baselib\", \"Arklight\"},");
 			Console.WriteLine("  hasdebugger = false,");
 			Console.WriteLine("  skipcompile = true,");
 			Console.WriteLine("}");
 			Console.WriteLine();
 
-			Console.WriteLine("-- This is an automatically generated Lua API definition generated for {0} of OpenRA.", utility.ModData.Manifest.Metadata.Version);
-			Console.WriteLine("-- https://github.com/OpenRA/OpenRA/wiki/Utility was used with the --zbstudio-lua-api parameter.");
-			Console.WriteLine("-- See https://github.com/OpenRA/OpenRA/wiki/Lua-API for human readable documentation.");
+			Console.WriteLine("-- This is an automatically generated Lua API definition generated for {0} of Arklight.", utility.ModData.Manifest.Metadata.Version);
+			Console.WriteLine("-- https://github.com/Arklight/Arklight/wiki/Utility was used with the --zbstudio-lua-api parameter.");
+			Console.WriteLine("-- See https://github.com/Arklight/Arklight/wiki/Lua-API for human readable documentation.");
 			Console.WriteLine();
 			Console.WriteLine("local api = {");
 
@@ -126,21 +126,22 @@ namespace OpenRA.Mods.Common.UtilityCommands.Documentation
 			Console.WriteLine("}");
 			Console.WriteLine();
 			Console.WriteLine("return {");
-			Console.WriteLine("  name = \"OpenRA\",");
-			Console.WriteLine("  description = \"Adds API description for auto-complete and tooltip support for OpenRA.\",");
+			Console.WriteLine("  name = \"Arklight\",");
+			Console.WriteLine("  description = \"Adds API description for auto-complete and tooltip support for Arklight.\",");
 			Console.WriteLine("  author = \"Matthias Mailänder\",");
 			Console.WriteLine($"  version = \"{utility.ModData.Manifest.Metadata.Version.Split('-').LastOrDefault()}\",");
 			Console.WriteLine();
 			Console.WriteLine("  onRegister = function(self)");
-			Console.WriteLine("    ide:AddAPI(\"lua\", \"openra\", api)");
-			Console.WriteLine("    ide:AddInterpreter(\"openra\", interpreter)");
+			Console.WriteLine("    ide:AddAPI(\"lua\", \"Arklight\", api)");
+			Console.WriteLine("    ide:AddInterpreter(\"Arklight\", interpreter)");
 			Console.WriteLine("  end,");
 			Console.WriteLine();
 			Console.WriteLine("  onUnRegister = function(self)");
-			Console.WriteLine("    ide:RemoveAPI(\"lua\", \"openra\")");
-			Console.WriteLine("    ide:RemoveInterpreter(\"openra\")");
+			Console.WriteLine("    ide:RemoveAPI(\"lua\", \"Arklight\")");
+			Console.WriteLine("    ide:RemoveInterpreter(\"Arklight\")");
 			Console.WriteLine("  end,");
 			Console.WriteLine("}");
 		}
 	}
 }
+

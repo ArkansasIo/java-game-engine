@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,11 +11,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Effects;
-using OpenRA.Graphics;
-using OpenRA.Traits;
+using Arklight.Effects;
+using Arklight.Graphics;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Effects
+namespace Arklight.Mods.Common.Effects
 {
 	public class RevealShroudEffect : IEffect
 	{
@@ -84,3 +84,4 @@ namespace OpenRA.Mods.Common.Effects
 		public IEnumerable<IRenderable> Render(WorldRenderer wr) { return SpriteRenderable.None; }
 	}
 }
+

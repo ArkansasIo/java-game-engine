@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -11,12 +11,12 @@
 
 using System.Collections.Generic;
 using System.Collections.Immutable;
-using OpenRA.Effects;
-using OpenRA.GameRules;
-using OpenRA.Graphics;
-using OpenRA.Traits;
+using Arklight.Effects;
+using Arklight.GameRules;
+using Arklight.Graphics;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Common.Effects
+namespace Arklight.Mods.Common.Effects
 {
 	public class NukeLaunch : IProjectile, ISpatiallyPartitionable
 	{
@@ -171,3 +171,4 @@ namespace OpenRA.Mods.Common.Effects
 		public float FractionComplete => ticks * 1f / impactDelay;
 	}
 }
+

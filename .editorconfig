@@ -49,7 +49,7 @@ dotnet_diagnostic.IDE0065.severity = silent
 
 # IDE0011 Add braces
 #csharp_prefer_braces = true
-# No options match the style used in OpenRA.
+# No options match the style used in Arklight.
 dotnet_diagnostic.IDE0011.severity = none
 
 # IDE0063 Use simple 'using' statement
@@ -657,7 +657,7 @@ dotnet_diagnostic.SA1311.severity = none # StaticReadonlyFieldsMustBeginWithUppe
 dotnet_diagnostic.SA1312.severity = none # VariableNamesMustBeginWithLowerCaseLetter
 dotnet_diagnostic.SA1313.severity = none # ParameterNamesMustBeginWithLowerCaseLetter
 
-# Rules that conflict with OpenRA project style conventions
+# Rules that conflict with Arklight project style conventions
 dotnet_diagnostic.SA1101.severity = none # PrefixLocalCallsWithThis
 dotnet_diagnostic.SA1107.severity = none # CodeMustNotContainMultipleStatementsOnOneLine
 dotnet_diagnostic.SA1116.severity = none # SplitParametersMustStartOnLineAfterDeclaration
@@ -919,7 +919,7 @@ dotnet_diagnostic.CA1850.severity = warning
 
 # Possible multiple enumerations of IEnumerable collection.
 #dotnet_code_quality.CA1851.enumeration_methods =
-dotnet_code_quality.CA1851.linq_chain_methods = M:OpenRA.Traits.IRenderModifier.Modify*
+dotnet_code_quality.CA1851.linq_chain_methods = M:Arklight.Traits.IRenderModifier.Modify*
 dotnet_code_quality.CA1851.assume_method_enumerates_parameters = true
 dotnet_diagnostic.CA1851.severity = warning
 
@@ -1339,3 +1339,4 @@ dotnet_diagnostic.RCS1266.severity = warning
 
 # Use string interpolation instead of 'string.Concat'.
 dotnet_diagnostic.RCS1267.severity = warning
+

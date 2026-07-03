@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,12 +13,12 @@ using System.Collections.Frozen;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
-using OpenRA.Mods.Common.Widgets;
-using OpenRA.Primitives;
-using OpenRA.Traits;
-using OpenRA.Widgets;
+using Arklight.Mods.Common.Widgets;
+using Arklight.Primitives;
+using Arklight.Traits;
+using Arklight.Widgets;
 
-namespace OpenRA.Mods.Common.Traits
+namespace Arklight.Mods.Common.Traits
 {
 	[TraitLocation(SystemActors.World)]
 	[IncludeStaticFluentReferences(typeof(TimeLimitManager))]
@@ -131,7 +131,7 @@ namespace OpenRA.Mods.Common.Traits
 			TimeLimit *= 60 * ticksPerSecond;
 		}
 
-		void IWorldLoaded.WorldLoaded(World w, OpenRA.Graphics.WorldRenderer wr)
+		void IWorldLoaded.WorldLoaded(World w, Arklight.Graphics.WorldRenderer wr)
 		{
 			if (string.IsNullOrWhiteSpace(info.CountdownLabel) || string.IsNullOrWhiteSpace(info.CountdownText))
 				return;
@@ -189,3 +189,4 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 }
+

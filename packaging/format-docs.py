@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-# Copyright (c) The OpenRA Developers and Contributors
-# This file is part of OpenRA, which is free software. It is made
+# Copyright (c) The Arklight Developers and Contributors
+# This file is part of Arklight, which is free software. It is made
 # available to you under the terms of the GNU General Public License
 # as published by the Free Software Foundation, either version 3 of
 # the License, or (at your option) any later version. For more
@@ -52,7 +52,7 @@ def format_docs(version, collectionName, types, relatedEnums):
         explanation = "all sprite sequence types with their properties and their default values plus developer commentary"
 
     print(f"# {title}\n")
-    print(f"This documentation is aimed at modders and has been automatically generated for version `{version}` of OpenRA. " +
+    print(f"This documentation is aimed at modders and has been automatically generated for version `{version}` of Arklight. " +
 				"Please do not edit it directly, but instead add new `[Desc(\"String\")]` tags to the source code.\n")
 
     print(f"Listed below are {explanation}.")
@@ -70,7 +70,7 @@ def format_docs(version, collectionName, types, relatedEnums):
 
             sourceUrl = ""
             if currentType["Filename"]:
-                sourceUrl = f"https://github.com/OpenRA/OpenRA/blob/{version}/{currentType['Filename']}"
+                sourceUrl = f"https://github.com/Arklight/Arklight/blob/{version}/{currentType['Filename']}"
                 description = f"{description} [GitHub]({sourceUrl})"
 
             if description:
@@ -138,3 +138,4 @@ if __name__ == "__main__":
         types = jsonInfo[keys[1]]
         relatedEnums = jsonInfo["RelatedEnums"] or []
         format_docs(version, collectionName, types, relatedEnums)
+

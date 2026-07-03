@@ -1,6 +1,6 @@
 # In-Game UI Redesign Pass
 
-This pass applies the OGame 0.84 inspired epic-blue interface language to the active Red Alert in-game chrome while keeping OpenRA's existing command, sidebar, radar, production, and menu logic intact.
+This pass applies the OGame 0.84 inspired epic-blue interface language to the active Red Alert in-game chrome while keeping Arklight's existing command, sidebar, radar, production, and menu logic intact.
 
 ## Files Updated
 
@@ -26,11 +26,12 @@ flowchart LR
 
 ## Current Scope
 
-The redesign is visual chrome only. It does not yet replace OpenRA production logic with OGame planet pages, fleet pages, resource pages, alliance pages, or MMORPG character sheets. Those systems remain documented in the OGame scaffold and can be wired into later UI screens once gameplay backing data exists.
+The redesign is visual chrome only. It does not yet replace Arklight production logic with OGame planet pages, fleet pages, resource pages, alliance pages, or MMORPG character sheets. Those systems remain documented in the OGame scaffold and can be wired into later UI screens once gameplay backing data exists.
 
 ## Next Integration Targets
 
 - Add clickable top-level strategic tabs once screen logic exists for galaxy, planet, fleet, diplomacy, and character pages.
 - Add resource-band widgets for metal, crystal, deuterium, energy, credits, supply, and command capacity.
-- Add a 4X empire overview panel that reads from the `OpenRA.Mods.Common.OGame084` catalog and economy models.
+- Add a 4X empire overview panel that reads from the `Arklight.Mods.Common.OGame084` catalog and economy models.
 - Extend observer chrome to share the same visual language.
+

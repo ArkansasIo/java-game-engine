@@ -76,7 +76,7 @@ notification-master-server-error = Master server communication failed.
 notification-game-offline = Game has not been advertised online.
 notification-no-port-forward = Server port is not accessible from the internet.
 notification-blacklisted-server-name = Server name contains a blacklisted word.
-notification-requires-authentication = Server requires players to have an OpenRA forum account.
+notification-requires-authentication = Server requires players to have an Arklight forum account.
 notification-no-permission-to-join = You do not have permission to join this server.
 notification-slot-closed = Your slot was closed by the host.
 
@@ -482,13 +482,13 @@ label-map-size-medium = Medium
 label-map-size-small = Small
 label-map-searching-count =
     { $count ->
-        [one] Searching the OpenRA Resource Center for { $count } map...
-       *[other] Searching the OpenRA Resource Center for { $count } maps...
+        [one] Searching the Arklight Resource Center for { $count } map...
+       *[other] Searching the Arklight Resource Center for { $count } maps...
     }
 label-map-unavailable-count =
     { $count ->
-        [one] { $count } map was not found on the OpenRA Resource Center
-       *[other] { $count } maps were not found on the OpenRA Resource Center
+        [one] { $count } map was not found on the Arklight Resource Center
+       *[other] { $count } maps were not found on the Arklight Resource Center
     }
 
 notification-map-deletion-failed = Failed to delete map '{ $map }'. See the debug.log file for details.
@@ -1148,3 +1148,4 @@ notification-tiling-path-started = Started tiling path
 notification-tiling-path-updated = Updated tiling path
 notification-tiling-path-reset = Discarded tiling path
 notification-tiling-path-painted = Painted tiling path
+

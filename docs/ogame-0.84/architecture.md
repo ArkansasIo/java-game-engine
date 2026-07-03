@@ -49,12 +49,13 @@
 - Administration: `pages_admin` tools for users, planets, queues, logs, localization, universe setup, simulation, bots, bans, coupons, and DB/debug pages.
 - Mods: `GameMod` hooks let extensions add routes, tabs, menu items, queue behavior, production/fleet/battle bonuses, object images, and custom mission handling.
 
-## Porting Notes for OpenRA
+## Porting Notes for Arklight
 
-A direct implementation would be a rewrite, not a copy. The useful boundaries for a future OpenRA-side port are:
+A direct implementation would be a rewrite, not a copy. The useful boundaries for a future Arklight-side port are:
 
-- Model OGame planets/fleets/resources as a separate rules/domain module instead of OpenRA actors.
+- Model OGame planets/fleets/resources as a separate rules/domain module instead of Arklight actors.
 - Convert queue rows to deterministic scheduled commands if multiplayer synchronization matters.
 - Keep combat as a service-style simulator with deterministic seeded random input.
-- Replace PHP page controllers with OpenRA widgets or an external web UI.
-- Treat mods as data/hook plugins only after defining an OpenRA-safe extension surface.
+- Replace PHP page controllers with Arklight widgets or an external web UI.
+- Treat mods as data/hook plugins only after defining an Arklight-safe extension surface.
+

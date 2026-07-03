@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
-		<AssemblyName>OpenRA</AssemblyName>
+		<AssemblyName>Arklight</AssemblyName>
 		<IsPublishable Condition="'$(CopyGenericLauncher)' == 'False'">false</IsPublishable>
 	</PropertyGroup>
 
@@ -24,7 +24,8 @@
 
 	<ItemGroup>
 		<None Include="App.config" />
-		<ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj" />
+		<ProjectReference Include="..\Arklight.Game\Arklight.Game.csproj" />
 		<AdditionalFiles Include="Properties/launchSettings.json" />
 	</ItemGroup>
 </Project>
+

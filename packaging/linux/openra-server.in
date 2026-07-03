@@ -3,8 +3,9 @@ set -o errexit || exit $?
 
 cd "{GAME_INSTALL_DIR}"
 
-if test -f "OpenRA.Server"; then
-	./OpenRA.Server Game.Mod={MODID} "$@"
+if test -f "Arklight.Server"; then
+	./Arklight.Server Game.Mod={MODID} "$@"
 else
-	dotnet OpenRA.Server.dll Game.Mod={MODID} "$@"
+	dotnet Arklight.Server.dll Game.Mod={MODID} "$@"
 fi
+

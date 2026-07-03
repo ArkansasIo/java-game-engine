@@ -37,7 +37,7 @@ datadir ?= $(datarootdir)
 mandir ?= $(datarootdir)/man/
 bindir ?= $(prefix)/bin
 libdir ?= $(prefix)/lib
-gameinstalldir ?= $(libdir)/openra
+gameinstalldir ?= $(libdir)/Arklight
 
 # Toolchain
 CWD = $(shell pwd)
@@ -132,9 +132,9 @@ test: all
 	@./utility.sh ra --check-yaml
 
 tests:
-	@dotnet build OpenRA.Test/OpenRA.Test.csproj -c Debug --nologo -p:TargetPlatform=$(TARGETPLATFORM)
+	@dotnet build Arklight.Test/Arklight.Test.csproj -c Debug --nologo -p:TargetPlatform=$(TARGETPLATFORM)
 	@echo
-	@dotnet test bin/OpenRA.Test.dll --test-adapter-path:.
+	@dotnet test bin/Arklight.Test.dll --test-adapter-path:.
 
 ############# LOCAL INSTALLATION AND DOWNSTREAM PACKAGING ##############
 #
@@ -157,7 +157,7 @@ install-linux-appdata:
 
 install-man: all
 	@mkdir -p $(DESTDIR)$(mandir)/man6/
-	@./utility.sh all --man-page > $(DESTDIR)$(mandir)/man6/openra.6
+	@./utility.sh all --man-page > $(DESTDIR)$(mandir)/man6/Arklight.6
 
 help:
 	@echo 'to compile, run:'
@@ -191,3 +191,4 @@ help:
 .SUFFIXES:
 
 .PHONY: all clean check check-scripts test version install install-linux-shortcuts install-linux-appdata install-man help
+

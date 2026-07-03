@@ -145,19 +145,19 @@ jobs:
 
       - name: Upload Installer
         id: unsigned-artifact
-        if: github.repository == 'openra/openra'
+        if: github.repository == 'Arklight/Arklight'
         uses: actions/upload-artifact@v7
         with:
           path: build/windows/*.exe
 
       - name: Microsoft Authenticode
         id: signpath
-        if: github.repository == 'openra/openra'
+        if: github.repository == 'Arklight/Arklight'
         uses: signpath/github-action-submit-signing-request@v2
         with:
           api-token: '${{ secrets.SIGNPATH_API_TOKEN }}'
           organization-id: '${{ secrets.SIGNPATH_ORGANISATION_ID }}'
-          project-slug: 'OpenRA'
+          project-slug: 'Arklight'
           signing-policy-slug: 'release-signing'
           github-artifact-id: '${{ steps.unsigned-artifact.outputs.artifact-id }}'
           wait-for-completion: true
@@ -172,8 +172,9 @@ jobs:
         run: |
           gh release upload "${{ github.ref_name }}" build/windows/*.zip
 
-          if [ "${GITHUB_REPOSITORY}" = "openra/openra" ]; then
+          if [ "${GITHUB_REPOSITORY}" = "Arklight/Arklight" ]; then
             gh release upload "${{ github.ref_name }}" build/windows/signed/*.exe
           else
             gh release upload "${{ github.ref_name }}" build/windows/*.exe
           fi
+

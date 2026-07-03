@@ -1,7 +1,7 @@
 #region Copyright & License Information
 /*
- * Copyright (c) The OpenRA Developers and Contributors
- * This file is part of OpenRA, which is free software. It is made
+ * Copyright (c) The Arklight Developers and Contributors
+ * This file is part of Arklight, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
  * the License, or (at your option) any later version. For more
@@ -13,16 +13,16 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using OpenRA.FileSystem;
-using OpenRA.Mods.Cnc.FileFormats;
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.FileFormats;
-using OpenRA.Mods.Common.Terrain;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
-using OpenRA.Traits;
+using Arklight.FileSystem;
+using Arklight.Mods.Cnc.FileFormats;
+using Arklight.Mods.Common;
+using Arklight.Mods.Common.FileFormats;
+using Arklight.Mods.Common.Terrain;
+using Arklight.Mods.Common.Traits;
+using Arklight.Primitives;
+using Arklight.Traits;
 
-namespace OpenRA.Mods.Cnc.UtilityCommands
+namespace Arklight.Mods.Cnc.UtilityCommands
 {
 	public abstract class ImportGen2MapCommand
 	{
@@ -30,7 +30,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		// These are imported as being outside the map bounds but within the shroud visible margin,
 		// which requires some extra padding to make the PPos calculations work.
 		// The first value is added to the left, right, and bottom edges. The second value is added to the top.
-		// There are 6 tiles in the top uninteractable region (3 in og TS, double for OpenRA).
+		// There are 6 tiles in the top uninteractable region (3 in og TS, double for Arklight).
 		// So far testing hasn't shown the need for a left/right/bottom uninteractable margin except in cases of odd elevation, which affects us but not the original games.
 		protected virtual int2 UninteractableMargin { get; } = new int2(0, 6);
 
@@ -557,7 +557,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		}
 
 		/// <summary>
-		/// Convert TS relative position to OpenRA MPos, accounting for map cordons.
+		/// Convert TS relative position to Arklight MPos, accounting for map cordons.
 		/// </summary>
 		protected MPos ToMPos(int dx, int dy)
 		{
@@ -565,7 +565,7 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		}
 
 		/// <summary>
-		/// Convert TS relative position to OpenRA MPos, accounting for map cordons.
+		/// Convert TS relative position to Arklight MPos, accounting for map cordons.
 		/// </summary>
 		protected MPos ToMPos(int rx, int ry, int mapWidthWithoutCordon)
 		{
@@ -577,3 +577,4 @@ namespace OpenRA.Mods.Cnc.UtilityCommands
 		#endregion
 	}
 }
+

@@ -350,7 +350,7 @@ stateDiagram-v2
   WarRoom --> GalaxyView: strategic map
 ```
 
-## OpenRA C# Scaffold Map
+## Arklight C# Scaffold Map
 
 ```mermaid
 flowchart LR
@@ -367,3 +367,4 @@ flowchart LR
   Interface[OGameInterfaceModel] --> Views[Hybrid UI Views]
   Interface --> Transitions[UI State Transitions]
 ```
+
