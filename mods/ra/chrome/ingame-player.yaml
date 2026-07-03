@@ -12,6 +12,44 @@ Container@PLAYER_WIDGETS:
 			CombineWithGroupKeyPrefix: ControlGroupCombineWith
 			JumpToGroupKeyPrefix: ControlGroupJumpTo
 		LogicTicker@SIDEBAR_TICKER:
+		Container@STELLAR_SUPPORT_FRAME:
+			X: 5
+			Y: 5
+			Width: 438
+			Height: 61
+			Children:
+				ColorBlock@PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 040E1ED0
+				ColorBlock@HEADER:
+					Width: PARENT_WIDTH
+					Height: 18
+					Color: 1C3858E8
+				ColorBlock@ACCENT:
+					Y: PARENT_HEIGHT - HEIGHT
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				Label@TITLE:
+					X: 96
+					Y: 2
+					Width: 190
+					Height: 16
+					Text: GALAXY COMMAND
+					Font: Bold
+					TextColor: DDEBFF
+					Contrast: true
+				Label@SUBTITLE:
+					X: 286
+					Y: 2
+					Width: 140
+					Height: 16
+					Text: RTS / 4X / MMO
+					Font: Tiny
+					TextColor: 8FBDEB
+					Align: Right
+					Contrast: true
 		Container@SUPPORT_POWERS:
 			Logic: SupportPowerBinLogic
 			X: 10
@@ -40,6 +78,44 @@ Container@PLAYER_WIDGETS:
 			X: 80
 			Y: 10
 			Order: Descending
+		Container@STELLAR_COMMAND_DECK:
+			X: 5
+			Y: WINDOW_HEIGHT - HEIGHT - 5
+			Width: 434
+			Height: 62
+			Children:
+				ColorBlock@PANEL:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 040E1ED0
+				ColorBlock@HEADER:
+					Width: PARENT_WIDTH
+					Height: 16
+					Color: 1C3858E8
+				ColorBlock@ACCENT:
+					Y: PARENT_HEIGHT - HEIGHT
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				Label@TITLE:
+					X: 10
+					Y: 1
+					Width: 180
+					Height: 15
+					Text: COMMAND DECK
+					Font: Bold
+					TextColor: DDEBFF
+					Contrast: true
+				Label@SUBTITLE:
+					X: 236
+					Y: 1
+					Width: 188
+					Height: 15
+					Text: Orders / Stance / Fleet
+					Font: Tiny
+					TextColor: 8FBDEB
+					Align: Right
+					Contrast: true
 		Image@COMMAND_BAR_BACKGROUND:
 			X: 5
 			Y: WINDOW_HEIGHT - HEIGHT - 5
@@ -422,6 +498,31 @@ Container@PLAYER_WIDGETS:
 							Width: 220
 							Height: 220
 							Skippable: false
+						ColorBlock@STELLAR_RADAR_HEADER:
+							X: 1
+							Y: 1
+							Width: 220
+							Height: 18
+							Color: 040E1ED8
+						Label@STELLAR_RADAR_TITLE:
+							X: 7
+							Y: 3
+							Width: 112
+							Height: 14
+							Text: ORBITAL RADAR
+							Font: TinyBold
+							TextColor: DDEBFF
+							Contrast: true
+						Label@STELLAR_RADAR_MODE:
+							X: 120
+							Y: 3
+							Width: 94
+							Height: 14
+							Text: Sector Grid
+							Font: Tiny
+							TextColor: 8FBDEB
+							Align: Right
+							Contrast: true
 		Container@SIDEBAR_PRODUCTION:
 			Logic: ClassicProductionLogic
 			X: WINDOW_WIDTH - 250

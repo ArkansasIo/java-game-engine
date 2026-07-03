@@ -48,5 +48,8 @@ update.log
 # Support directory
 /Support
 
+# Local external source clones used for reference generation
+/.external/
+
 # IntelliJ files
 .idea
