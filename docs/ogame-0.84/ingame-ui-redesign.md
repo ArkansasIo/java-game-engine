@@ -1,6 +1,6 @@
 # In-Game UI Redesign Pass
 
-This pass applies the OGame 0.84 inspired epic-blue interface language to the active Red Alert in-game chrome while keeping Arklight's existing command, sidebar, radar, production, and menu logic intact.
+This pass applies the OGame 0.84 inspired epic-blue interface language to the active Arklight tactical chrome while keeping Arklight's existing command, sidebar, radar, production, and menu logic intact.
 
 ## Files Updated
 

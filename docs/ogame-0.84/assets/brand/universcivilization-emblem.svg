@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">UniversCivilization Emblem</title>
+  <desc id="desc">Sci-fi orbital crown emblem for UniversCivilization: Empire at War.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="48%" r="62%">
+      <stop offset="0" stop-color="#102a4d"/>
+      <stop offset="0.58" stop-color="#040e1e"/>
+      <stop offset="1" stop-color="#01050b"/>
+    </radialGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e6ebfb"/>
+      <stop offset="0.28" stop-color="#6da8ff"/>
+      <stop offset="0.56" stop-color="#344566"/>
+      <stop offset="1" stop-color="#e2b84f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff0a8"/>
+      <stop offset="0.48" stop-color="#d7a72e"/>
+      <stop offset="1" stop-color="#7d5a0a"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="46" fill="url(#bg)"/>
+  <g fill="none" stroke="#415680" stroke-width="2" opacity="0.75">
+    <circle cx="256" cy="256" r="184"/>
+    <circle cx="256" cy="256" r="130"/>
+    <ellipse cx="256" cy="256" rx="210" ry="68"/>
+    <ellipse cx="256" cy="256" rx="88" ry="210" transform="rotate(58 256 256)"/>
+    <path d="M66 256h380M256 66v380"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M256 54a202 202 0 0 1 202 202h-42a160 160 0 0 0-320 0H54A202 202 0 0 1 256 54Z" fill="#07182e" stroke="url(#metal)" stroke-width="10"/>
+    <path d="M154 314 218 174l38 94 38-94 64 140-102 98Z" fill="url(#gold)" stroke="#fff0a8" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M256 222 288 292 256 350 224 292Z" fill="#00ff00" stroke="#e6ff9d" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M116 320h280l-54 58H170Z" fill="#061225" stroke="#6da8ff" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M104 320c70-82 234-82 304 0" stroke="#e2b84f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g fill="#6da8ff" opacity="0.9">
+    <circle cx="114" cy="124" r="4"/>
+    <circle cx="394" cy="156" r="3"/>
+    <circle cx="420" cy="310" r="4"/>
+    <circle cx="96" cy="366" r="3"/>
+  </g>
+</svg>

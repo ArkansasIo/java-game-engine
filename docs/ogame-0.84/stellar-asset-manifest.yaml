@@ -1,0 +1,154 @@
+version: 1
+legal:
+  policy: Original UniversCivilization assets only. Do not copy proprietary browser-game, RTS, film, or licensed graphics.
+  inspiration: OGame-era blue command UI, space empire RTS/4X, dense operational panels.
+root: mods/stellar/assets
+palette:
+  deep-space: "#040e1e"
+  panel-blue: "#344566"
+  frame-line: "#415680"
+  command-text: "#E6EBFB"
+  tactical-blue: "#6DA8FF"
+  command-lime: "#00FF00"
+  alliance-green: "#33CC00"
+  warning-gold: "#FFD25A"
+  hostile-red: "#FF4A4A"
+assets:
+  units:
+    - id: unit-orbital-engineer
+      name: Orbital Engineer
+      role: Builder and field repair unit
+      sprite: sprites/units/orbital-engineer.png
+      icon: icons/units/orbital-engineer.png
+    - id: unit-vacuum-marine
+      name: Vacuum Marine
+      role: Baseline infantry
+      sprite: sprites/units/vacuum-marine.png
+      icon: icons/units/vacuum-marine.png
+    - id: unit-phalanx-guard
+      name: Phalanx Guard
+      role: Shield infantry
+      sprite: sprites/units/phalanx-guard.png
+      icon: icons/units/phalanx-guard.png
+    - id: unit-sentinel-drone
+      name: Sentinel Drone
+      role: Scout and detector
+      sprite: sprites/units/sentinel-drone.png
+      model: models/units/sentinel-drone.glb
+      icon: icons/units/sentinel-drone.png
+  starships:
+    - id: ship-probe
+      name: Deep Probe
+      role: Espionage
+      model: models/starships/deep-probe.glb
+      render: renders/starships/deep-probe.png
+      icon: icons/starships/deep-probe.png
+    - id: ship-light-fighter
+      name: Light Fighter
+      role: Strike craft
+      model: models/starships/light-fighter.glb
+      render: renders/starships/light-fighter.png
+      icon: icons/starships/light-fighter.png
+    - id: ship-cruiser
+      name: Cruiser
+      role: Line ship
+      model: models/starships/cruiser.glb
+      render: renders/starships/cruiser.png
+      icon: icons/starships/cruiser.png
+    - id: ship-colony-ark
+      name: Colony Ark
+      role: Colonization
+      model: models/starships/colony-ark.glb
+      render: renders/starships/colony-ark.png
+      icon: icons/starships/colony-ark.png
+    - id: ship-dreadnought
+      name: Dreadnought
+      role: Capital siege
+      model: models/starships/dreadnought.glb
+      render: renders/starships/dreadnought.png
+      icon: icons/starships/dreadnought.png
+  buildings:
+    - id: building-command-nexus
+      name: Command Nexus
+      role: Colony control
+      sprite: sprites/buildings/command-nexus.png
+      model: models/buildings/command-nexus.glb
+      icon: icons/buildings/command-nexus.png
+    - id: building-metal-extractor
+      name: Metal Extractor
+      role: Metal production
+      sprite: sprites/buildings/metal-extractor.png
+      model: models/buildings/metal-extractor.glb
+      icon: icons/buildings/metal-extractor.png
+    - id: building-crystal-array
+      name: Crystal Array
+      role: Crystal production
+      sprite: sprites/buildings/crystal-array.png
+      model: models/buildings/crystal-array.glb
+      icon: icons/buildings/crystal-array.png
+    - id: building-deuterium-refinery
+      name: Deuterium Refinery
+      role: Fuel production
+      sprite: sprites/buildings/deuterium-refinery.png
+      model: models/buildings/deuterium-refinery.glb
+      icon: icons/buildings/deuterium-refinery.png
+    - id: building-orbital-shipyard
+      name: Orbital Shipyard
+      role: Starship production
+      model: models/buildings/orbital-shipyard.glb
+      render: renders/buildings/orbital-shipyard.png
+      icon: icons/buildings/orbital-shipyard.png
+    - id: building-research-spire
+      name: Research Spire
+      role: Research unlocks
+      sprite: sprites/buildings/research-spire.png
+      model: models/buildings/research-spire.glb
+      icon: icons/buildings/research-spire.png
+  weapons:
+    - id: weapon-rail-lance
+      name: Rail Lance
+      role: Kinetic anti-armor
+      icon: icons/weapons/rail-lance.png
+    - id: weapon-plasma-torpedo
+      name: Plasma Torpedo
+      role: Anti-capital projectile
+      icon: icons/weapons/plasma-torpedo.png
+    - id: weapon-ion-beam
+      name: Ion Beam
+      role: Shield stripping
+      vfx: vfx/weapons/ion-beam.png
+  armor:
+    - id: armor-composite-hull
+      name: Composite Hull
+      role: Baseline hull armor
+      icon: icons/armor/composite-hull.png
+    - id: armor-ablative-ceramic
+      name: Ablative Ceramic
+      role: Thermal armor
+      icon: icons/armor/ablative-ceramic.png
+    - id: armor-void-lattice
+      name: Void Lattice
+      role: Exotic late-game armor
+      icon: icons/armor/void-lattice.png
+  planets:
+    - id: planet-terran
+      name: Terran Colony World
+      model: models/planets/terran-colony.glb
+      render: renders/planets/terran-colony.png
+      icon: icons/planets/terran-colony.png
+    - id: planet-ice
+      name: Ice Resource World
+      model: models/planets/ice-resource-world.glb
+      render: renders/planets/ice-resource-world.png
+      icon: icons/planets/ice-resource-world.png
+  vfx:
+    - id: effect-warp-entry
+      name: Warp Entry
+      sheet: vfx/space/warp-entry.png
+    - id: effect-shield-hit
+      name: Shield Hit
+      sheet: vfx/combat/shield-hit.png
+  ui:
+    - id: ui-resource-strip
+      name: Resource Strip
+      image: ui/resource-strip.png

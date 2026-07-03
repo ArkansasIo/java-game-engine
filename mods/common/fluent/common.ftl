@@ -4,6 +4,21 @@ button-retry = Retry
 button-back = Back
 button-continue = Continue
 button-quit = Quit
+button-content-title = DLC / Expansions
+button-missions-title = Campaign Acts
+button-skirmish-title = Galaxy Sandbox
+button-load-title = Load Empire
+button-replays-title = Battle Replays
+button-music-title = Music
+button-credits-title = Credits
+button-map-editor-title = Starforge
+button-new-map-title = New Sector
+button-load-map-title = Load Sector
+label-stellar-command-title = Stellar Command
+label-account-creation-title = Account Creation
+label-new-empire-title = New Empire
+label-online-eight-player-title = Online 8 Player
+label-patch-infolog-title = Patch / Info Log
 
 ## Server Orders
 notification-custom-rules = This map contains custom rules. Game experience may change.

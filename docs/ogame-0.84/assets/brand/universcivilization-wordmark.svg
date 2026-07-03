@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">UniversCivilization: Empire at War Wordmark</title>
+  <desc id="desc">Horizontal sci-fi wordmark for UniversCivilization: Empire at War.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#071225"/>
+      <stop offset="0.5" stop-color="#344566"/>
+      <stop offset="1" stop-color="#071225"/>
+    </linearGradient>
+    <linearGradient id="text" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.52" stop-color="#e6ebfb"/>
+      <stop offset="1" stop-color="#6da8ff"/>
+    </linearGradient>
+    <filter id="blueGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="320" fill="#040e1e"/>
+  <path d="M80 108h1040l54 52-54 52H80l-54-52Z" fill="url(#panel)" stroke="#6da8ff" stroke-width="4"/>
+  <path d="M110 84h980M110 236h980" stroke="#415680" stroke-width="3"/>
+  <text x="600" y="178" text-anchor="middle" font-family="Orbitron, Eurostile, Bank Gothic, Arial, sans-serif" font-size="88" font-weight="700" letter-spacing="0" fill="url(#text)" filter="url(#blueGlow)">UniversCivilization</text>
+  <text x="600" y="242" text-anchor="middle" font-family="Orbitron, Eurostile, Bank Gothic, Arial, sans-serif" font-size="38" font-weight="600" letter-spacing="6" fill="#00ff00">EMPIRE AT WAR</text>
+  <path d="M556 54 600 16l44 38-44 38Z" fill="#00ff00" stroke="#ffd25a" stroke-width="5"/>
+  <path d="M320 242h180M700 242h180" stroke="#ffd25a" stroke-width="4"/>
+</svg>

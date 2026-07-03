@@ -21,7 +21,7 @@
 		</AssemblyAttribute>
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Arklight-SDL2-CS" Version="1.0.42" />
+		<PackageReference Include="OpenRA-SDL2-CS" Version="1.0.43" />
 	</ItemGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Arklight.Game\Arklight.Game.csproj" />

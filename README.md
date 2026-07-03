@@ -2,6 +2,8 @@
 
 # UniversCivilization: Empire at War
 
+![UniversCivilization key art](docs/ogame-0.84/assets/brand/universcivilization-key-art.png)
+
 ![Epic Blue](https://img.shields.io/badge/UniversCivilization_Epic_Blue-040e1e?style=for-the-badge)
 ![Panel](https://img.shields.io/badge/Panel-344566?style=for-the-badge)
 ![Text](https://img.shields.io/badge/Text-E6EBFB?style=for-the-badge)
@@ -16,15 +18,15 @@
 
 ## Mission Briefing
 
-Arklight ships with playable mods inspired by:
+Arklight ships with playable compatibility sectors for the new UniversCivilization setting:
 
 | Mod | Status |
 |---|---|
-| Command & Conquer: Red Alert | ![Available](https://img.shields.io/badge/available-lime?style=flat-square) |
-| Command & Conquer: Tiberian Dawn | ![Available](https://img.shields.io/badge/available-lime?style=flat-square) |
-| Dune 2000 | ![Available](https://img.shields.io/badge/available-lime?style=flat-square) |
+| Arklight: Red Sector | ![Available](https://img.shields.io/badge/available-lime?style=flat-square) |
+| Arklight: Dawn Sector | ![Available](https://img.shields.io/badge/available-lime?style=flat-square) |
+| Arklight: Desert Sector | ![Available](https://img.shields.io/badge/available-lime?style=flat-square) |
 
-> EA has not endorsed and does not support this project.
+> Legacy compatibility content remains technical scaffolding. UniversCivilization branding, story, and new space assets are original Arklight material.
 
 ## Command Console
 
@@ -91,8 +93,12 @@ This checkout includes local design-reference material using the OGame 0.84 Epic
 
 - [OGame 0.84 reference documentation](docs/ogame-0.84/README.md): features, game logic, UML diagrams, source indexes, and a Stellar RTS/4X/MMORPG campaign blueprint derived from `ogamespec/ogame-opensource`.
 - [Implementation scaffold](docs/ogame-0.84/implementation-scaffold.md): compiled C# files for feature catalogs, economy, queues, fleet logic, battle logic, campaign generation, and UI state modeling.
-- [In-game UI redesign pass](docs/ogame-0.84/ingame-ui-redesign.md): Red Alert HUD and shared menu chrome styled toward Stellaris, OGame, RTS/4X, and MMORPG command systems.
+- [UniversCivilization campaign bible](docs/ogame-0.84/universcivilization-campaign.md): 12-act space empire story with chapter bands, playable mission arcs, factions, fleets, weapons, and escalation beats.
+- [Empire creation systems](docs/ogame-0.84/empire-creation-systems.md): account creation, 10 races, 10 governments, DLC/expansions, patch/info log, and 8-player online multiplayer planning.
+- [Arklight renaming map](docs/ogame-0.84/arklight-renaming-map.md): visible-name mapping from legacy RTS references to original Arklight sector names while preserving compatibility IDs.
+- [In-game UI redesign pass](docs/ogame-0.84/ingame-ui-redesign.md): Arklight tactical HUD and shared menu chrome styled toward Stellaris, OGame, RTS/4X, and MMORPG command systems.
 - [Stellaris/OGame menu taxonomy](docs/ogame-0.84/stellaris-menu-taxonomy.md): categories, submenus, pages, subpages, and window-frame layout regions for the strategy UI shell.
+- [Brand asset pack](docs/ogame-0.84/assets/brand/README.md): generated key art, SVG emblem, SVG wordmark, and palette tokens for the sci-fi RTS/4X identity.
 - [UML diagrams](docs/ogame-0.84/uml.md): request flow, queue flow, battle flow, campaign model, system taxonomy, and hybrid UI state machine.
 
 These reference documents are not executable Arklight gameplay. They are planning material for future design or porting work.

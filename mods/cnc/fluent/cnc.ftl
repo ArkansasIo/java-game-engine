@@ -1,6 +1,6 @@
 ## Metadata
-mod-title = Tiberian Dawn
-mod-windowtitle = Arklight - Tiberian Dawn
+mod-title = Arklight: Dawn Sector
+mod-windowtitle = Arklight - Dawn Sector
 
 ## CncLoadScreen
 loadscreen-loading = Loading

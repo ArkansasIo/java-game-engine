@@ -1,14 +1,14 @@
 modcontent-installprompt =
-    Tiberian Dawn requires artwork and audio from the original game.
+    Arklight: Dawn Sector requires legacy compatibility artwork and audio.
 
-    Quick Install will automatically download this content (without music or videos) from a mirror of the 2007 C&C Gold freeware release.
+    Quick Install will automatically download this content (without music or videos) from the configured freeware mirror.
 
     Advanced Install includes options for copying the music, videos, and other content from an original game disc or digital installation.
 modcontent-header =
-    Game content may be extracted from the original game discs or an existing digital install. Arklight can also download the base game files from an online mirror of the 2007 freeware release of C&C.
+    Compatibility content may be extracted from original game discs or an existing digital install. Arklight can also download the base game files from the configured freeware mirror.
 modcontent-package-basefiles = Base Game Files
 modcontent-package-basemusic = Base Game Music
-modcontent-package-gdi = GDI Campaign Briefings
-modcontent-package-nod = Nod Campaign Briefings
+modcontent-package-gdi = Dawn Concord Briefings
+modcontent-package-nod = Eclipse Order Briefings
 modcontent-package-covertopsmusic = Covert Operations Music
 

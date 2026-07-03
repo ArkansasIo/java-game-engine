@@ -1,17 +1,17 @@
 modcontent-installprompt =
-    Red Alert requires artwork and audio from the original game.
+    Arklight: Red Sector requires legacy compatibility artwork and audio.
 
-    Quick Install will automatically download this content (without music or videos) from a mirror of the 2008 Red Alert freeware release.
+    Quick Install will automatically download this content (without music or videos) from the configured freeware mirror.
 
     Advanced Install includes options for copying the music, videos, and other content from an original game disc or digital installation.
 modcontent-header =
-    Game content may be extracted from the original game discs or an existing digital install. Arklight can also download the base game files from an online mirror of the 2008 freeware release of RA.
+    Compatibility content may be extracted from original game discs or an existing digital install. Arklight can also download the base game files from the configured freeware mirror.
 modcontent-package-basefiles = Base Game Files
 modcontent-package-aftermathfiles = Aftermath Expansion Files
-modcontent-package-deserttileset = C&C Desert Tileset
+modcontent-package-deserttileset = Desert Sector Tileset
 modcontent-package-basemusic = Base Game Music
-modcontent-package-allied = Allied Campaign Briefings
-modcontent-package-soviet = Soviet Campaign Briefings
+modcontent-package-allied = Solar Union Briefings
+modcontent-package-soviet = Red Sector Briefings
 modcontent-package-counterstrikemusic = Counterstrike Music
 modcontent-package-aftermathmusic = Aftermath Music
 

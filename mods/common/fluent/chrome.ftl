@@ -455,9 +455,9 @@ label-mouse-control-desc-modern-edgescroll = or by moving the cursor to the edge
 checkbox-edgescroll-container = Screen Edge Panning
 
 ## mainmenu.yaml
-label-main-menu-title = Arklight
-label-singleplayer-title = Singleplayer
-button-extras-title = Extras
+label-main-menu-title = UniversCivilization
+label-singleplayer-title = New Empire
+button-extras-title = Patch / Info Log
 button-main-menu-content = Manage Content
 button-singleplayer-menu-skirmish = Skirmish
 button-singleplayer-menu-load = Load
@@ -474,7 +474,7 @@ label-update-notice-b = Download the latest version from www.Arklight.net
 label-missions-title = Missions
 
 ## mainmenu.yaml, multiplayer-browser.yaml
-label-multiplayer-title = Multiplayer
+label-multiplayer-title = Online 8 Player
 
 ## mainmenu.yaml, settings.yaml
 button-settings-title = Settings

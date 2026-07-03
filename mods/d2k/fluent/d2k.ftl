@@ -1,6 +1,6 @@
 ## Metadata
-mod-title = Dune 2000
-mod-windowtitle = Arklight - Dune 2000
+mod-title = Arklight: Desert Sector
+mod-windowtitle = Arklight - Desert Sector
 
 ## LogoStripLoadScreen
 loadscreen-loading = Filling Crates..., Breeding Sandworms..., Fuelling carryalls..., Deploying harvesters..., Preparing thopters..., Summoning mentats...

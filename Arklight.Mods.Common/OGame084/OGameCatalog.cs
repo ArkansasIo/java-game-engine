@@ -46,7 +46,10 @@ namespace Arklight.Mods.Common.OGame084
 				"Route-driven old-style PHP pages and MVC-style Page subclasses for gameplay and admin workflows."),
 			new OGameFeature("stellar-blueprint", "Stellar RTS/4X/MMORPG Blueprint",
 				"docs/ogame-0.84/stellar-rts-4x-design.md",
-				"12-act, 600-chapter design layer, 35 chapter details, 90 classes, and hybrid UI pillars.")
+				"12-act, 600-chapter design layer, 35 chapter details, 90 classes, and hybrid UI pillars."),
+			new OGameFeature("empire-creation", "Empire Creation",
+				"Arklight.Mods.Common/OGame084/EmpireCreationCatalog.cs",
+				"Account creation, ten races, ten governments, origins, profile setup, DLC/expansion rules, patch info log, and 8-player online multiplayer setup.")
 		];
 
 		public static readonly IReadOnlyList<OGameNamedValue> ChapterElements =

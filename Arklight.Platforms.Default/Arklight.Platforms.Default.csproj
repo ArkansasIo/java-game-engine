@@ -1,9 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<AssemblyName>Arklight.Platforms.Default.SDL2</AssemblyName>
+	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\Arklight.Game\Arklight.Game.csproj" />
-		<PackageReference Include="Arklight-Freetype6" Version="1.0.11" />
-		<PackageReference Include="Arklight-OpenAL-CS" Version="1.0.22" />
-		<PackageReference Include="Arklight-SDL2-CS" Version="1.0.43" />
+		<PackageReference Include="OpenRA-Freetype6" Version="1.0.11" />
+		<PackageReference Include="OpenRA-OpenAL-CS" Version="1.0.22" />
+		<PackageReference Include="OpenRA-SDL2-CS" Version="1.0.43" />
 	</ItemGroup>
 	<ItemGroup>
 		<Content Include="Arklight.Platforms.Default.dll.config" Condition="'$(TargetPlatform)' != 'win-x64'">
