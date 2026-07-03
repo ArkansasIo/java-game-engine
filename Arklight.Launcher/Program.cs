@@ -11,15 +11,21 @@
 
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 
 namespace Arklight.Launcher
 {
 	static class Program
 	{
+		const string DefaultMod = "ts";
+
 		[STAThread]
 		static int Main(string[] args)
 		{
+			args = EnsureEngineArgument(args);
+			args = EnsureModArgument(args);
+
 			if (Debugger.IsAttached || args.Contains("--just-die"))
 			{
 				try
@@ -55,6 +61,28 @@ namespace Arklight.Launcher
 				// Flushing logs in finally block is okay here, as the catch block handles the exception.
 				Log.Dispose();
 			}
+		}
+
+		static string[] EnsureModArgument(string[] args)
+		{
+			if (args.Any(x => x.StartsWith("Game.Mod=", StringComparison.Ordinal)))
+				return args;
+
+			var normalized = new string[args.Length + 1];
+			Array.Copy(args, normalized, args.Length);
+			normalized[^1] = $"Game.Mod={DefaultMod}";
+			return normalized;
+		}
+
+		static string[] EnsureEngineArgument(string[] args)
+		{
+			if (args.Any(x => x.StartsWith("Engine.EngineDir=", StringComparison.Ordinal)))
+				return args;
+
+			var normalized = new string[args.Length + 1];
+			Array.Copy(args, normalized, args.Length);
+			normalized[^1] = $"Engine.EngineDir={Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, ".."))}";
+			return normalized;
 		}
 	}
 }
