@@ -17,6 +17,7 @@ Generated from local clone path: `.external/ogame-opensource`.
 - [In-Game Menu Implementation Catalog](ingame-menu-implementation.md): live menu windows, planes, subplanes, frames, functions, features, and game-logic bindings.
 - [In-Game Menu Systems TODO](ingame-menu-systems-todo.md): implementation backlog for menu systems, gameplay systems, data logic, stats, inspectors, functions, and tests.
 - [Brand Assets](assets/brand/README.md): UniversCivilization key art, SVG emblem, SVG wordmark, and OGame-style sci-fi palette tokens.
+- [Stellar Managed Content Redesign](stellar-content-redesign.md): cloned content workspace and original asset replacement map for the sci-fi MMORPG/4X universe.
 - [Stellar Asset Pipeline](stellar-asset-pipeline.md): original unit, starship, building, weapon, armor, planet, VFX, UI, 2D, and 3D asset production plan.
 - [Stellar Asset Manifest](stellar-asset-manifest.yaml): canonical IDs and target paths for the original space asset pack.
 - [Implementation Scaffold](implementation-scaffold.md): C# files added under `Arklight.Mods.Common/OGame084` for feature catalogs, economy, queues, fleet logic, battle logic, campaign generation, and UI state modeling.

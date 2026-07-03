@@ -85,121 +85,121 @@ Container@INGAME_MENU:
 							Width: PARENT_WIDTH
 							Height: PARENT_HEIGHT
 							Color: 061628C8
-						Label@TAB_EMPIRE:
+						Button@TAB_EMPIRE:
 							X: 8
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-empire
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_GALAXY:
+						Button@TAB_GALAXY:
 							X: 66
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-galaxy
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_SYSTEM:
+						Button@TAB_SYSTEM:
 							X: 124
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-system
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_PLANET:
+						Button@TAB_PLANET:
 							X: 182
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-planet
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_FLEET:
+						Button@TAB_FLEET:
 							X: 240
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-fleet
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_WAR:
+						Button@TAB_WAR:
 							X: 298
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-war
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_RESEARCH:
+						Button@TAB_RESEARCH:
 							X: 356
-							Y: 8
+							Y: 6
 							Width: 64
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-research
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_MARKET:
+						Button@TAB_MARKET:
 							X: 424
-							Y: 8
+							Y: 6
 							Width: 54
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-market
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_DIPLOMACY:
+						Button@TAB_DIPLOMACY:
 							X: 482
-							Y: 8
+							Y: 6
 							Width: 74
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-diplomacy
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_ALLIANCE:
+						Button@TAB_ALLIANCE:
 							X: 560
-							Y: 8
+							Y: 6
 							Width: 64
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-alliance
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_CHARACTER:
+						Button@TAB_CHARACTER:
 							X: 628
-							Y: 8
+							Y: 6
 							Width: 82
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-character
 							Font: TinyBold
 							TextColor: DDEBFF
 							Align: Center
 							Contrast: true
-						Label@TAB_SECONDARY:
+						Button@TAB_SECONDARY:
 							X: 10
-							Y: 30
+							Y: 28
 							Width: PARENT_WIDTH - 20
-							Height: 15
+							Height: 18
 							Text: label-strategy-tab-secondary
 							Font: Tiny
 							TextColor: 8FBDEB
@@ -228,110 +228,110 @@ Container@INGAME_MENU:
 							Font: TinyBold
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_A:
+						Button@RAIL_LIST_A:
 							X: 10
 							Y: 34
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-empire-overview
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_B:
+						Button@RAIL_LIST_B:
 							X: 10
 							Y: 56
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-colony-management
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_C:
+						Button@RAIL_LIST_C:
 							X: 10
 							Y: 78
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-fleet-operations
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_D:
+						Button@RAIL_LIST_D:
 							X: 10
 							Y: 100
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-military-doctrine
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_E:
+						Button@RAIL_LIST_E:
 							X: 10
 							Y: 122
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-civilian-systems
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_F:
+						Button@RAIL_LIST_F:
 							X: 10
 							Y: 144
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-government-council
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_G:
+						Button@RAIL_LIST_G:
 							X: 10
 							Y: 166
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-diplomacy-desk
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_H:
+						Button@RAIL_LIST_H:
 							X: 10
 							Y: 188
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-character-sheet
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_I:
+						Button@RAIL_LIST_I:
 							X: 10
 							Y: 210
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-inventory-equipment
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_J:
+						Button@RAIL_LIST_J:
 							X: 10
 							Y: 232
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-quests-campaign
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_K:
+						Button@RAIL_LIST_K:
 							X: 10
 							Y: 254
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-logs-messages
 							Font: Tiny
 							TextColor: DDEBFF
 							Contrast: true
-						Label@RAIL_LIST_L:
+						Button@RAIL_LIST_L:
 							X: 10
 							Y: 276
 							Width: PARENT_WIDTH - 20
-							Height: 16
+							Height: 18
 							Text: label-strategy-rail-system-settings
 							Font: Tiny
 							TextColor: DDEBFF

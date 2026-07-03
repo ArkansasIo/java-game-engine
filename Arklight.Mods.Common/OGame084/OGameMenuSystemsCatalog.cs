@@ -75,26 +75,44 @@ namespace Arklight.Mods.Common.OGame084
 		public readonly string ActiveWindowId;
 		public readonly string ActivePageId;
 		public readonly string ActiveSubpageId;
+		public readonly string ActiveFrameId;
+		public readonly string ActivePlaneId;
+		public readonly string ActiveSubplaneId;
 		public readonly string SelectedObjectId;
 		public readonly string InspectorFocusId;
 		public readonly string PendingActionId;
+		public readonly string SelectedFunctionId;
+		public readonly string SelectedFeatureId;
+		public readonly string ValidationMessage;
 
 		public OGameMenuRuntimeState(
 			string activeCategoryId = "empire",
 			string activeWindowId = "empire-dashboard",
 			string activePageId = "dashboard",
 			string activeSubpageId = "overview",
+			string activeFrameId = "Header",
+			string activePlaneId = "Resource topbar",
+			string activeSubplaneId = "Metal",
 			string selectedObjectId = "homeworld",
 			string inspectorFocusId = "empire-summary",
-			string pendingActionId = "")
+			string pendingActionId = "",
+			string selectedFunctionId = "",
+			string selectedFeatureId = "",
+			string validationMessage = "")
 		{
 			ActiveCategoryId = activeCategoryId;
 			ActiveWindowId = activeWindowId;
 			ActivePageId = activePageId;
 			ActiveSubpageId = activeSubpageId;
+			ActiveFrameId = activeFrameId;
+			ActivePlaneId = activePlaneId;
+			ActiveSubplaneId = activeSubplaneId;
 			SelectedObjectId = selectedObjectId;
 			InspectorFocusId = inspectorFocusId;
 			PendingActionId = pendingActionId;
+			SelectedFunctionId = selectedFunctionId;
+			SelectedFeatureId = selectedFeatureId;
+			ValidationMessage = validationMessage;
 		}
 	}
 
@@ -273,5 +291,43 @@ namespace Arklight.Mods.Common.OGame084
 		public static int StatCount => Systems.Sum(s => s.Stats.Count);
 
 		public static int FeatureCount => Systems.Sum(s => s.Features.Count);
+
+		public static OGameMenuSystemDefinition GetSystem(string id)
+		{
+			return Systems.FirstOrDefault(s => s.Id == id);
+		}
+
+		public static IReadOnlyList<string> BuildSystemSummaryLines()
+		{
+			return Systems
+				.Select(s =>
+					$"{s.Name}: menus {JoinValues(s.Submenus)} | frames {JoinValues(s.Frames)} | planes {JoinValues(s.Planes)}")
+				.ToArray();
+		}
+
+		public static IReadOnlyList<string> BuildDetailedSystemLines()
+		{
+			return Systems
+				.Select(s =>
+					$"{s.Name}: subplanes {JoinValues(s.Subplanes)} | logic {JoinValues(s.LogicFunctions)} | stats {JoinValues(s.Stats)} | features {JoinValues(s.Features)}")
+				.ToArray();
+		}
+
+		public static IReadOnlyList<string> BuildFrameSummaryLines()
+		{
+			return FrameOrder.ToArray();
+		}
+
+		public static IReadOnlyList<string> BuildFeatureSummaryLines()
+		{
+			return OGameCatalog.Features
+				.Select(f => $"{f.Name}: {f.SourceModule}")
+				.ToArray();
+		}
+
+		static string JoinValues(IReadOnlyList<string> values)
+		{
+			return string.Join(" / ", values);
+		}
 	}
 }

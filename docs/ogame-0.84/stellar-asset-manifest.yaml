@@ -3,6 +3,9 @@ legal:
   policy: Original UniversCivilization assets only. Do not copy proprietary browser-game, RTS, film, or licensed graphics.
   inspiration: OGame-era blue command UI, space empire RTS/4X, dense operational panels.
 root: mods/stellar/assets
+managedContentClone: mods/stellar-content
+contentMap: mods/stellar/assets/original-content-map.yaml
+conceptSheet: mods/stellar/assets/renders/concept/ogame-scifi-4x-asset-sheet.png
 palette:
   deep-space: "#040e1e"
   panel-blue: "#344566"

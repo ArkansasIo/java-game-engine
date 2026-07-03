@@ -1,0 +1,89 @@
+version: 1
+name: UniversCivilization Original Content Map
+policy: Original assets only. Do not copy legacy RTS archives, proprietary browser-game art, film assets, or licensed game designs.
+sourceContentFamilies:
+  common-content:
+    replacementFolder: mods/stellar-content
+    redesign:
+      - blue command chrome
+      - content installer panel art
+      - cursors
+      - fonts
+      - common notification sounds
+  ra-content:
+    replacementFolder: mods/stellar-content/installer
+    redesign:
+      - Solar Union campaign briefings
+      - Red Sector campaign briefings
+      - orbital colony tile packs
+      - original command music
+  cnc-content:
+    replacementFolder: mods/stellar-content/installer
+    redesign:
+      - Dawn Concord campaign briefings
+      - Eclipse Order campaign briefings
+      - asteroid battlefield tile packs
+      - faction command music
+  d2k-content:
+    replacementFolder: mods/stellar-content/installer
+    redesign:
+      - frontier desert moon tile packs
+      - refinery and deuterium audio packs
+      - trade-guild briefing media
+  ts-content:
+    replacementFolder: mods/stellar-content/installer
+    redesign:
+      - nebula and ice-sector tile packs
+      - late-game war media
+      - capital fleet music
+assetGroups:
+  base-interface:
+    package: stellar-base-interface
+    paths:
+      - mods/stellar/assets/ui
+      - mods/stellar/assets/icons/resources
+      - mods/stellar/assets/renders/concept/ogame-scifi-4x-asset-sheet.png
+    style: OGame-era blue panels, pale command text, lime status highlights, sharp frame lines.
+  colony-buildings:
+    package: stellar-colony-buildings
+    paths:
+      - mods/stellar/assets/sprites/buildings
+      - mods/stellar/assets/models/buildings
+      - mods/stellar/assets/icons/buildings
+    style: isometric colony infrastructure, orbital rings, reactor glow, readable RTS silhouettes.
+  fleets-and-starships:
+    package: stellar-fleet-starships
+    paths:
+      - mods/stellar/assets/models/starships
+      - mods/stellar/assets/renders/starships
+      - mods/stellar/assets/icons/starships
+    style: OGame-style fleet classes adapted into original Arklight silhouettes.
+  units-and-characters:
+    package: stellar-units-characters
+    paths:
+      - mods/stellar/assets/sprites/units
+      - mods/stellar/assets/models/units
+      - mods/stellar/assets/icons/units
+    style: MMORPG class readability with RTS scale and sci-fi armor materials.
+  planets-and-terrain:
+    package: stellar-planets-terrain
+    paths:
+      - mods/stellar/assets/models/planets
+      - mods/stellar/assets/renders/planets
+      - mods/stellar/assets/icons/planets
+    style: 4X planet archetypes, orbital overlays, colony lights, resource-zone readability.
+  weapons-armor-vfx:
+    package: stellar-weapons-armor-vfx
+    paths:
+      - mods/stellar/assets/icons/weapons
+      - mods/stellar/assets/icons/armor
+      - mods/stellar/assets/vfx
+    style: beams, missiles, shield hits, warp entries, debris, and status icons.
+productionStates:
+  cloned-folder: done
+  concept-sheet: done
+  package-manifest: done
+  final-sprite-sheets: pending
+  final-3d-models: pending
+  final-audio: pending
+  playable-mod-registration: pending

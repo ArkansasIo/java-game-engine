@@ -101,6 +101,7 @@ This checkout includes local design-reference material using the OGame 0.84 Epic
 - [In-game menu implementation catalog](docs/ogame-0.84/ingame-menu-implementation.md): live menu windows, planes, subplanes, frames, functions, features, and game-logic bindings used by the staged strategy shell.
 - [In-game menu systems TODO](docs/ogame-0.84/ingame-menu-systems-todo.md): backlog for menu systems, gameplay systems, data logic, stats, inspectors, functions, and feature work.
 - [Brand asset pack](docs/ogame-0.84/assets/brand/README.md): generated key art, SVG emblem, SVG wordmark, and palette tokens for the sci-fi RTS/4X identity.
+- [Stellar managed content redesign](docs/ogame-0.84/stellar-content-redesign.md): cloned managed-content workspace and original OGame-style sci-fi MMORPG/4X asset replacement map.
 - [UML diagrams](docs/ogame-0.84/uml.md): request flow, queue flow, battle flow, campaign model, system taxonomy, and hybrid UI state machine.
 
 These reference documents are not executable Arklight gameplay. They are planning material for future design or porting work.

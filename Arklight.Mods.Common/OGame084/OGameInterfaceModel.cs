@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Arklight.Mods.Common.OGame084
 {
@@ -247,6 +248,29 @@ namespace Arklight.Mods.Common.OGame084
 			new OGameNamedValue("right-inspector", "Right Inspector", "Selected object details, stats, alerts, and contextual actions."),
 			new OGameNamedValue("footer", "Footer", "Current actions, hotkey hints, status text, and warning messages.")
 		];
+
+		public static IReadOnlyList<string> BuildSectionSummaryLines()
+		{
+			return MenuSections
+				.Select(section =>
+					$"{section.Name}: submenus {string.Join(" / ", section.Submenus)} | pages {string.Join(" / ", section.Pages)} | subpages {string.Join(" / ", section.Subpages)}")
+				.ToArray();
+		}
+
+		public static IReadOnlyList<string> BuildTransitionSummaryLines()
+		{
+			return Transitions
+				.Select(transition => $"{transition.From} -> {transition.To}: {transition.Trigger}")
+				.ToArray();
+		}
+
+		public static IReadOnlyList<string> BuildWindowSummaryLines()
+		{
+			return MenuWindows
+				.Select(window =>
+					$"{window.Name}: planes {string.Join(" / ", window.Planes)} | subplanes {string.Join(" / ", window.Subplanes)} | frames {string.Join(" / ", window.Frames)}")
+				.ToArray();
+		}
 	}
 }
 
