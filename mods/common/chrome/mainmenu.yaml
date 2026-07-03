@@ -9,6 +9,76 @@ Container@MAINMENU:
 			Y: 0 - 15
 			Width: WINDOW_WIDTH + 30
 			Height: WINDOW_HEIGHT + 30
+		ColorBlock@TITLE_SCREEN_BACKDROP:
+			Width: WINDOW_WIDTH
+			Height: WINDOW_HEIGHT
+			Color: 020817F2
+		ColorBlock@TITLE_SCREEN_GRID_TOP:
+			Y: 72
+			Width: WINDOW_WIDTH
+			Height: 2
+			Color: 6DA8FF99
+		ColorBlock@TITLE_SCREEN_GRID_BOTTOM:
+			Y: WINDOW_HEIGHT - 74
+			Width: WINDOW_WIDTH
+			Height: 2
+			Color: 6DA8FF99
+		Container@TITLE_SCREEN:
+			X: 46
+			Y: 44
+			Width: 520
+			Height: 196
+			Children:
+				ColorBlock@TITLE_BACKDROP:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 061628D8
+				ColorBlock@TITLE_HEADER:
+					Width: PARENT_WIDTH
+					Height: 38
+					Color: 142C49F0
+				ColorBlock@TITLE_ACCENT:
+					Y: 38
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				Label@ENGINE_LOGO:
+					X: 18
+					Y: 9
+					Width: PARENT_WIDTH - 36
+					Height: 20
+					Text: label-arklight-engine-logo
+					Font: Bold
+					TextColor: DDEBFF
+					Contrast: true
+				Label@TITLE:
+					X: 18
+					Y: 58
+					Width: PARENT_WIDTH - 36
+					Height: 32
+					Text: label-title-screen-game-title
+					Font: BigBold
+					TextColor: DDEBFF
+					Contrast: true
+				Label@SUBTITLE:
+					X: 20
+					Y: 96
+					Width: PARENT_WIDTH - 40
+					Height: 20
+					Text: label-title-screen-game-subtitle
+					Font: Bold
+					TextColor: 8FBDEB
+					Contrast: true
+				Label@SYSTEMS:
+					X: 20
+					Y: 128
+					Width: PARENT_WIDTH - 40
+					Height: 42
+					Text: label-title-screen-game-systems
+					Font: Tiny
+					TextColor: B8D8FF
+					WordWrap: true
+					Contrast: true
 		Image@LOGO:
 			X: WINDOW_WIDTH - 296
 			Y: 30
@@ -23,16 +93,21 @@ Container@MAINMENU:
 				ColorBlock@WINDOW_BACKDROP:
 					Width: PARENT_WIDTH
 					Height: PARENT_HEIGHT
-					Color: 020817F0
+					Color: 061628F2
 				ColorBlock@WINDOW_HEADER:
 					Width: PARENT_WIDTH
 					Height: 44
-					Color: 142C49F0
+					Color: 12385FF8
 				ColorBlock@WINDOW_ACCENT:
 					Y: 44
 					Width: PARENT_WIDTH
 					Height: 2
 					Color: 6DA8FFFF
+				ColorBlock@WINDOW_ACCENT_BOTTOM:
+					Y: PARENT_HEIGHT - 3
+					Width: PARENT_WIDTH
+					Height: 3
+					Color: 2C75CFFF
 				Label@WINDOW_TITLE:
 					X: 0
 					Y: 10

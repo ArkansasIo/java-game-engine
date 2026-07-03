@@ -1,0 +1,8 @@
+stellar-original:
+	Title: UniversCivilization Original Asset Workspace
+	Type: Directory
+	RegistryPrefixes: Software\Arklight\UniversCivilization
+	Directories:
+		^EngineDir|mods/stellar/assets
+	Install:
+		Copy: .

@@ -1,0 +1,120 @@
+Metadata:
+	Title: mod-title
+	Version: {DEV_VERSION}
+	Hidden: true
+
+FileSystem: DefaultFileSystem
+	Packages:
+		^EngineDir
+		^EngineDir|mods/common-content: content
+		^EngineDir|mods/common: common
+		^EngineDir|mods/stellar/assets: stellarassets
+		$stellar-content: stellarcontent
+
+Rules:
+
+Cursors:
+	content|cursors.yaml
+
+Chrome:
+	content|chrome.yaml
+
+Assemblies: Arklight.Mods.Common.dll
+
+ChromeLayout:
+	content|content.yaml
+
+Notifications:
+	content|notifications.yaml
+
+LoadScreen: ModContentLoadScreen
+	Image: stellarassets|renders/concept/ogame-scifi-4x-asset-sheet.png
+
+ChromeMetrics:
+	common|metrics.yaml
+	content|metrics.yaml
+
+FluentMessages:
+	common|fluent/common.ftl
+	content|fluent/content.ftl
+	content|fluent/chrome.ftl
+	stellarcontent|fluent/chrome.ftl
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+
+ModContent:
+	Mod: stellar
+	QuickDownload: stellar-original
+	Packages:
+		ContentPackage@base-interface:
+			Title: modcontent-package-stellar-base-interface
+			Identifier: stellar-base-interface
+			TestFiles: ^EngineDir|mods/stellar/assets/renders/concept/ogame-scifi-4x-asset-sheet.png, ^EngineDir|mods/stellar/assets/original-content-map.yaml
+			Sources: stellar-original
+			Required: true
+		ContentPackage@colony-buildings:
+			Title: modcontent-package-stellar-colony-buildings
+			Identifier: stellar-colony-buildings
+			TestFiles: ^EngineDir|mods/stellar/assets/sprites/buildings, ^EngineDir|mods/stellar/assets/models/buildings, ^EngineDir|mods/stellar/assets/icons/buildings
+			Sources: stellar-original
+			Required: true
+		ContentPackage@fleet-starships:
+			Title: modcontent-package-stellar-fleet-starships
+			Identifier: stellar-fleet-starships
+			TestFiles: ^EngineDir|mods/stellar/assets/models/starships, ^EngineDir|mods/stellar/assets/renders/starships, ^EngineDir|mods/stellar/assets/icons/starships
+			Sources: stellar-original
+			Required: true
+		ContentPackage@units-characters:
+			Title: modcontent-package-stellar-units-characters
+			Identifier: stellar-units-characters
+			TestFiles: ^EngineDir|mods/stellar/assets/sprites/units, ^EngineDir|mods/stellar/assets/models/units, ^EngineDir|mods/stellar/assets/icons/units
+			Sources: stellar-original
+		ContentPackage@planets-terrain:
+			Title: modcontent-package-stellar-planets-terrain
+			Identifier: stellar-planets-terrain
+			TestFiles: ^EngineDir|mods/stellar/assets/models/planets, ^EngineDir|mods/stellar/assets/renders/planets, ^EngineDir|mods/stellar/assets/icons/planets
+			Sources: stellar-original
+		ContentPackage@weapons-armor-vfx:
+			Title: modcontent-package-stellar-weapons-armor-vfx
+			Identifier: stellar-weapons-armor-vfx
+			TestFiles: ^EngineDir|mods/stellar/assets/icons/weapons, ^EngineDir|mods/stellar/assets/icons/armor, ^EngineDir|mods/stellar/assets/vfx
+			Sources: stellar-original
+		ContentPackage@campaign-media:
+			Title: modcontent-package-stellar-campaign-media
+			Identifier: stellar-campaign-media
+			TestFiles: ^EngineDir|docs/ogame-0.84/universcivilization-campaign.md, ^EngineDir|docs/ogame-0.84/assets/brand/universcivilization-key-art.png
+			Sources: stellar-original
+	Sources:
+		stellarcontent|installer/original.yaml
+
+SoundFormats:
+
+SpriteFormats: PngSheet
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: DefaultSpriteSequence

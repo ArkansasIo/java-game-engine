@@ -406,6 +406,16 @@ namespace Arklight
 			if (modID == null)
 				throw new InvalidOperationException("Game.Mod argument missing.");
 
+			if (!Mods.ContainsKey(modID))
+			{
+				var preferredMods = new[] { "ts", "ra", "cnc", "d2k" };
+				modID = preferredMods.FirstOrDefault(Mods.ContainsKey) ?? Mods.Keys.FirstOrDefault();
+				if (modID == null)
+					throw new InvalidOperationException("No installed mods found.");
+
+				Console.WriteLine($"Requested mod is unavailable; falling back to '{modID}'.");
+			}
+
 			if (Mods.TryGetValue(modID, out var manifest))
 			{
 				var launchPath = args.GetValue("Engine.LaunchPath", null);
