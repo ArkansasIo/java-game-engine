@@ -1,28 +1,28 @@
-# OGame 0.84 Architecture and Game Logic
+# UniversCivilization: Empire at War - Architecture and Arklight Engine Integration
 
-## Source Shape
+This document outlines the architecture for *UniversCivilization: Empire at War*, utilizing the Arklight Game Engine. It transitions from legacy OGame 0.84 logic into a modern, data-driven, scalable architecture suited for a Sci-Fi Space Universe Conquest game.
 
-- `game/index.php` is the main request entrypoint. It loads configuration, initializes core systems, authenticates sessions, updates queues and active planet state, then routes to old-style includes or MVC-style `Page` classes.
-- `game/core/core.php` acts as the central include hub for database, users, planets, production, queue, fleet, battle, pages, localization, mods, and utility functions.
-- `game/router.json` maps page keys to PHP files, locale packs, menu/header behavior, and MVC mode.
-- `game/core/page.php` defines page rendering helpers and the base `Page` class used by newer pages.
-- `game/core/mods.php` defines `GameMod`, the hook surface used by bundled mods under `game/mods`.
-- `game/core/queue.php` is the central deferred event processor for construction, shipyard, research, bans, cleanup, stats, bots, coupons, and custom mod queue rows.
-- `game/core/fleet.php` handles fleet validation, mission availability, dispatch, timing, queue completion, mission execution, and fleet logs.
-- `game/core/battle.php`, `game/core/battle_engine.php`, and the C engine in `game/battle` cover battle setup, simulation, report data, plunder, debris, moon creation, and result writeback.
-- `game/core/prod.php` calculates resource production, energy, officer/mod bonuses, storage, build prices, times, and fleet prices.
-- `game/pages` and `game/pages_admin` provide user and admin screens around the core functions.
 
-## Features and Functions
+## Architecture Strategy
 
-- Original OGame 0.84 mechanics and old browser UI.
-- Fast battle engine with fair rapidfire plus PHP backup logic.
-- Event queue that can run from normal page traffic or CRON.
-- Fleet missions: attack, ACS attack, transport, deploy, ACS hold, espionage, colonize, recycle, destroy, expedition, and missiles.
-- Economy: production, storage, energy, officers, planet temperature, planet size, building/research/shipyard timings, and mod bonuses.
-- Social systems: alliances, ranks, applications, buddies, messages, notes, and statistics.
-- Admin systems: users, planets, queues, logs, universe settings, localization, battle simulation, bots, bans, coupons, database, and debugging.
-- Mods: extension hooks for routes, tabs, menu items, queues, production, fleet, battle, images, and custom missions.
+*UniversCivilization* is built on the Arklight Game Engine. Unlike the legacy PHP OGame architecture, which relied on synchronous page-load processing, *UniversCivilization* adopts a service-oriented approach:
+
+- **Engine Core (Arklight):** Handles low-level rendering, networking, physics, and input.
+- **Game Logic Layer (C# / Data-Driven):** Implements RTS/4X systems (resource production, combat simulation, queue management) as high-performance services.
+- **Data Model:** Planets, fleets, and players are defined by modular, extensible Arklight traits.
+- **UI System:** A modern, reactive UI (reminiscent of Stellaris/OGame) running atop the engine, interacting with the Game Logic Layer via a clean API.
+- **Multiplayer/MMORPG:** Servers manage authoritative state, synchronization, and persistent universe events.
+
+
+## Features and Core Systems
+
+- **Dynamic Universe:** Persistent, evolving galaxy map with hyperlanes, anomalies, and trade routes.
+- **RTS/4X Simulation:** Seamless transition from deep-space strategy to tactical planet-level control.
+- **Combat Simulation:** High-performance battle engine handling large-scale fleet engagements, orbital bombardment, and planetary defense.
+- **Economy:** Complex resource management involving extraction, refinement, trade, and industrial scaling.
+- **Social/MMORPG:** Persistent guild/faction systems, player-driven economy, diplomacy, and galactic-scale meta-events.
+- **Moddable Architecture:** Designed with the Arklight Mod SDK for deep-level extension of game rules, units, and UI elements.
+
 
 ## Main Runtime Flow
 
@@ -49,13 +49,14 @@
 - Administration: `pages_admin` tools for users, planets, queues, logs, localization, universe setup, simulation, bots, bans, coupons, and DB/debug pages.
 - Mods: `GameMod` hooks let extensions add routes, tabs, menu items, queue behavior, production/fleet/battle bonuses, object images, and custom mission handling.
 
-## Porting Notes for Arklight
+## Porting and Development Notes
 
-A direct implementation would be a rewrite, not a copy. The useful boundaries for a future Arklight-side port are:
+Legacy PHP/OGame logic serves as a functional specification for game rules. Implementation in *UniversCivilization* follows these principles:
 
-- Model OGame planets/fleets/resources as a separate rules/domain module instead of Arklight actors.
-- Convert queue rows to deterministic scheduled commands if multiplayer synchronization matters.
-- Keep combat as a service-style simulator with deterministic seeded random input.
-- Replace PHP page controllers with Arklight widgets or an external web UI.
-- Treat mods as data/hook plugins only after defining an Arklight-safe extension surface.
+- **Modular Domain Models:** Planets, fleets, and players exist as distinct Arklight actors with data-driven components (traits).
+- **Scheduled Simulation:** Deterministic events (construction, fleet arrival) utilize a robust, tick-based scheduler rather than request-driven updates.
+- **Service-Oriented Engine:** Combat, economy, and diplomacy are architected as decoupled services.
+- **Modern UI Shell:** Replaces browser-based controller logic with high-fidelity, data-bound widgets.
+- **Extension Surface:** Mods integrate directly with the engine through defined API hooks for rules, assets, and UI behaviors.
+
 

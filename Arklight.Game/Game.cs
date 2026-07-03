@@ -438,7 +438,7 @@ namespace Arklight
 				Settings.Game.Platform = p;
 				try
 				{
-					var platform = CreatePlatform(p);
+					var platform = CreatePlatform(p, Settings.Graphics.SDLVersion);
 					Renderer = new Renderer(platform, Settings.Graphics, manifest.RendererConstants.VertexBatchSize);
 					Sound = new Sound(platform, Settings.Sound);
 
@@ -458,9 +458,9 @@ namespace Arklight
 			InitializeMod(manifest, args);
 		}
 
-		public static IPlatform CreatePlatform(string platformName)
+		public static IPlatform CreatePlatform(string platformName, string sdlVersion)
 		{
-			var rendererPath = Path.Combine(Platform.BinDir, "Arklight.Platforms." + platformName + ".dll");
+			var rendererPath = Path.Combine(Platform.BinDir, "Arklight.Platforms." + platformName + "." + sdlVersion + ".dll");
 
 			var loader = new AssemblyLoader(rendererPath);
 			var platformType = loader.LoadDefaultAssembly().GetTypes().SingleOrDefault(t => typeof(IPlatform).IsAssignableFrom(t));

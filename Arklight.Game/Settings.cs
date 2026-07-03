@@ -247,6 +247,9 @@ namespace Arklight
 		[Desc("Screen resolution in windowed mode.")]
 		public int2 WindowedSize = new(1024, 768);
 
+		[Desc("SDL version to use (SDL2, SDL3).")]
+		public string SDLVersion = "SDL2";
+
 		public bool CursorDouble = false;
 		public WorldViewport ViewportDistance = WorldViewport.Medium;
 		public float UIScale = 1;

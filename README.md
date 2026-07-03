@@ -1,13 +1,14 @@
 <div align="center">
 
-# Arklight
+# UniversCivilization: Empire at War
 
-![Epic Blue](https://img.shields.io/badge/OGame_0.84_Epic_Blue-040e1e?style=for-the-badge)
+![Epic Blue](https://img.shields.io/badge/UniversCivilization_Epic_Blue-040e1e?style=for-the-badge)
 ![Panel](https://img.shields.io/badge/Panel-344566?style=for-the-badge)
 ![Text](https://img.shields.io/badge/Text-E6EBFB?style=for-the-badge)
 ![Command](https://img.shields.io/badge/Command_Lime-00ff00?style=for-the-badge)
 
-**A libre real-time strategy game engine for recreating and reimagining classic Westwood-style RTS games.**
+**A Sci-Fi Space Universe Conquest Empire game built on the Arklight Game Engine, blending RTS, 4X, and MMORPG elements.**
+
 
 </div>
 

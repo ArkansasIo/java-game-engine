@@ -1,6 +1,7 @@
-﻿# Stellar RTS/4X/MMORPG Campaign and Systems Blueprint
+﻿# UniversCivilization: Empire at War - Campaign and Systems Blueprint
 
-This is a fictional expansion design layer for a Stellaris-like RTS/4X/MMORPG interface. It is intended as worldbuilding and systems documentation, not implemented game code.
+This document defines the core mechanics, worldbuilding, and systems design for *UniversCivilization: Empire at War*, powered by the Arklight Game Engine. It merges RTS, 4X, and MMORPG elements into a cohesive Sci-Fi Space Universe Conquest experience.
+
 
 ## Scale
 
