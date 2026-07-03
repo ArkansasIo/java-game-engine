@@ -58,6 +58,35 @@ namespace Arklight.Mods.Common.OGame084
 		}
 	}
 
+	public sealed class OGameInterfaceWindow
+	{
+		public readonly string Id;
+		public readonly string Name;
+		public readonly IReadOnlyList<string> Planes;
+		public readonly IReadOnlyList<string> Subplanes;
+		public readonly IReadOnlyList<string> Frames;
+		public readonly IReadOnlyList<string> Functions;
+		public readonly IReadOnlyList<string> GameLogic;
+
+		public OGameInterfaceWindow(
+			string id,
+			string name,
+			string[] planes,
+			string[] subplanes,
+			string[] frames,
+			string[] functions,
+			string[] gameLogic)
+		{
+			Id = id;
+			Name = name;
+			Planes = planes;
+			Subplanes = subplanes;
+			Frames = frames;
+			Functions = functions;
+			GameLogic = gameLogic;
+		}
+	}
+
 	public static class OGameInterfaceModel
 	{
 		public static readonly IReadOnlyList<OGameNamedValue> Views =
@@ -142,6 +171,70 @@ namespace Arklight.Mods.Common.OGame084
 				["Resume", "Save", "Load", "Settings", "Music"],
 				["Game", "Audio", "Display", "Controls"],
 				["Abort Mission", "Surrender", "Restart", "Back To Editor", "Exit Editor"])
+		];
+
+		public static readonly IReadOnlyList<OGameInterfaceWindow> MenuWindows =
+		[
+			new OGameInterfaceWindow("empire-dashboard", "Empire Dashboard",
+				["Resource topbar", "Alert strip", "Colony ledger", "Victory tracker"],
+				["Metal", "Crystal", "Deuterium", "Energy", "Dark Matter", "Command Capacity"],
+				["Header", "Top tabs", "Left empire rail", "Center summary grid", "Right alert inspector", "Footer actions"],
+				["Review empire status", "Select colony", "Inspect resource income", "Open objectives", "Jump to crisis"],
+				["OGameCatalog.Features", "OGameEconomy", "OGameCampaign", "EmpireCreationCatalog"]),
+			new OGameInterfaceWindow("galaxy-map", "Galaxy Map",
+				["Galaxy plane", "Sector plane", "System plane", "Expedition plane"],
+				["Coordinates", "Debris fields", "Moons", "Pirates", "NPC empires", "Jump points"],
+				["Header alerts", "Strategic map", "Claims overlay", "Route overlay", "Inspector", "Command footer"],
+				["Browse sectors", "Inspect systems", "Plan expeditions", "Track hostile fleets", "Open diplomacy target"],
+				["OGameFleet", "OGameCatalog universe", "OGameInterfaceModel.Transitions"]),
+			new OGameInterfaceWindow("planet-command", "Planet Command",
+				["Overview plane", "Production plane", "Construction plane", "Defense plane"],
+				["Mines", "Power", "Storage", "Population", "Housing", "Culture", "Stability"],
+				["Planet header", "Resource cards", "Build queue", "Shipyard queue", "Defense grid", "Inspector"],
+				["Manage buildings", "Queue ships", "Queue defenses", "Balance energy", "Inspect storage"],
+				["OGameEconomy", "OGameQueueType.Building", "OGameQueueType.Shipyard"]),
+			new OGameInterfaceWindow("fleet-command", "Fleet Command",
+				["Dispatch plane", "Mission plane", "Movement plane", "Logistics plane"],
+				["Attack", "Transport", "Deploy", "Hold", "Colonize", "Recycle", "Expedition", "Missiles"],
+				["Fleet selector", "Mission picker", "Target selector", "Cargo panel", "Timing panel", "Result footer"],
+				["Dispatch fleets", "Calculate fuel", "Resolve arrivals", "Return fleets", "Write mission logs"],
+				["OGameFleet", "OGameMissionType", "OGameBattle", "ACS"]),
+			new OGameInterfaceWindow("war-room", "War Room",
+				["Fronts plane", "Armies plane", "Battle report plane", "Production plane"],
+				["Infantry", "Vehicles", "Aircraft", "Naval", "Mechs", "Drones", "Fortifications", "Special forces"],
+				["War header", "Front list", "Unit catalog", "Battle report viewer", "Right losses inspector", "Action footer"],
+				["Review battles", "Inspect units", "Compare weapons", "Track losses", "Jump to tactical battle"],
+				["OGameBattle", "OGameSystemDomain.Weapons", "OGameSystemDomain.Units"]),
+			new OGameInterfaceWindow("research-lab", "Research Lab",
+				["Physics plane", "Energy plane", "Combat plane", "Propulsion plane"],
+				["Laser", "Ion", "Plasma", "Hyperspace", "Computer", "Espionage", "Armor", "Shielding"],
+				["Lab header", "Tech tree", "Requirement frame", "Queue frame", "Effect inspector", "Footer actions"],
+				["Inspect requirements", "Queue research", "Preview bonuses", "Open tech details", "Compare upgrades"],
+				["OGameQueueType.Research", "OGameSystemDomain.Weapons", "OGameSystemDomain.Shields"]),
+			new OGameInterfaceWindow("market-and-civil", "Market And Civil Systems",
+				["Exchange plane", "Trade route plane", "Civil services plane", "Supply plane"],
+				["Import", "Export", "Convoys", "Tariffs", "Smuggling", "Shortages", "Surpluses"],
+				["Market header", "Orders table", "Route list", "Civil system list", "Storage inspector", "Footer actions"],
+				["Post orders", "Inspect shortages", "Assign convoys", "Review taxes", "Track storage"],
+				["OGameEconomy", "OGameSystemDomain.CivilSystems", "EmpireCreationCatalog"]),
+			new OGameInterfaceWindow("diplomacy-alliance", "Diplomacy And Alliance",
+				["Relations plane", "Treaty plane", "Alliance roster plane", "Espionage plane"],
+				["Envoys", "Trust", "Threat", "Sanctions", "Bans", "Non-Aggression", "Trade pacts", "Circular messages"],
+				["Diplomacy header", "Contact list", "Treaty form", "Alliance roster", "Intel inspector", "Footer actions"],
+				["Manage contacts", "Declare war", "Negotiate treaties", "Review alliance ranks", "Send circular messages"],
+				["OGameCatalog alliances", "OGameCatalog messages", "OGameMissionType.Espionage"]),
+			new OGameInterfaceWindow("character-campaign", "Character And Campaign",
+				["Stats plane", "Equipment plane", "Quest plane", "Social plane"],
+				["Weapons", "Shields", "Armor", "Talents", "Reputation", "Guild", "Campaign acts", "Chapter details"],
+				["Character header", "Equipment slots", "Skill tree", "Quest journal", "Reputation inspector", "Footer actions"],
+				["Equip commander", "Review skills", "Track quests", "Inspect chapters", "Open social state"],
+				["OGameCampaign", "OGameCatalog.ChapterElements", "OGameSystemDomain.Armors"]),
+			new OGameInterfaceWindow("system-menu", "System Menu",
+				["Game plane", "Audio plane", "Display plane", "Controls plane"],
+				["Resume", "Save", "Load", "Settings", "Music", "Abort Mission", "Surrender", "Restart"],
+				["Pause command panel", "Settings window", "Save/load browser", "Music window", "Confirmation windows", "Footer hints"],
+				["Resume game", "Save game", "Load game", "Open settings", "Open music", "Surrender or restart"],
+				["IngameMenuLogic", "SettingsLogic", "MusicPlayerLogic", "GameSaveBrowserLogic"])
 		];
 
 		public static readonly IReadOnlyList<OGameNamedValue> WindowRegions =

@@ -14,6 +14,7 @@ Generated from local clone path: `.external/ogame-opensource`.
 - [Stellar RTS/4X/MMORPG Blueprint](stellar-rts-4x-design.md): fictional 12-act, 600-chapter campaign framework with 35 chapter detail elements, 90 system classes, and hybrid strategy/MMORPG UI pillars.
 - [In-Game UI Redesign Pass](ingame-ui-redesign.md): Arklight tactical HUD and shared in-game menu chrome updated toward Stellaris/OGame/RTS-4X/MMORPG styling.
 - [Stellaris/OGame Menu Taxonomy](stellaris-menu-taxonomy.md): top categories, submenus, pages, subpages, and reusable window-frame regions for the strategy UI shell.
+- [In-Game Menu Implementation Catalog](ingame-menu-implementation.md): live menu windows, planes, subplanes, frames, functions, features, and game-logic bindings.
 - [Brand Assets](assets/brand/README.md): UniversCivilization key art, SVG emblem, SVG wordmark, and OGame-style sci-fi palette tokens.
 - [Stellar Asset Pipeline](stellar-asset-pipeline.md): original unit, starship, building, weapon, armor, planet, VFX, UI, 2D, and 3D asset production plan.
 - [Stellar Asset Manifest](stellar-asset-manifest.yaml): canonical IDs and target paths for the original space asset pack.

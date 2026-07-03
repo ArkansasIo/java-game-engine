@@ -27,6 +27,7 @@ Container@INGAME_MENU:
 			Contrast: True
 		Container@PANEL_ROOT:
 		Container@STELLAR_STRATEGY_WINDOW:
+			Logic: OGameIngameMenuLogic
 			X: (WINDOW_WIDTH - WIDTH) / 2
 			Y: (WINDOW_HEIGHT - HEIGHT) / 2
 			Width: 760
@@ -512,10 +513,11 @@ Container@INGAME_MENU:
 							X: 12
 							Y: 232
 							Width: PARENT_WIDTH - 24
-							Height: 48
+							Height: 86
 							Text: label-strategy-subpage-detail
 							Font: Tiny
 							TextColor: 8FBDEB
+							WordWrap: true
 							Contrast: true
 				Container@RIGHT_STATUS_LAYOUT:
 					X: 560
@@ -548,6 +550,7 @@ Container@INGAME_MENU:
 							Text: label-strategy-status-header
 							Font: Tiny
 							TextColor: DDEBFF
+							WordWrap: true
 							Contrast: true
 						Label@STATUS_B:
 							X: 10
@@ -557,6 +560,7 @@ Container@INGAME_MENU:
 							Text: label-strategy-status-left
 							Font: Tiny
 							TextColor: DDEBFF
+							WordWrap: true
 							Contrast: true
 						Label@STATUS_C:
 							X: 10
@@ -566,6 +570,7 @@ Container@INGAME_MENU:
 							Text: label-strategy-status-center
 							Font: Tiny
 							TextColor: DDEBFF
+							WordWrap: true
 							Contrast: true
 						Label@STATUS_D:
 							X: 10
@@ -575,6 +580,7 @@ Container@INGAME_MENU:
 							Text: label-strategy-status-right
 							Font: Tiny
 							TextColor: DDEBFF
+							WordWrap: true
 							Contrast: true
 						Label@STATUS_E:
 							X: 10
@@ -584,6 +590,7 @@ Container@INGAME_MENU:
 							Text: label-strategy-status-footer
 							Font: Tiny
 							TextColor: DDEBFF
+							WordWrap: true
 							Contrast: true
 						ColorBlock@STATUS_SPLIT:
 							X: 10
@@ -595,10 +602,11 @@ Container@INGAME_MENU:
 							X: 10
 							Y: 232
 							Width: PARENT_WIDTH - 20
-							Height: 50
+							Height: 74
 							Text: label-strategy-status-note
 							Font: Tiny
 							TextColor: 8FBDEB
+							WordWrap: true
 							Contrast: true
 				Label@FOOTER_NOTE:
 					X: 16

@@ -36,6 +36,13 @@ button-connection-switchmod-panel-abort = Abort
 label-Arklight = Arklight
 label-credits-title = Credits
 
+## mainmenu.yaml
+label-stellar-command-title = Stellar Command
+label-arklight-engine-logo = ARKLIGHT GAME ENGINE
+label-title-screen-game-title = UNIVERSCIVILIZATION: EMPIRE AT WAR
+label-title-screen-game-subtitle = Epic Blue Strategy Command Interface
+label-title-screen-game-systems = RTS / 4X / MMORPG systems: empire command, galaxy map, planet management, fleet operations, research, diplomacy, alliances, character progression, and campaign acts.
+
 ## editor.yaml
 label-new-map-bg-title = New Map
 label-new-map-bg-tileset = Environment:

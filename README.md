@@ -98,6 +98,7 @@ This checkout includes local design-reference material using the OGame 0.84 Epic
 - [Arklight renaming map](docs/ogame-0.84/arklight-renaming-map.md): visible-name mapping from legacy RTS references to original Arklight sector names while preserving compatibility IDs.
 - [In-game UI redesign pass](docs/ogame-0.84/ingame-ui-redesign.md): Arklight tactical HUD and shared menu chrome styled toward Stellaris, OGame, RTS/4X, and MMORPG command systems.
 - [Stellaris/OGame menu taxonomy](docs/ogame-0.84/stellaris-menu-taxonomy.md): categories, submenus, pages, subpages, and window-frame layout regions for the strategy UI shell.
+- [In-game menu implementation catalog](docs/ogame-0.84/ingame-menu-implementation.md): live menu windows, planes, subplanes, frames, functions, features, and game-logic bindings used by the staged strategy shell.
 - [Brand asset pack](docs/ogame-0.84/assets/brand/README.md): generated key art, SVG emblem, SVG wordmark, and palette tokens for the sci-fi RTS/4X identity.
 - [UML diagrams](docs/ogame-0.84/uml.md): request flow, queue flow, battle flow, campaign model, system taxonomy, and hybrid UI state machine.
 
@@ -133,4 +134,3 @@ See [COPYING](COPYING) for the full license text.
 ## Sponsors
 
 Free Windows code signing is provided by [SignPath.io](https://about.signpath.io/) with a certificate from the [SignPath Foundation](https://signpath.org/).
-
