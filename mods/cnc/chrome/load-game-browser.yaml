@@ -1,4 +1,4 @@
-﻿Container@LOAD_GAME_BROWSER_PANEL:
+Container@LOAD_GAME_BROWSER_PANEL:
 	Logic: LoadGameBrowserLogic
 	X: (WINDOW_WIDTH - WIDTH) / 2
 	Y: (WINDOW_HEIGHT - HEIGHT) / 2

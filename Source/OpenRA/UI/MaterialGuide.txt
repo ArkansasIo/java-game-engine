@@ -1,0 +1,9 @@
+// Define the blue glass material setup as a reference for Unreal Material Editor
+/*
+1. Create Material (UI_BlueGlass_Mat)
+2. Set Material Domain: User Interface
+3. Add TextureSample -> Blur (using SceneTexture: PostProcessInput0)
+4. Add Constant4Vector (Color: 0, 0.64, 1.0, 0.85) // #00A3FF @ 85%
+5. Multiply Color by SceneTexture Result
+6. Connect to Final Color
+*/

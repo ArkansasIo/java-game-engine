@@ -1,0 +1,658 @@
+Container@INGAME_MENU:
+	Width: WINDOW_WIDTH
+	Height: WINDOW_HEIGHT
+	Logic: IngameMenuLogic
+		Buttons: RESUME, LOAD_GAME, SAVE_GAME, SETTINGS, MUSIC, SURRENDER, RESTART, BACK_TO_EDITOR, ABORT_MISSION, SAVE_MAP, PLAY_MAP, EXIT_EDITOR
+		ButtonStride: 0, 40
+	Children:
+		Background@BORDER:
+			X: 0 - 15
+			Y: 0 - 15
+			Width: WINDOW_WIDTH + 30
+			Height: WINDOW_HEIGHT + 30
+			Background: mainmenu-border
+		Image@LOGO:
+			X: WINDOW_WIDTH - 296
+			Y: 30
+			ImageCollection: logos
+			ImageName: logo
+		Label@VERSION_LABEL:
+			Logic: VersionLabelLogic
+			X: WINDOW_WIDTH - 296
+			Y: 296 - 19
+			Width: 296 - 20
+			Height: 25
+			Align: Center
+			Font: Regular
+			Contrast: True
+		Container@PANEL_ROOT:
+		Container@STELLAR_STRATEGY_WINDOW:
+			X: (WINDOW_WIDTH - WIDTH) / 2
+			Y: (WINDOW_HEIGHT - HEIGHT) / 2
+			Width: 760
+			Height: 520
+			Children:
+				ColorBlock@WINDOW_BACKDROP:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 020817F0
+				ColorBlock@WINDOW_HEADER:
+					Width: PARENT_WIDTH
+					Height: 44
+					Color: 142C49F0
+				ColorBlock@WINDOW_FOOTER:
+					Y: PARENT_HEIGHT - HEIGHT
+					Width: PARENT_WIDTH
+					Height: 28
+					Color: 081A2DE8
+				ColorBlock@WINDOW_ACCENT_TOP:
+					Y: 44
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				ColorBlock@WINDOW_ACCENT_BOTTOM:
+					Y: PARENT_HEIGHT - HEIGHT - 28
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				Label@WINDOW_TITLE:
+					X: 16
+					Y: 8
+					Width: 245
+					Height: 22
+					Text: STELLAR COMMAND INTERFACE
+					Font: Bold
+					TextColor: DDEBFF
+					Contrast: true
+				Label@WINDOW_SUBTITLE:
+					X: 420
+					Y: 10
+					Width: 320
+					Height: 18
+					Text: OGame 0.84 / RTS / 4X / MMORPG shell
+					Font: Tiny
+					TextColor: 8FBDEB
+					Align: Right
+					Contrast: true
+				Container@TOP_CATEGORY_TABS:
+					X: 12
+					Y: 52
+					Width: PARENT_WIDTH - 24
+					Height: 54
+					Children:
+						ColorBlock@TAB_BACKDROP:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Color: 061628C8
+						Label@TAB_EMPIRE:
+							X: 8
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: Empire
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_GALAXY:
+							X: 66
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: Galaxy
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_SYSTEM:
+							X: 124
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: System
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_PLANET:
+							X: 182
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: Planet
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_FLEET:
+							X: 240
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: Fleet
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_WAR:
+							X: 298
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: War
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_RESEARCH:
+							X: 356
+							Y: 8
+							Width: 64
+							Height: 15
+							Text: Research
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_MARKET:
+							X: 424
+							Y: 8
+							Width: 54
+							Height: 15
+							Text: Market
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_DIPLOMACY:
+							X: 482
+							Y: 8
+							Width: 74
+							Height: 15
+							Text: Diplomacy
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_ALLIANCE:
+							X: 560
+							Y: 8
+							Width: 64
+							Height: 15
+							Text: Alliance
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_CHARACTER:
+							X: 628
+							Y: 8
+							Width: 82
+							Height: 15
+							Text: Character
+							Font: TinyBold
+							TextColor: DDEBFF
+							Align: Center
+							Contrast: true
+						Label@TAB_SECONDARY:
+							X: 10
+							Y: 30
+							Width: PARENT_WIDTH - 20
+							Height: 15
+							Text: Overview / Resources / Buildings / Shipyard / Defense / Tech Tree / Intel / Quests / Logs / Settings
+							Font: Tiny
+							TextColor: 8FBDEB
+							Align: Center
+							Contrast: true
+				Container@LEFT_SUBMENU_RAIL:
+					X: 12
+					Y: 114
+					Width: 168
+					Height: 330
+					Children:
+						ColorBlock@RAIL_BACKDROP:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Color: 061628D8
+						ColorBlock@RAIL_HEADER:
+							Width: PARENT_WIDTH
+							Height: 22
+							Color: 1C3858E8
+						Label@RAIL_TITLE:
+							X: 8
+							Y: 4
+							Width: PARENT_WIDTH - 16
+							Height: 14
+							Text: SUB MENUS
+							Font: TinyBold
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_A:
+							X: 10
+							Y: 34
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Empire Overview
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_B:
+							X: 10
+							Y: 56
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Colony Management
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_C:
+							X: 10
+							Y: 78
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Fleet Operations
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_D:
+							X: 10
+							Y: 100
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Military Doctrine
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_E:
+							X: 10
+							Y: 122
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Civilian Systems
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_F:
+							X: 10
+							Y: 144
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Government Council
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_G:
+							X: 10
+							Y: 166
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Diplomacy Desk
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_H:
+							X: 10
+							Y: 188
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Character Sheet
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_I:
+							X: 10
+							Y: 210
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Inventory / Equipment
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_J:
+							X: 10
+							Y: 232
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Quests / Campaign
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_K:
+							X: 10
+							Y: 254
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: Logs / Messages
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@RAIL_LIST_L:
+							X: 10
+							Y: 276
+							Width: PARENT_WIDTH - 20
+							Height: 16
+							Text: System Settings
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+				Container@CENTER_PAGE_GRID:
+					X: 192
+					Y: 114
+					Width: 356
+					Height: 330
+					Children:
+						ColorBlock@PAGE_BACKDROP:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Color: 061628D8
+						ColorBlock@PAGE_HEADER:
+							Width: PARENT_WIDTH
+							Height: 22
+							Color: 1C3858E8
+						Label@PAGE_TITLE:
+							X: 8
+							Y: 4
+							Width: PARENT_WIDTH - 16
+							Height: 14
+							Text: PAGES AND SUB PAGES
+							Font: TinyBold
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_GALAXY:
+							X: 12
+							Y: 34
+							Width: 155
+							Height: 16
+							Text: "Galaxy: Map / Sectors / Systems"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_PLANET:
+							X: 12
+							Y: 56
+							Width: 170
+							Height: 16
+							Text: "Planet: Overview / Resources"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_BUILD:
+							X: 12
+							Y: 78
+							Width: 170
+							Height: 16
+							Text: "Build: Buildings / Shipyard"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_FLEET:
+							X: 12
+							Y: 100
+							Width: 170
+							Height: 16
+							Text: "Fleet: Dispatch / Movement"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_COMBAT:
+							X: 12
+							Y: 122
+							Width: 170
+							Height: 16
+							Text: "War: Units / Weapons / Armor"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_RESEARCH:
+							X: 12
+							Y: 144
+							Width: 170
+							Height: 16
+							Text: "Research: Lab / Tech Tree"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_CIVIL:
+							X: 12
+							Y: 166
+							Width: 170
+							Height: 16
+							Text: "Civil: Population / Housing"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_MARKET:
+							X: 12
+							Y: 188
+							Width: 170
+							Height: 16
+							Text: "Market: Trade / Contracts"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_GOV:
+							X: 184
+							Y: 34
+							Width: 160
+							Height: 16
+							Text: "Gov: Laws / Policies"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_DIPLO:
+							X: 184
+							Y: 56
+							Width: 160
+							Height: 16
+							Text: "Diplomacy: Treaties / War"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_ALLIANCE:
+							X: 184
+							Y: 78
+							Width: 160
+							Height: 16
+							Text: "Alliance: Ranks / Members"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_HERO:
+							X: 184
+							Y: 100
+							Width: 160
+							Height: 16
+							Text: "Character: Stats / Skills"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_EQUIP:
+							X: 184
+							Y: 122
+							Width: 160
+							Height: 16
+							Text: "Gear: Weapons / Shields"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_QUEST:
+							X: 184
+							Y: 144
+							Width: 160
+							Height: 16
+							Text: "Quest: Acts / Chapters"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_INTEL:
+							X: 184
+							Y: 166
+							Width: 160
+							Height: 16
+							Text: "Intel: Espionage / Phalanx"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@PAGE_ADMIN:
+							X: 184
+							Y: 188
+							Width: 160
+							Height: 16
+							Text: "System: Save / Load / Audio"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						ColorBlock@SUBPAGE_SPLIT:
+							X: 12
+							Y: 218
+							Width: PARENT_WIDTH - 24
+							Height: 1
+							Color: 6DA8FFCC
+						Label@SUBPAGE_DETAIL:
+							X: 12
+							Y: 232
+							Width: PARENT_WIDTH - 24
+							Height: 48
+							Text: "Sub-layouts: resource cards, queue rows, fleet slots, diplomacy dossiers, character equipment, quest chapters, battle reports, and settings forms."
+							Font: Tiny
+							TextColor: 8FBDEB
+							Contrast: true
+				Container@RIGHT_STATUS_LAYOUT:
+					X: 560
+					Y: 114
+					Width: 188
+					Height: 330
+					Children:
+						ColorBlock@STATUS_BACKDROP:
+							Width: PARENT_WIDTH
+							Height: PARENT_HEIGHT
+							Color: 061628D8
+						ColorBlock@STATUS_HEADER:
+							Width: PARENT_WIDTH
+							Height: 22
+							Color: 1C3858E8
+						Label@STATUS_TITLE:
+							X: 8
+							Y: 4
+							Width: PARENT_WIDTH - 16
+							Height: 14
+							Text: WINDOW FRAMES
+							Font: TinyBold
+							TextColor: DDEBFF
+							Contrast: true
+						Label@STATUS_A:
+							X: 10
+							Y: 34
+							Width: PARENT_WIDTH - 20
+							Height: 30
+							Text: "Header: title, mode, alerts"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@STATUS_B:
+							X: 10
+							Y: 70
+							Width: PARENT_WIDTH - 20
+							Height: 30
+							Text: "Left: category navigation"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@STATUS_C:
+							X: 10
+							Y: 106
+							Width: PARENT_WIDTH - 20
+							Height: 30
+							Text: "Center: active page content"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@STATUS_D:
+							X: 10
+							Y: 142
+							Width: PARENT_WIDTH - 20
+							Height: 30
+							Text: "Right: inspector and stats"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						Label@STATUS_E:
+							X: 10
+							Y: 178
+							Width: PARENT_WIDTH - 20
+							Height: 30
+							Text: "Footer: actions and hints"
+							Font: Tiny
+							TextColor: DDEBFF
+							Contrast: true
+						ColorBlock@STATUS_SPLIT:
+							X: 10
+							Y: 218
+							Width: PARENT_WIDTH - 20
+							Height: 1
+							Color: 6DA8FFCC
+						Label@STATUS_F:
+							X: 10
+							Y: 232
+							Width: PARENT_WIDTH - 20
+							Height: 50
+							Text: Layouts are ready for future logic screens and keep the current Arklight menu actions available.
+							Font: Tiny
+							TextColor: 8FBDEB
+							Contrast: true
+				Label@FOOTER_NOTE:
+					X: 16
+					Y: PARENT_HEIGHT - 23
+					Width: PARENT_WIDTH - 32
+					Height: 16
+					Text: Active Arklight actions stay in the command panel; strategy pages are staged for future logic binding.
+					Font: Tiny
+					TextColor: 8FBDEB
+					Align: Center
+					Contrast: true
+		Background@MENU_BUTTONS:
+			X: 13 + (WINDOW_WIDTH - 522) / 4 - WIDTH / 2
+			Y: (WINDOW_HEIGHT - HEIGHT) / 2
+			Width: 260
+			Height: 156
+			Children:
+				ColorBlock@STELLAR_MENU_BACKDROP:
+					Width: PARENT_WIDTH
+					Height: PARENT_HEIGHT
+					Color: 040E1EE8
+				ColorBlock@STELLAR_MENU_HEADER:
+					Width: PARENT_WIDTH
+					Height: 34
+					Color: 1C3858F0
+				ColorBlock@STELLAR_MENU_ACCENT:
+					Y: 34
+					Width: PARENT_WIDTH
+					Height: 2
+					Color: 6DA8FFFF
+				Label@LABEL_TITLE:
+					X: (PARENT_WIDTH - WIDTH) / 2
+					Y: 7
+					Width: 240
+					Height: 18
+					Text: STRATEGIC COMMAND
+					Align: Center
+					Font: Bold
+					TextColor: DDEBFF
+					Contrast: true
+				Label@LABEL_MODE_STRIP:
+					X: 10
+					Y: 39
+					Width: PARENT_WIDTH - 20
+					Height: 30
+					Text: Galaxy / System / Planet / Fleet / Diplomacy / Character
+					Align: Center
+					Font: Tiny
+					TextColor: 8FBDEB
+					Contrast: true
+				Button@BUTTON_TEMPLATE:
+					X: (PARENT_WIDTH - WIDTH) / 2
+					Y: 78
+					Width: 140
+					Height: 30
+					Font: Bold
+

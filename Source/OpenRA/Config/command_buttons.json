@@ -1,0 +1,13 @@
+{
+  "Fleet": [
+    { "id": "move", "label": "Move", "action": "CMD_MOVE", "icon": "assets/icons/move.png" },
+    { "id": "attack", "label": "Attack", "action": "CMD_ATTACK", "icon": "assets/icons/attack.png" },
+    { "id": "patrol", "label": "Patrol", "action": "CMD_PATROL", "icon": "assets/icons/patrol.png" },
+    { "id": "formation", "label": "Formation", "action": "CMD_FORM", "icon": "assets/icons/formation.png" }
+  ],
+  "Planet": [
+    { "id": "build", "label": "Build", "action": "CMD_BUILD", "icon": "assets/icons/build.png" },
+    { "id": "terra", "label": "Terraform", "action": "CMD_TERRA", "icon": "assets/icons/terra.png" },
+    { "id": "tax", "label": "Tax Rates", "action": "CMD_TAX", "icon": "assets/icons/tax.png" }
+  ]
+}

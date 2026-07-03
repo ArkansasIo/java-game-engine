@@ -1,0 +1,18 @@
+# Project: OpenRA UI/Game Logic Foundation
+- Source/
+  - OpenRA/
+    - UI/
+      - UIBase.h (Theme logic)
+      - HUDManager.cpp (Control loop)
+      - UnrealHUD.cpp/h (Bridge)
+      - LayoutEditor.h (UI modification)
+      - MaterialGuide.txt (Blue glass aesthetic)
+    - Systems/
+      - InputDelegates.h (Command routing)
+      - Systems.h (Base stubs)
+      - FleetCombatSystem.cpp (Fleet Logic)
+      - GalaxyGenerator.cpp (Procedural logic)
+      - EmpireManager.cpp (4X Logic)
+    - Config/
+      - ui_schema.json (Layout)
+      - command_buttons.json (Context logic)
